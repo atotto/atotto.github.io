@@ -1,25 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>atotto blog</title>
-    <link>https://blog.artarch.net/</link>
-    <description>Recent content on atotto blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 01 Sep 2013 15:44:57 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.artarch.net/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>README</title>
-      <link>https://blog.artarch.net/posts/readme/</link>
-      <pubDate>Sun, 01 Sep 2013 15:44:57 +0900</pubDate>
-      
-      <guid>https://blog.artarch.net/posts/readme/</guid>
-      <description>atotto
- twitter/atotto github.com/atotto  </description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>art arch</title>
+		<link>https://blog.artarch.net/</link>
+		<description>Recent content on art arch</description>
+		<generator>Hugo 0.59.1 -- gohugo.io</generator>
+		<language>ja</language>
+		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+		<webMaster>ato.araki@gmail.com (ato)</webMaster>
+		<copyright>ato — All rights reserved.</copyright>
+		<lastBuildDate>Sun, 10 Nov 2019 19:55:42 +0900</lastBuildDate>
+		<atom:link href="https://blog.artarch.net/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Posts</title>
+			<link>https://blog.artarch.net/posts/</link>
+			<pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
+			<author>ato.araki@gmail.com (ato)</author>
+			<guid isPermaLink="true">https://blog.artarch.net/posts/</guid>
+			<description></description>
+		</item>
+		<item>
+			<title>about</title>
+			<link>https://blog.artarch.net/about/</link>
+			<pubDate>Sun, 01 Sep 2013 15:44:57 +0900</pubDate>
+			<author>ato.araki@gmail.com (ato)</author>
+			<guid isPermaLink="true">https://blog.artarch.net/about/</guid>
+			<description>&lt;p&gt;atotto&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://blog.artarch.net/images/2013.png&#34; alt=&#34;atotto&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/atotto&#34;&gt;twitter/atotto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/atotto&#34;&gt;github.com/atotto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+		</item>
+	</channel>
 </rss>

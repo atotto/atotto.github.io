@@ -1,37 +1,141 @@
 <!DOCTYPE html>
 <html lang="ja">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
-<title>404 Page not found | atotto blog</title>
-
-<link rel="stylesheet" href="https://blog.artarch.net//css/styles.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-<section class="hero is-fullheight">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <span class="">
-        <i class="far fa-frown fa-10x"></i>
-      </span>
-      <h1 class="title is-2 notfound">404</h1>
-      <h2 class="subtitle is-4">
-        Page not found
-      </h2>
-      <p>The page you are looking for doesn't exist or an other error occured.</p>
-      <p><a href="#" onclick="history.go(-1)">Go back</a>, or head over to <a href="https://blog.artarch.net/">Home page</a></p>
+<head>
+  <meta charset="utf-8" />
+  <title>404 Page not found | art arch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="雑記です" />
+  <meta name="author" content="ato" />
+  <meta name="generator" content="Hugo 0.59.1" />
+  <link href="https://blog.artarch.net/index.xml" rel="alternate" type="application/rss+xml" title="art arch Feed" />
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style-compat.css" />
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style.css" />
+  <!--<![endif]-->
+</head>
+<body>
+<div class="pure-g">
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+  <div class="pure-u-22-24 pure-u-md-14-24">
+  
+<div class="navigation">
+  <div class="navigation-header clearfix">
+    <div class="pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading pure-menu-link" href="https://blog.artarch.net/">
+        art arch
+      </a>
+      <ul class="pure-menu-list navigation-header-subtitle pull-end">
+        <li class="pure-menu-item pure-menu-disabled">memoメモ</li>
+      </ul>
     </div>
   </div>
-</section>
+  <div class="navigation-content">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item" title="All posts">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/posts/">Posts</a>
+        </li>
+        <li class="pure-menu-item" title="All categories">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/categories/">Categories</a>
+        </li>
+        <li class="pure-menu-item" title="All tags">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/tags/">Tags</a>
+        </li>
+        <li class="pure-menu-item" title="All series">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/series/">Series</a>
+        </li>
+        <li class="pure-menu-item" title="About">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/about/">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+<div>
+  <div>
+    <h2 class="post-title">404 Page not found</h2>
+  </div>
+  <div>
+    <p>There&#39;s nothing to see here, please move along!</p>
+  </div>
+</div>
+  <div class="footer">
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item" title="twitter">
+        <a class="pure-menu-link" href="https://twitter.com/atotto">Twitter</a>
+      </li>
+      <li class="pure-menu-item" title="RSS Feed">
+        <a href="https://blog.artarch.net/index.xml" class="pure-menu-link">RSS</a>
+      </li>
+      <li class="pure-menu-item fix-cursor-pointer" title="Go to top">
+        <a class="pure-menu-link" id="btn-gototop">
+          <span class="fix-placement-up">&#x21e7;&#xfe0e;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item pure-menu-disabled">
+        &copy; 2019 &mdash; ato — All rights reserved.
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  function setElementsClass(selector, value) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll(selector),
+      function(elem) { elem.className = value; }
+    );
+  }
+
+  setElementsClass('img', 'pure-img');
+  setElementsClass('table', 'pure-table');
+
+  function onResize() {
+      Array.prototype.forEach.call(
+        [{
+          selector: '.pure-menu',
+          hi: 'pure-menu pure-menu-horizontal',
+          lo: 'pure-menu'
+        }, {
+          selector: '.navigation-header-subtitle',
+          hi: 'pure-menu-list navigation-header-subtitle pull-end',
+          lo: 'pure-menu-list navigation-header-subtitle'
+        }, {
+          selector: '.navigation-header',
+          hi: 'navigation-header clearfix',
+          lo: 'navigation-header'
+        }],
+        function(elem) {
+          setElementsClass(
+            elem.selector,
+            document.documentElement.clientWidth >= 768 ? elem.hi : elem.lo
+          );
+        }
+      );
+  }
+  onResize();
+  window.addEventListener('resize', onResize);
+
+  document.getElementById('btn-gototop').addEventListener('click', function() {
+    function scroll() {
+      if (window.pageYOffset > 0) { setTimeout(scroll, 8); }
+      window.scroll(0, window.pageYOffset - 128);
+    }
+    scroll();
+  });
+</script>
+
+  </div>
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+</div>
+</body>
+</html>
