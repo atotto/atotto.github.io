@@ -18,5 +18,21 @@
 			<guid isPermaLink="true">https://blog.artarch.net/categories/web/</guid>
 			<description></description>
 		</item>
+		<item>
+			<title>make</title>
+			<link>https://blog.artarch.net/categories/make/</link>
+			<pubDate>Sat, 06 Apr 2019 22:12:32 +0900</pubDate>
+			<author>ato.araki@gmail.com (ato)</author>
+			<guid isPermaLink="true">https://blog.artarch.net/categories/make/</guid>
+			<description></description>
+		</item>
+		<item>
+			<title>book</title>
+			<link>https://blog.artarch.net/categories/book/</link>
+			<pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
+			<author>ato.araki@gmail.com (ato)</author>
+			<guid isPermaLink="true">https://blog.artarch.net/categories/book/</guid>
+			<description></description>
+		</item>
 	</channel>
 </rss>
