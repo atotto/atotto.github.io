@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>atotto blog</title>
-    <link>https://blog.artarch.net/</link>
-    <description>Recent content on atotto blog</description>
+    <title>Posts on atotto blog</title>
+    <link>https://blog.artarch.net/posts/</link>
+    <description>Recent content in Posts on atotto blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 01 Sep 2013 15:44:57 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.artarch.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
