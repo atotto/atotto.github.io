@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>フィルムカメラをデジタル化するには(課題がたくさん) | art arch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content=" フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。 最近ではこのような仕組みのアダプタが出ているようだが、ちょっと大きい&hellip;
+ https://www.imback.eu/
+ カメラのフィルムを配置する部分にCMOSカメラを置いたらどうなるのか。 Amazonなんかでは山のようにUSBカメラが売られている。
+どうせならモロ黒カメラがいい https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/
+センササイズの問題 市販されているカメラのセンササイズは大きくても1/3インチ程度で、フルサイズの35mmx24mmに比べると劣る。 このまま当てはめるとレンズの中心部分しか活用できず、また画角が狭くなるために望遠寄りとなる。 広角のレンズアダプターなどをつければまだマシかもしれないが、カメラサイズが大きくなりがち。 仮に35mmのセンサがあったとしても、レンズからの光が斜めに当たる部分が多くあるため、周辺光量に課題がありそう。 センササイズが小さいものばかりなのは、大きくすると単に生産できる量が減り、単価が高くなる傾向があるため、できるだけ小さくすることで大量生産できる方向に働いている様子。
+カメラの内部のレイアウト リッチにやれるなら、raspberry pi zeroあたりが収まると良さそう。 バッテリーをどう組み込むのかは課題
+シャッターとの同期はどうするか カメラ側のシャッタースピード長めに取るとして、どう同期するか。 バルブ撮影できるカメラだと長くできるが、写真撮ってる感が失われそう。 カメラ側の露出を固定しつつ、動画撮影して明るい画像だけを取り出す、みたいなことになりそう。
+ローリングシャッターがグローバルシャッターか カメラのシャッターを利用するのであれば、グローバルシャッターの方が良さそう。ローリングシャッターだと露光時間内に収まらなかった場合に中途半端な画像になる。
+撮像面の比較    規格 サイズ     35mm 36x24mm   APS-C 23.6x15.8mm   1型 13.2x8.8mm   1/3型 4.8x3.6mm     画像(イメージ)センサー・(CCD・CMOS)の大きさ比較
+ " />
+  <meta name="author" content="ato" />
+  <meta name="generator" content="Hugo 0.59.1" />
+  <link href="https://blog.artarch.net/index.xml" rel="alternate" type="application/rss+xml" title="art arch Feed" />
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style-compat.css" />
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style.css" />
+  <!--<![endif]-->
+</head>
+<body>
+<div class="pure-g">
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+  <div class="pure-u-22-24 pure-u-md-14-24">
+  
+<div class="navigation">
+  <div class="navigation-header clearfix">
+    <div class="pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading pure-menu-link" href="https://blog.artarch.net/">
+        art arch
+      </a>
+      <ul class="pure-menu-list navigation-header-subtitle pull-end">
+        <li class="pure-menu-item pure-menu-disabled">memoメモ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="navigation-content">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item" title="All posts">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/posts/">Posts</a>
+        </li>
+        <li class="pure-menu-item" title="All categories">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/categories/">Categories</a>
+        </li>
+        <li class="pure-menu-item" title="All tags">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/tags/">Tags</a>
+        </li>
+        <li class="pure-menu-item" title="All series">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/series/">Series</a>
+        </li>
+        <li class="pure-menu-item" title="About">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/about/">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+<div>
+  <div>
+    <h2 class="post-title">
+      
+      フィルムカメラをデジタル化するには(課題がたくさん)
+    </h2>
+    
+<div class="post-meta">
+  <span>Date</span> &#x5b;
+    <time datetime="2019-07-29T21:37:21&#43;09:00">
+      2019-07-29
+    </time>
+  &#x5d;
+        
+        
+  <span>Categories</span> &#x5b;
+    <a href="https://blog.artarch.net/categories/note">note</a>
+  &#x5d;
+        
+        
+  <span>Tags</span> &#x5b;
+    <a href="https://blog.artarch.net/tags/camera">Camera</a>
+  &#x5d;
+</div>
+
+  </div>
+  <div>
+    
+
+<p>フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。
+最近ではこのような仕組みのアダプタが出ているようだが、ちょっと大きい&hellip;</p>
+
+<blockquote>
+<p><img src="https://blog.artarch.net/posts/camera_film_and_digital/imback.jpeg" alt="imback" />
+<a href="https://www.imback.eu/">https://www.imback.eu/</a></p>
+</blockquote>
+
+<p>カメラのフィルムを配置する部分にCMOSカメラを置いたらどうなるのか。
+Amazonなんかでは山のようにUSBカメラが売られている。</p>
+
+<p>どうせならモロ黒カメラがいい
+<a href="https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/">https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/</a></p>
+
+<h2 id="センササイズの問題">センササイズの問題</h2>
+
+<p>市販されているカメラのセンササイズは大きくても1/3インチ程度で、フルサイズの35mmx24mmに比べると劣る。
+このまま当てはめるとレンズの中心部分しか活用できず、また画角が狭くなるために望遠寄りとなる。
+広角のレンズアダプターなどをつければまだマシかもしれないが、カメラサイズが大きくなりがち。
+仮に35mmのセンサがあったとしても、レンズからの光が斜めに当たる部分が多くあるため、周辺光量に課題がありそう。
+センササイズが小さいものばかりなのは、大きくすると単に生産できる量が減り、単価が高くなる傾向があるため、できるだけ小さくすることで大量生産できる方向に働いている様子。</p>
+
+<h2 id="カメラの内部のレイアウト">カメラの内部のレイアウト</h2>
+
+<p>リッチにやれるなら、raspberry pi zeroあたりが収まると良さそう。
+バッテリーをどう組み込むのかは課題</p>
+
+<h2 id="シャッターとの同期はどうするか">シャッターとの同期はどうするか</h2>
+
+<p>カメラ側のシャッタースピード長めに取るとして、どう同期するか。
+バルブ撮影できるカメラだと長くできるが、写真撮ってる感が失われそう。
+カメラ側の露出を固定しつつ、動画撮影して明るい画像だけを取り出す、みたいなことになりそう。</p>
+
+<h2 id="ローリングシャッターがグローバルシャッターか">ローリングシャッターがグローバルシャッターか</h2>
+
+<p>カメラのシャッターを利用するのであれば、グローバルシャッターの方が良さそう。ローリングシャッターだと露光時間内に収まらなかった場合に中途半端な画像になる。</p>
+
+<h2 id="撮像面の比較">撮像面の比較</h2>
+
+<table>
+<thead>
+<tr>
+<th>規格</th>
+<th>サイズ</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>35mm</td>
+<td>36x24mm</td>
+</tr>
+
+<tr>
+<td>APS-C</td>
+<td>23.6x15.8mm</td>
+</tr>
+
+<tr>
+<td>1型</td>
+<td>13.2x8.8mm</td>
+</tr>
+
+<tr>
+<td>1/3型</td>
+<td>4.8x3.6mm</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><a href="https://antaresdigicame.org/photo_gallery_sp/photo_gallery/camera/camera87.html">画像(イメージ)センサー・(CCD・CMOS)の大きさ比較</a></p>
+</blockquote>
+
+  </div>
+</div>
+  <div class="footer">
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item" title="twitter">
+        <a class="pure-menu-link" href="https://twitter.com/atotto">Twitter</a>
+      </li>
+      <li class="pure-menu-item" title="RSS Feed">
+        <a href="https://blog.artarch.net/index.xml" class="pure-menu-link">RSS</a>
+      </li>
+      <li class="pure-menu-item fix-cursor-pointer" title="Go to top">
+        <a class="pure-menu-link" id="btn-gototop">
+          <span class="fix-placement-up">&#x21e7;&#xfe0e;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item pure-menu-disabled">
+        &copy; 2019 &mdash; ato — All rights reserved.
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  function setElementsClass(selector, value) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll(selector),
+      function(elem) { elem.className = value; }
+    );
+  }
+
+  setElementsClass('img', 'pure-img');
+  setElementsClass('table', 'pure-table');
+
+  function onResize() {
+      Array.prototype.forEach.call(
+        [{
+          selector: '.pure-menu',
+          hi: 'pure-menu pure-menu-horizontal',
+          lo: 'pure-menu'
+        }, {
+          selector: '.navigation-header-subtitle',
+          hi: 'pure-menu-list navigation-header-subtitle pull-end',
+          lo: 'pure-menu-list navigation-header-subtitle'
+        }, {
+          selector: '.navigation-header',
+          hi: 'navigation-header clearfix',
+          lo: 'navigation-header'
+        }],
+        function(elem) {
+          setElementsClass(
+            elem.selector,
+            document.documentElement.clientWidth >= 768 ? elem.hi : elem.lo
+          );
+        }
+      );
+  }
+  onResize();
+  window.addEventListener('resize', onResize);
+
+  document.getElementById('btn-gototop').addEventListener('click', function() {
+    function scroll() {
+      if (window.pageYOffset > 0) { setTimeout(scroll, 8); }
+      window.scroll(0, window.pageYOffset - 128);
+    }
+    scroll();
+  });
+</script>
+
+  </div>
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+</div>
+</body>
+</html>
