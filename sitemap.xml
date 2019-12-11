@@ -4,21 +4,46 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2019-11-10T19:55:42+09:00</lastmod>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2019-11-10T19:55:42+09:00</lastmod>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.artarch.net/posts/hugo_github_pages/</loc>
-    <lastmod>2019-11-10T19:55:42+09:00</lastmod>
+    <loc>https://blog.artarch.net/tags/gps/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/note/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/rtk/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/rtk/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/hugo_github_pages/</loc>
     <lastmod>2019-11-10T19:55:42+09:00</lastmod>
   </url>
   
@@ -45,11 +70,6 @@
   <url>
     <loc>https://blog.artarch.net/series/works/</loc>
     <lastmod>2019-04-06T22:12:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/</loc>
-    <lastmod>2017-05-08T21:04:23+09:00</lastmod>
   </url>
   
   <url>

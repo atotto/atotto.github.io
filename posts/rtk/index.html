@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>RTKをやってみるために調べたことと分かったこと | art arch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content=" GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと
+ https://robot-car.jimdo.com/ https://qzss.go.jp/events/robotcar_191118.html  最初に調べたこと  RTKとは何で、何が必要か アンテナは何が必要か  わかったこと  RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。 1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）  価格が高め。 F9Pなどがある。アンテナも1周波と比較すると高価。 今後は2周波が来そう  rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる 基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。 GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。 docomoやsoftbankがRTKの基準局設置を進めている  結果として購入したもの  M8T（一台） GNSSアンテナ（一台）  キーワード  基準局 移動局 RTCM3  ノウハウ  建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度） 地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf GPSの周波がLTEと干渉する可能性があるので、気をつける https://www.gsi.go.jp/common/000195100.pdf BeidouのC02衛星は避けたほうがいいらしい  " />
+  <meta name="author" content="ato" />
+  <meta name="generator" content="Hugo 0.59.1" />
+  <link href="https://blog.artarch.net/index.xml" rel="alternate" type="application/rss+xml" title="art arch Feed" />
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style-compat.css" />
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://blog.artarch.net/assets/style.css" />
+  <!--<![endif]-->
+</head>
+<body>
+<div class="pure-g">
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+  <div class="pure-u-22-24 pure-u-md-14-24">
+  
+<div class="navigation">
+  <div class="navigation-header clearfix">
+    <div class="pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading pure-menu-link" href="https://blog.artarch.net/">
+        art arch
+      </a>
+      <ul class="pure-menu-list navigation-header-subtitle pull-end">
+        <li class="pure-menu-item pure-menu-disabled">memoメモ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="navigation-content">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item" title="All posts">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/posts/">Posts</a>
+        </li>
+        <li class="pure-menu-item" title="All categories">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/categories/">Categories</a>
+        </li>
+        <li class="pure-menu-item" title="All tags">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/tags/">Tags</a>
+        </li>
+        <li class="pure-menu-item" title="All series">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/series/">Series</a>
+        </li>
+        <li class="pure-menu-item" title="About">
+          <a  class="pure-menu-link" href="https://blog.artarch.net/about/">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+<div>
+  <div>
+    <h2 class="post-title">
+      
+      RTKをやってみるために調べたことと分かったこと
+    </h2>
+    
+<div class="post-meta">
+  <span>Date</span> &#x5b;
+    <time datetime="2019-11-10T21:55:23&#43;09:00">
+      2019-11-10
+    </time>
+  &#x5d;
+        
+        
+  <span>Categories</span> &#x5b;
+    <a href="https://blog.artarch.net/categories/note">note</a>
+  &#x5d;
+        
+        
+  <span>Tags</span> &#x5b;
+    <a href="https://blog.artarch.net/tags/gps">GPS</a>
+    <a href="https://blog.artarch.net/tags/rtk">RTK</a>
+  &#x5d;
+</div>
+
+  </div>
+  <div>
+    
+
+<p>GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと</p>
+
+<ul>
+<li><a href="https://robot-car.jimdo.com/">https://robot-car.jimdo.com/</a></li>
+<li><a href="https://qzss.go.jp/events/robotcar_191118.html">https://qzss.go.jp/events/robotcar_191118.html</a></li>
+</ul>
+
+<h2 id="最初に調べたこと">最初に調べたこと</h2>
+
+<ul>
+<li>RTKとは何で、何が必要か</li>
+<li>アンテナは何が必要か</li>
+</ul>
+
+<h2 id="わかったこと">わかったこと</h2>
+
+<ul>
+<li>RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする</li>
+<li>RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。</li>
+<li>1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）
+
+<ul>
+<li>価格が高め。</li>
+<li>F9Pなどがある。アンテナも1周波と比較すると高価。</li>
+<li>今後は2周波が来そう</li>
+</ul></li>
+<li>rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる</li>
+<li>基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる</li>
+<li>M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。</li>
+<li>GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。</li>
+<li>docomoやsoftbankがRTKの基準局設置を進めている</li>
+</ul>
+
+<h2 id="結果として購入したもの">結果として購入したもの</h2>
+
+<ul>
+<li>M8T（一台）</li>
+<li>GNSSアンテナ（一台）</li>
+</ul>
+
+<h2 id="キーワード">キーワード</h2>
+
+<ul>
+<li>基準局</li>
+<li>移動局</li>
+<li>RTCM3</li>
+</ul>
+
+<h2 id="ノウハウ">ノウハウ</h2>
+
+<ul>
+<li>建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度）</li>
+<li>地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い
+<a href="http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf">http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf</a></li>
+<li>GPSの周波がLTEと干渉する可能性があるので、気をつける
+<a href="https://www.gsi.go.jp/common/000195100.pdf">https://www.gsi.go.jp/common/000195100.pdf</a></li>
+<li>BeidouのC02衛星は避けたほうがいいらしい</li>
+</ul>
+
+  </div>
+</div>
+  <div class="footer">
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item" title="twitter">
+        <a class="pure-menu-link" href="https://twitter.com/atotto">Twitter</a>
+      </li>
+      <li class="pure-menu-item" title="RSS Feed">
+        <a href="https://blog.artarch.net/index.xml" class="pure-menu-link">RSS</a>
+      </li>
+      <li class="pure-menu-item fix-cursor-pointer" title="Go to top">
+        <a class="pure-menu-link" id="btn-gototop">
+          <span class="fix-placement-up">&#x21e7;&#xfe0e;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item pure-menu-disabled">
+        &copy; 2019 &mdash; ato — All rights reserved.
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  function setElementsClass(selector, value) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll(selector),
+      function(elem) { elem.className = value; }
+    );
+  }
+
+  setElementsClass('img', 'pure-img');
+  setElementsClass('table', 'pure-table');
+
+  function onResize() {
+      Array.prototype.forEach.call(
+        [{
+          selector: '.pure-menu',
+          hi: 'pure-menu pure-menu-horizontal',
+          lo: 'pure-menu'
+        }, {
+          selector: '.navigation-header-subtitle',
+          hi: 'pure-menu-list navigation-header-subtitle pull-end',
+          lo: 'pure-menu-list navigation-header-subtitle'
+        }, {
+          selector: '.navigation-header',
+          hi: 'navigation-header clearfix',
+          lo: 'navigation-header'
+        }],
+        function(elem) {
+          setElementsClass(
+            elem.selector,
+            document.documentElement.clientWidth >= 768 ? elem.hi : elem.lo
+          );
+        }
+      );
+  }
+  onResize();
+  window.addEventListener('resize', onResize);
+
+  document.getElementById('btn-gototop').addEventListener('click', function() {
+    function scroll() {
+      if (window.pageYOffset > 0) { setTimeout(scroll, 8); }
+      window.scroll(0, window.pageYOffset - 128);
+    }
+    scroll();
+  });
+</script>
+
+  </div>
+  <div class="pure-u-1-24 pure-u-md-5-24"></div>
+</div>
+</body>
+</html>
