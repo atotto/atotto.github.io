@@ -4,12 +4,27 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
+    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/web/ogp/</loc>
+    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/web/</loc>
+    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +34,6 @@
   
   <url>
     <loc>https://blog.artarch.net/categories/note/</loc>
-    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/posts/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
   </url>
   
@@ -43,12 +53,7 @@
   </url>
   
   <url>
-    <loc>https://blog.artarch.net/posts/hugo_github_pages/</loc>
-    <lastmod>2019-11-10T19:55:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/categories/web/</loc>
+    <loc>https://blog.artarch.net/posts/web/hugo_github_pages/</loc>
     <lastmod>2019-11-10T19:55:42+09:00</lastmod>
   </url>
   

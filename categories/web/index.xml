@@ -9,17 +9,26 @@
     <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato)</webMaster>
     <copyright>ato — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Nov 2019 19:55:42 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 22:39:14 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>hugoでOGP確認</title>
+      <link>https://blog.artarch.net/posts/web/ogp/</link>
+      <pubDate>Sun, 22 Dec 2019 22:39:14 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/web/ogp/</guid>
+      <description>&lt;p&gt;OPG設定メモ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Hugo &#43; Github Pagesにしてみる</title>
-      <link>https://blog.artarch.net/posts/hugo_github_pages/</link>
+      <link>https://blog.artarch.net/posts/web/hugo_github_pages/</link>
       <pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
       <author>ato.araki@gmail.com (ato)</author>
-      <guid>https://blog.artarch.net/posts/hugo_github_pages/</guid>
+      <guid>https://blog.artarch.net/posts/web/hugo_github_pages/</guid>
       <description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;</description>
     </item>
     
