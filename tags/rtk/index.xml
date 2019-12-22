@@ -1,82 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>RTK on art arch</title>
-		<link>https://blog.artarch.net/tags/rtk/</link>
-		<description>Recent content in RTK on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/tags/rtk/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>RTKをやってみるために調べたことと分かったこと</title>
-			<link>https://blog.artarch.net/posts/rtk/</link>
-			<pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/rtk/</guid>
-			<description>
-
-&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
+  <channel>
+    <title>RTK on art arch</title>
+    <link>https://blog.artarch.net/tags/rtk/</link>
+    <description>Recent content in RTK on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/rtk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RTKをやってみるために調べたことと分かったこと</title>
+      <link>https://blog.artarch.net/posts/rtk/</link>
+      <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/rtk/</guid>
+      <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://qzss.go.jp/events/robotcar_191118.html&#34;&gt;https://qzss.go.jp/events/robotcar_191118.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;最初に調べたこと&#34;&gt;最初に調べたこと&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RTKとは何で、何が必要か&lt;/li&gt;
-&lt;li&gt;アンテナは何が必要か&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;わかったこと&#34;&gt;わかったこと&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする&lt;/li&gt;
-&lt;li&gt;RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。&lt;/li&gt;
-&lt;li&gt;1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）
-
-&lt;ul&gt;
-&lt;li&gt;価格が高め。&lt;/li&gt;
-&lt;li&gt;F9Pなどがある。アンテナも1周波と比較すると高価。&lt;/li&gt;
-&lt;li&gt;今後は2周波が来そう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる&lt;/li&gt;
-&lt;li&gt;基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる&lt;/li&gt;
-&lt;li&gt;M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。&lt;/li&gt;
-&lt;li&gt;GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。&lt;/li&gt;
-&lt;li&gt;docomoやsoftbankがRTKの基準局設置を進めている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;結果として購入したもの&#34;&gt;結果として購入したもの&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;M8T（一台）&lt;/li&gt;
-&lt;li&gt;GNSSアンテナ（一台）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;キーワード&#34;&gt;キーワード&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;基準局&lt;/li&gt;
-&lt;li&gt;移動局&lt;/li&gt;
-&lt;li&gt;RTCM3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ノウハウ&#34;&gt;ノウハウ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度）&lt;/li&gt;
-&lt;li&gt;地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い
-&lt;a href=&#34;http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf&#34;&gt;http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GPSの周波がLTEと干渉する可能性があるので、気をつける
-&lt;a href=&#34;https://www.gsi.go.jp/common/000195100.pdf&#34;&gt;https://www.gsi.go.jp/common/000195100.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;BeidouのC02衛星は避けたほうがいいらしい&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-		</item>
-	</channel>
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

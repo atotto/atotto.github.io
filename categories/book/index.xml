@@ -1,152 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>book on art arch</title>
-		<link>https://blog.artarch.net/categories/book/</link>
-		<description>Recent content in book on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Thu, 26 Mar 2015 22:48:03 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/categories/book/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>How Google Works</title>
-			<link>https://blog.artarch.net/posts/book/how_google_works/</link>
-			<pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/book/how_google_works/</guid>
-			<description>
-
-&lt;p&gt;読んで考えたことメモ&lt;/p&gt;
-
-&lt;h3 id=&#34;5年で起こり得ること&#34;&gt;5年で起こり得ること&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amzn.to/2K6NDAc&#34;&gt;How Google Works&lt;/a&gt; より:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;常識を捨て、想像力をたくましくし、これからの五年であなたの業界で「起こり得ること」は何かと自問してみよう。一番速く変わるものは何か、まったく変わらないものは何か。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&#34;変わるもの&#34;&gt;変わるもの:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;グラス型デバイスで、ディスプレイが不要になる
-
-&lt;ul&gt;
-&lt;li&gt;紙の必要性が問われる&lt;/li&gt;
-&lt;li&gt;タブレット型端末、PCが絶滅危惧種になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;グラス型デバイスで、ホロデッキっぽいものができる
-
-&lt;ul&gt;
-&lt;li&gt;仮想空間&lt;/li&gt;
-&lt;li&gt;モノのデザイン、建築の仕事の仕方が変わる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;コンピュータに話しかけるようになる
-
-&lt;ul&gt;
-&lt;li&gt;言葉でコンピュータにお仕事を依頼できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;筋斗雲みたいな車ができる
-
-&lt;ul&gt;
-&lt;li&gt;呼んだら車が来る。これが本物の自動車&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;定型化される仕事はロボットがこなす
-
-&lt;ul&gt;
-&lt;li&gt;作業の定型化が進み、カスタマイズされるものはとても高価になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;手仕事ブランドの確立
-
-&lt;ul&gt;
-&lt;li&gt;コンピュータ、ロボットではない、人の手によるプロダクトがブランドとして確立できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;個人の様々データが自動的に収集される
-
-&lt;ul&gt;
-&lt;li&gt;いまどこ？&lt;/li&gt;
-&lt;li&gt;心拍数は？&lt;/li&gt;
-&lt;li&gt;血流は？&lt;/li&gt;
-&lt;li&gt;集中してる？それとも眠たい？&lt;/li&gt;
-&lt;li&gt;イライラしてる？元気？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;レプリケータ
-
-&lt;ul&gt;
-&lt;li&gt;モノ・食べ物が家庭でもビルドできるようになる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;プログラミングできる人材の不足
-
-&lt;ul&gt;
-&lt;li&gt;タブレット型端末に慣れた人によるコンピュータ離れ&lt;/li&gt;
-&lt;li&gt;Qwertyキーボードが使えない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;コミュニケーション力の低下
-
-&lt;ul&gt;
-&lt;li&gt;人と人が偶然会うこと、知りあうきっかけの機会損失の増加&lt;/li&gt;
-&lt;li&gt;付き合うより一人&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;物流の自動化
-
-&lt;ul&gt;
-&lt;li&gt;ロボット化、自動車による宛先への自動配送&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;野菜工場
-
-&lt;ul&gt;
-&lt;li&gt;完全自動化された野菜工場による収益拡大&lt;/li&gt;
-&lt;li&gt;安全性のアピールによるブランドの確立&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;変わらないもの&#34;&gt;変わらないもの:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;人間
-
-&lt;ul&gt;
-&lt;li&gt;生物学的に。。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;宇宙
-
-&lt;ul&gt;
-&lt;li&gt;すくなくとも5年ではそう変わらない、と思う&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;天変地異に対する対応
-
-&lt;ul&gt;
-&lt;li&gt;起こってから対応する性&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;天気予報
-
-&lt;ul&gt;
-&lt;li&gt;むしろ当たらなくなっていくかも？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;スポーツ
-
-&lt;ul&gt;
-&lt;li&gt;種目、ルールはそんなに変わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;趣味
-
-&lt;ul&gt;
-&lt;li&gt;世代毎に違うけど、個人の趣味は大きく変わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ゲーム
-
-&lt;ul&gt;
-&lt;li&gt;ゲームに対する面白さは繰り返しやってくる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;電気ありきのシステム
-
-&lt;ul&gt;
-&lt;li&gt;電気の次は簡単に出てこない、切り替わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-		</item>
-	</channel>
+  <channel>
+    <title>book on art arch</title>
+    <link>https://blog.artarch.net/categories/book/</link>
+    <description>Recent content in book on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Thu, 26 Mar 2015 22:48:03 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/categories/book/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Google Works</title>
+      <link>https://blog.artarch.net/posts/book/how_google_works/</link>
+      <pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/how_google_works/</guid>
+      <description>&lt;p&gt;読んで考えたことメモ&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

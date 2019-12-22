@@ -1,46 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Tags on art arch</title>
-		<link>https://blog.artarch.net/tags/</link>
-		<description>Recent content in Tags on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/tags/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>GPS</title>
-			<link>https://blog.artarch.net/tags/gps/</link>
-			<pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/tags/gps/</guid>
-			<description></description>
-		</item>
-		<item>
-			<title>RTK</title>
-			<link>https://blog.artarch.net/tags/rtk/</link>
-			<pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/tags/rtk/</guid>
-			<description></description>
-		</item>
-		<item>
-			<title>Camera</title>
-			<link>https://blog.artarch.net/tags/camera/</link>
-			<pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/tags/camera/</guid>
-			<description></description>
-		</item>
-		<item>
-			<title>toy</title>
-			<link>https://blog.artarch.net/tags/toy/</link>
-			<pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/tags/toy/</guid>
-			<description></description>
-		</item>
-	</channel>
+  <channel>
+    <title>Tags on art arch</title>
+    <link>https://blog.artarch.net/tags/</link>
+    <description>Recent content in Tags on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GPS</title>
+      <link>https://blog.artarch.net/tags/gps/</link>
+      <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/gps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RTK</title>
+      <link>https://blog.artarch.net/tags/rtk/</link>
+      <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/rtk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camera</title>
+      <link>https://blog.artarch.net/tags/camera/</link>
+      <pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/camera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toy</title>
+      <link>https://blog.artarch.net/tags/toy/</link>
+      <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/toy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

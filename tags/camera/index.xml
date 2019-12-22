@@ -1,97 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Camera on art arch</title>
-		<link>https://blog.artarch.net/tags/camera/</link>
-		<description>Recent content in Camera on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Mon, 29 Jul 2019 21:37:21 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/tags/camera/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
-			<link>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</link>
-			<pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</guid>
-			<description>
-
-&lt;p&gt;フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。
-最近ではこのような仕組みのアダプタが出ているようだが、ちょっと大きい&amp;hellip;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.artarch.net/posts/camera_film_and_digital/imback.jpeg&#34; alt=&#34;imback&#34; /&gt;
-&lt;a href=&#34;https://www.imback.eu/&#34;&gt;https://www.imback.eu/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;カメラのフィルムを配置する部分にCMOSカメラを置いたらどうなるのか。
-Amazonなんかでは山のようにUSBカメラが売られている。&lt;/p&gt;
-
-&lt;p&gt;どうせならモロ黒カメラがいい
-&lt;a href=&#34;https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/&#34;&gt;https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;センササイズの問題&#34;&gt;センササイズの問題&lt;/h2&gt;
-
-&lt;p&gt;市販されているカメラのセンササイズは大きくても1/3インチ程度で、フルサイズの35mmx24mmに比べると劣る。
-このまま当てはめるとレンズの中心部分しか活用できず、また画角が狭くなるために望遠寄りとなる。
-広角のレンズアダプターなどをつければまだマシかもしれないが、カメラサイズが大きくなりがち。
-仮に35mmのセンサがあったとしても、レンズからの光が斜めに当たる部分が多くあるため、周辺光量に課題がありそう。
-センササイズが小さいものばかりなのは、大きくすると単に生産できる量が減り、単価が高くなる傾向があるため、できるだけ小さくすることで大量生産できる方向に働いている様子。&lt;/p&gt;
-
-&lt;h2 id=&#34;カメラの内部のレイアウト&#34;&gt;カメラの内部のレイアウト&lt;/h2&gt;
-
-&lt;p&gt;リッチにやれるなら、raspberry pi zeroあたりが収まると良さそう。
-バッテリーをどう組み込むのかは課題&lt;/p&gt;
-
-&lt;h2 id=&#34;シャッターとの同期はどうするか&#34;&gt;シャッターとの同期はどうするか&lt;/h2&gt;
-
-&lt;p&gt;カメラ側のシャッタースピード長めに取るとして、どう同期するか。
-バルブ撮影できるカメラだと長くできるが、写真撮ってる感が失われそう。
-カメラ側の露出を固定しつつ、動画撮影して明るい画像だけを取り出す、みたいなことになりそう。&lt;/p&gt;
-
-&lt;h2 id=&#34;ローリングシャッターがグローバルシャッターか&#34;&gt;ローリングシャッターがグローバルシャッターか&lt;/h2&gt;
-
-&lt;p&gt;カメラのシャッターを利用するのであれば、グローバルシャッターの方が良さそう。ローリングシャッターだと露光時間内に収まらなかった場合に中途半端な画像になる。&lt;/p&gt;
-
-&lt;h2 id=&#34;撮像面の比較&#34;&gt;撮像面の比較&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;規格&lt;/th&gt;
-&lt;th&gt;サイズ&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;35mm&lt;/td&gt;
-&lt;td&gt;36x24mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;APS-C&lt;/td&gt;
-&lt;td&gt;23.6x15.8mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1型&lt;/td&gt;
-&lt;td&gt;13.2x8.8mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1/3型&lt;/td&gt;
-&lt;td&gt;4.8x3.6mm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://antaresdigicame.org/photo_gallery_sp/photo_gallery/camera/camera87.html&#34;&gt;画像(イメージ)センサー・(CCD・CMOS)の大きさ比較&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-		</item>
-	</channel>
+  <channel>
+    <title>Camera on art arch</title>
+    <link>https://blog.artarch.net/tags/camera/</link>
+    <description>Recent content in Camera on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Mon, 29 Jul 2019 21:37:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/camera/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
+      <link>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</link>
+      <pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</guid>
+      <description>&lt;p&gt;フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

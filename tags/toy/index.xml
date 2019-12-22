@@ -1,32 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>toy on art arch</title>
-		<link>https://blog.artarch.net/tags/toy/</link>
-		<description>Recent content in toy on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Mon, 08 May 2017 21:04:23 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/tags/toy/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>Train Controller</title>
-			<link>https://blog.artarch.net/posts/works/train_controller/</link>
-			<pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/works/train_controller/</guid>
-			<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/ato.araki/posts/10213411490867148&#34;&gt;https://www.facebook.com/ato.araki/posts/10213411490867148&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/brbYwpX_ItY&#34;&gt;https://youtu.be/brbYwpX_ItY&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  <channel>
+    <title>toy on art arch</title>
+    <link>https://blog.artarch.net/tags/toy/</link>
+    <description>Recent content in toy on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Mon, 08 May 2017 21:04:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/toy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Train Controller</title>
+      <link>https://blog.artarch.net/posts/works/train_controller/</link>
+      <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/works/train_controller/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/brbYwpX_ItY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-		</item>
-	</channel>
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

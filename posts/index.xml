@@ -1,351 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on art arch</title>
-		<link>https://blog.artarch.net/posts/</link>
-		<description>Recent content in Posts on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>RTKをやってみるために調べたことと分かったこと</title>
-			<link>https://blog.artarch.net/posts/rtk/</link>
-			<pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/rtk/</guid>
-			<description>
-
-&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
+  <channel>
+    <title>Posts on art arch</title>
+    <link>https://blog.artarch.net/posts/</link>
+    <description>Recent content in Posts on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RTKをやってみるために調べたことと分かったこと</title>
+      <link>https://blog.artarch.net/posts/rtk/</link>
+      <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/rtk/</guid>
+      <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://qzss.go.jp/events/robotcar_191118.html&#34;&gt;https://qzss.go.jp/events/robotcar_191118.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;最初に調べたこと&#34;&gt;最初に調べたこと&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RTKとは何で、何が必要か&lt;/li&gt;
-&lt;li&gt;アンテナは何が必要か&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;わかったこと&#34;&gt;わかったこと&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする&lt;/li&gt;
-&lt;li&gt;RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。&lt;/li&gt;
-&lt;li&gt;1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）
-
-&lt;ul&gt;
-&lt;li&gt;価格が高め。&lt;/li&gt;
-&lt;li&gt;F9Pなどがある。アンテナも1周波と比較すると高価。&lt;/li&gt;
-&lt;li&gt;今後は2周波が来そう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる&lt;/li&gt;
-&lt;li&gt;基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる&lt;/li&gt;
-&lt;li&gt;M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。&lt;/li&gt;
-&lt;li&gt;GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。&lt;/li&gt;
-&lt;li&gt;docomoやsoftbankがRTKの基準局設置を進めている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;結果として購入したもの&#34;&gt;結果として購入したもの&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;M8T（一台）&lt;/li&gt;
-&lt;li&gt;GNSSアンテナ（一台）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;キーワード&#34;&gt;キーワード&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;基準局&lt;/li&gt;
-&lt;li&gt;移動局&lt;/li&gt;
-&lt;li&gt;RTCM3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ノウハウ&#34;&gt;ノウハウ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度）&lt;/li&gt;
-&lt;li&gt;地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い
-&lt;a href=&#34;http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf&#34;&gt;http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GPSの周波がLTEと干渉する可能性があるので、気をつける
-&lt;a href=&#34;https://www.gsi.go.jp/common/000195100.pdf&#34;&gt;https://www.gsi.go.jp/common/000195100.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;BeidouのC02衛星は避けたほうがいいらしい&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-		</item>
-		<item>
-			<title>Hugo &#43; Github Pagesにしてみる</title>
-			<link>https://blog.artarch.net/posts/hugo_github_pages/</link>
-			<pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/hugo_github_pages/</guid>
-			<description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;
-
-&lt;p&gt;NAISTにいた頃、&lt;a href=&#34;https://www.emacswiki.org/emacs/EmacsWikiMode&#34;&gt;emacs wiki&lt;/a&gt;で書いていた自分のページはすでに無くなっていた。10年持たないか。
-&lt;a href=&#34;https://robotics.naist.jp/member/old_members/2008/ato-a/A2wiki/WelcomePage.html&#34;&gt;https://robotics.naist.jp/member/old_members/2008/ato-a/A2wiki/WelcomePage.html&lt;/a&gt;&lt;/p&gt;
-</description>
-		</item>
-		<item>
-			<title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
-			<link>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</link>
-			<pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</guid>
-			<description>
-
-&lt;p&gt;フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。
-最近ではこのような仕組みのアダプタが出ているようだが、ちょっと大きい&amp;hellip;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.artarch.net/posts/camera_film_and_digital/imback.jpeg&#34; alt=&#34;imback&#34; /&gt;
-&lt;a href=&#34;https://www.imback.eu/&#34;&gt;https://www.imback.eu/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;カメラのフィルムを配置する部分にCMOSカメラを置いたらどうなるのか。
-Amazonなんかでは山のようにUSBカメラが売られている。&lt;/p&gt;
-
-&lt;p&gt;どうせならモロ黒カメラがいい
-&lt;a href=&#34;https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/&#34;&gt;https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;センササイズの問題&#34;&gt;センササイズの問題&lt;/h2&gt;
-
-&lt;p&gt;市販されているカメラのセンササイズは大きくても1/3インチ程度で、フルサイズの35mmx24mmに比べると劣る。
-このまま当てはめるとレンズの中心部分しか活用できず、また画角が狭くなるために望遠寄りとなる。
-広角のレンズアダプターなどをつければまだマシかもしれないが、カメラサイズが大きくなりがち。
-仮に35mmのセンサがあったとしても、レンズからの光が斜めに当たる部分が多くあるため、周辺光量に課題がありそう。
-センササイズが小さいものばかりなのは、大きくすると単に生産できる量が減り、単価が高くなる傾向があるため、できるだけ小さくすることで大量生産できる方向に働いている様子。&lt;/p&gt;
-
-&lt;h2 id=&#34;カメラの内部のレイアウト&#34;&gt;カメラの内部のレイアウト&lt;/h2&gt;
-
-&lt;p&gt;リッチにやれるなら、raspberry pi zeroあたりが収まると良さそう。
-バッテリーをどう組み込むのかは課題&lt;/p&gt;
-
-&lt;h2 id=&#34;シャッターとの同期はどうするか&#34;&gt;シャッターとの同期はどうするか&lt;/h2&gt;
-
-&lt;p&gt;カメラ側のシャッタースピード長めに取るとして、どう同期するか。
-バルブ撮影できるカメラだと長くできるが、写真撮ってる感が失われそう。
-カメラ側の露出を固定しつつ、動画撮影して明るい画像だけを取り出す、みたいなことになりそう。&lt;/p&gt;
-
-&lt;h2 id=&#34;ローリングシャッターがグローバルシャッターか&#34;&gt;ローリングシャッターがグローバルシャッターか&lt;/h2&gt;
-
-&lt;p&gt;カメラのシャッターを利用するのであれば、グローバルシャッターの方が良さそう。ローリングシャッターだと露光時間内に収まらなかった場合に中途半端な画像になる。&lt;/p&gt;
-
-&lt;h2 id=&#34;撮像面の比較&#34;&gt;撮像面の比較&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;規格&lt;/th&gt;
-&lt;th&gt;サイズ&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;35mm&lt;/td&gt;
-&lt;td&gt;36x24mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;APS-C&lt;/td&gt;
-&lt;td&gt;23.6x15.8mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1型&lt;/td&gt;
-&lt;td&gt;13.2x8.8mm&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;1/3型&lt;/td&gt;
-&lt;td&gt;4.8x3.6mm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://antaresdigicame.org/photo_gallery_sp/photo_gallery/camera/camera87.html&#34;&gt;画像(イメージ)センサー・(CCD・CMOS)の大きさ比較&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-		</item>
-		<item>
-			<title>Pomodoro Timer</title>
-			<link>https://blog.artarch.net/posts/works/pomodoro_timer/</link>
-			<pubDate>Sat, 06 Apr 2019 22:12:32 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/works/pomodoro_timer/</guid>
-			<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/atotto/pomodoro-timer&#34;&gt;https://github.com/atotto/pomodoro-timer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/p2KY_9WpKLg&#34;&gt;https://youtu.be/p2KY_9WpKLg&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo &#43; Github Pagesにしてみる</title>
+      <link>https://blog.artarch.net/posts/hugo_github_pages/</link>
+      <pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/hugo_github_pages/</guid>
+      <description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
+      <link>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</link>
+      <pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</guid>
+      <description>&lt;p&gt;フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pomodoro Timer</title>
+      <link>https://blog.artarch.net/posts/works/pomodoro_timer/</link>
+      <pubDate>Sat, 06 Apr 2019 22:12:32 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/works/pomodoro_timer/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/p2KY_9WpKLg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-		</item>
-		<item>
-			<title>Train Controller</title>
-			<link>https://blog.artarch.net/posts/works/train_controller/</link>
-			<pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/works/train_controller/</guid>
-			<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/ato.araki/posts/10213411490867148&#34;&gt;https://www.facebook.com/ato.araki/posts/10213411490867148&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/brbYwpX_ItY&#34;&gt;https://youtu.be/brbYwpX_ItY&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Train Controller</title>
+      <link>https://blog.artarch.net/posts/works/train_controller/</link>
+      <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/works/train_controller/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/brbYwpX_ItY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-		</item>
-		<item>
-			<title>How Google Works</title>
-			<link>https://blog.artarch.net/posts/book/how_google_works/</link>
-			<pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/book/how_google_works/</guid>
-			<description>
-
-&lt;p&gt;読んで考えたことメモ&lt;/p&gt;
-
-&lt;h3 id=&#34;5年で起こり得ること&#34;&gt;5年で起こり得ること&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amzn.to/2K6NDAc&#34;&gt;How Google Works&lt;/a&gt; より:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;常識を捨て、想像力をたくましくし、これからの五年であなたの業界で「起こり得ること」は何かと自問してみよう。一番速く変わるものは何か、まったく変わらないものは何か。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&#34;変わるもの&#34;&gt;変わるもの:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;グラス型デバイスで、ディスプレイが不要になる
-
-&lt;ul&gt;
-&lt;li&gt;紙の必要性が問われる&lt;/li&gt;
-&lt;li&gt;タブレット型端末、PCが絶滅危惧種になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;グラス型デバイスで、ホロデッキっぽいものができる
-
-&lt;ul&gt;
-&lt;li&gt;仮想空間&lt;/li&gt;
-&lt;li&gt;モノのデザイン、建築の仕事の仕方が変わる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;コンピュータに話しかけるようになる
-
-&lt;ul&gt;
-&lt;li&gt;言葉でコンピュータにお仕事を依頼できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;筋斗雲みたいな車ができる
-
-&lt;ul&gt;
-&lt;li&gt;呼んだら車が来る。これが本物の自動車&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;定型化される仕事はロボットがこなす
-
-&lt;ul&gt;
-&lt;li&gt;作業の定型化が進み、カスタマイズされるものはとても高価になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;手仕事ブランドの確立
-
-&lt;ul&gt;
-&lt;li&gt;コンピュータ、ロボットではない、人の手によるプロダクトがブランドとして確立できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;個人の様々データが自動的に収集される
-
-&lt;ul&gt;
-&lt;li&gt;いまどこ？&lt;/li&gt;
-&lt;li&gt;心拍数は？&lt;/li&gt;
-&lt;li&gt;血流は？&lt;/li&gt;
-&lt;li&gt;集中してる？それとも眠たい？&lt;/li&gt;
-&lt;li&gt;イライラしてる？元気？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;レプリケータ
-
-&lt;ul&gt;
-&lt;li&gt;モノ・食べ物が家庭でもビルドできるようになる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;プログラミングできる人材の不足
-
-&lt;ul&gt;
-&lt;li&gt;タブレット型端末に慣れた人によるコンピュータ離れ&lt;/li&gt;
-&lt;li&gt;Qwertyキーボードが使えない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;コミュニケーション力の低下
-
-&lt;ul&gt;
-&lt;li&gt;人と人が偶然会うこと、知りあうきっかけの機会損失の増加&lt;/li&gt;
-&lt;li&gt;付き合うより一人&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;物流の自動化
-
-&lt;ul&gt;
-&lt;li&gt;ロボット化、自動車による宛先への自動配送&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;野菜工場
-
-&lt;ul&gt;
-&lt;li&gt;完全自動化された野菜工場による収益拡大&lt;/li&gt;
-&lt;li&gt;安全性のアピールによるブランドの確立&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;変わらないもの&#34;&gt;変わらないもの:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;人間
-
-&lt;ul&gt;
-&lt;li&gt;生物学的に。。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;宇宙
-
-&lt;ul&gt;
-&lt;li&gt;すくなくとも5年ではそう変わらない、と思う&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;天変地異に対する対応
-
-&lt;ul&gt;
-&lt;li&gt;起こってから対応する性&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;天気予報
-
-&lt;ul&gt;
-&lt;li&gt;むしろ当たらなくなっていくかも？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;スポーツ
-
-&lt;ul&gt;
-&lt;li&gt;種目、ルールはそんなに変わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;趣味
-
-&lt;ul&gt;
-&lt;li&gt;世代毎に違うけど、個人の趣味は大きく変わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ゲーム
-
-&lt;ul&gt;
-&lt;li&gt;ゲームに対する面白さは繰り返しやってくる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;電気ありきのシステム
-
-&lt;ul&gt;
-&lt;li&gt;電気の次は簡単に出てこない、切り替わらない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-		</item>
-	</channel>
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>How Google Works</title>
+      <link>https://blog.artarch.net/posts/book/how_google_works/</link>
+      <pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/how_google_works/</guid>
+      <description>&lt;p&gt;読んで考えたことメモ&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>

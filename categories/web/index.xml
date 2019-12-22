@@ -1,26 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>web on art arch</title>
-		<link>https://blog.artarch.net/categories/web/</link>
-		<description>Recent content in web on art arch</description>
-		<generator>Hugo 0.59.1 -- gohugo.io</generator>
-		<language>ja</language>
-		<managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-		<webMaster>ato.araki@gmail.com (ato)</webMaster>
-		<copyright>ato — All rights reserved.</copyright>
-		<lastBuildDate>Sun, 10 Nov 2019 19:55:42 +0900</lastBuildDate>
-		<atom:link href="https://blog.artarch.net/categories/web/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>Hugo &#43; Github Pagesにしてみる</title>
-			<link>https://blog.artarch.net/posts/hugo_github_pages/</link>
-			<pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
-			<author>ato.araki@gmail.com (ato)</author>
-			<guid isPermaLink="true">https://blog.artarch.net/posts/hugo_github_pages/</guid>
-			<description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;
-
-&lt;p&gt;NAISTにいた頃、&lt;a href=&#34;https://www.emacswiki.org/emacs/EmacsWikiMode&#34;&gt;emacs wiki&lt;/a&gt;で書いていた自分のページはすでに無くなっていた。10年持たないか。
-&lt;a href=&#34;https://robotics.naist.jp/member/old_members/2008/ato-a/A2wiki/WelcomePage.html&#34;&gt;https://robotics.naist.jp/member/old_members/2008/ato-a/A2wiki/WelcomePage.html&lt;/a&gt;&lt;/p&gt;
-</description>
-		</item>
-	</channel>
+  <channel>
+    <title>web on art arch</title>
+    <link>https://blog.artarch.net/categories/web/</link>
+    <description>Recent content in web on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Nov 2019 19:55:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo &#43; Github Pagesにしてみる</title>
+      <link>https://blog.artarch.net/posts/hugo_github_pages/</link>
+      <pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/hugo_github_pages/</guid>
+      <description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
 </rss>
