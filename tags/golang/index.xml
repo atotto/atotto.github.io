@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on art arch</title>
+    <link>https://blog.artarch.net/tags/golang/</link>
+    <description>Recent content in golang on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Sat, 29 Sep 2012 00:35:36 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
+      <link>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</link>
+      <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</guid>
+      <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

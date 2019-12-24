@@ -50,5 +50,59 @@
       <description></description>
     </item>
     
+    <item>
+      <title>arduino</title>
+      <link>https://blog.artarch.net/tags/arduino/</link>
+      <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry-pi</title>
+      <link>https://blog.artarch.net/tags/raspberry-pi/</link>
+      <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USB</title>
+      <link>https://blog.artarch.net/tags/usb/</link>
+      <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keyboard</title>
+      <link>https://blog.artarch.net/tags/keyboard/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/keyboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blink1</title>
+      <link>https://blog.artarch.net/tags/blink1/</link>
+      <pubDate>Thu, 21 Aug 2014 22:47:29 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/blink1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://blog.artarch.net/tags/golang/</link>
+      <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/tags/golang/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

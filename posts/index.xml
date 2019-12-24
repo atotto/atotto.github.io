@@ -78,12 +78,118 @@
     </item>
     
     <item>
+      <title>DigisparkとLM61で温度を測る</title>
+      <link>https://blog.artarch.net/posts/device/digispark_lm61_usb/</link>
+      <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/digispark_lm61_usb/</guid>
+      <description>&lt;p&gt;最近Digisparkで遊ぶのにはまってます。
+DigiUSBの使い方の導入として、温度をLM61で計測し、データを読んでみたのでメモ。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Piに挿せるモータードライバを試す</title>
+      <link>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</link>
+      <pubDate>Sun, 04 Dec 2016 18:17:22 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</guid>
+      <description>&lt;p&gt;raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LinuxからUSB HUBの電源のON/OFFを制御してみる</title>
+      <link>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</link>
+      <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</guid>
+      <description>&lt;p&gt;USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
+いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</guid>
+      <description>&lt;p&gt;年末の掃除もかねてメンテナンス。&lt;/p&gt;
+
+&lt;p&gt;キーの効きが悪いところがあったので調査。
+Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/posts/device/tex-yoda/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/tex-yoda/</guid>
+      <description>&lt;p&gt;メカニカルキーボードにトラックポイントがついているキーボード(Tex Yoda)です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>How Google Works</title>
       <link>https://blog.artarch.net/posts/book/how_google_works/</link>
       <pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
       <author>ato.araki@gmail.com (ato)</author>
       <guid>https://blog.artarch.net/posts/book/how_google_works/</guid>
       <description>&lt;p&gt;読んで考えたことメモ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>blink(1) mk2を買った</title>
+      <link>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</link>
+      <pubDate>Thu, 21 Aug 2014 22:47:29 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://thingm.com/products/blink-1/&#34;&gt;blink(1) mk2 USB RGB LED&lt;/a&gt; を同僚と一緒に購入しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lean UX</title>
+      <link>https://blog.artarch.net/posts/book/lean-ux/</link>
+      <pubDate>Mon, 21 Jul 2014 22:40:57 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/lean-ux/</guid>
+      <description>&lt;p&gt;先日、読書会で読んできました。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;div class=&#34;amazon-box&#34;&gt;&lt;div class=&#34;amazon-image&#34;&gt;
+        &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4873116619/blog310712-22/ref=nosim/&#34; target=&#34;_blank&#34;&gt;
+            &lt;img border=&#34;0&#34; src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4873116619&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL160_&amp;tag=blog310712-22&#34; &gt;
+        &lt;/a&gt;
+    &lt;/div&gt;&lt;div class=&#34;amazon-info&#34;&gt;
+        &lt;div class=&#34;amazon-name&#34;&gt;
+            &lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4873116619/blog310712-22/ref=nosim/&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;clear-left&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;この本をざっくりと説明すると、UIデザイナ＋エンジニア達がアジャイル開発をリーン・スタートアップの要領でプロダクト開発をすすめるために必要なこと・やることをおおまかにまとめた本、です。
+Lean UXというタイトルからするとユーザーエクスペリエンスをリーンを通じてどうデザインするか、ということを想像するかもしれませんが、UXのtipsなどはなく、純粋にリーンの話です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>APIデザインの極意</title>
+      <link>https://blog.artarch.net/posts/book/practical-api-design/</link>
+      <pubDate>Fri, 13 Jun 2014 06:46:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/practical-api-design/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/484433591X/hatena310712-22/&#34;&gt;APIデザインの極意&lt;/a&gt;
+を、この本の訳者の &lt;a href=&#34;http://twitter.com/yoshiki_shibata/status/463985363195686912&#34;&gt;@yoshiki_shibata さんがレビューを募集&lt;/a&gt;していたので応募してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
+      <link>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</link>
+      <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</guid>
+      <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
     </item>
     
   </channel>

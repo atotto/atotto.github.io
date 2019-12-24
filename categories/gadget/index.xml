@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gadget on art arch</title>
+    <link>https://blog.artarch.net/categories/gadget/</link>
+    <description>Recent content in gadget on art arch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato)</webMaster>
+    <copyright>ato — All rights reserved.</copyright>
+    <lastBuildDate>Fri, 09 Oct 2015 12:13:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/categories/gadget/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LinuxからUSB HUBの電源のON/OFFを制御してみる</title>
+      <link>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</link>
+      <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</guid>
+      <description>&lt;p&gt;USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
+いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/posts/device/tex-yoda/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/tex-yoda/</guid>
+      <description>&lt;p&gt;メカニカルキーボードにトラックポイントがついているキーボード(Tex Yoda)です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>blink(1) mk2を買った</title>
+      <link>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</link>
+      <pubDate>Thu, 21 Aug 2014 22:47:29 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://thingm.com/products/blink-1/&#34;&gt;blink(1) mk2 USB RGB LED&lt;/a&gt; を同僚と一緒に購入しました。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

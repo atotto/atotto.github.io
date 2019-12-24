@@ -98,6 +98,61 @@
   </url>
   
   <url>
+    <loc>https://blog.artarch.net/tags/arduino/</loc>
+    <lastmod>2016-12-19T20:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/device/digispark_lm61_usb/</loc>
+    <lastmod>2016-12-19T20:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/raspberry-pi/</loc>
+    <lastmod>2016-12-19T20:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</loc>
+    <lastmod>2016-12-04T18:17:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/gadget/</loc>
+    <lastmod>2015-10-09T12:13:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</loc>
+    <lastmod>2015-10-09T12:13:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/usb/</loc>
+    <lastmod>2015-10-09T12:13:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/keyboard/</loc>
+    <lastmod>2015-06-04T18:15:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/repair/</loc>
+    <lastmod>2015-06-04T18:15:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</loc>
+    <lastmod>2015-06-04T18:15:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/device/tex-yoda/</loc>
+    <lastmod>2015-06-04T18:15:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.artarch.net/categories/book/</loc>
     <lastmod>2015-03-26T22:48:03+09:00</lastmod>
   </url>
@@ -108,8 +163,38 @@
   </url>
   
   <url>
+    <loc>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</loc>
+    <lastmod>2014-08-21T22:47:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/blink1/</loc>
+    <lastmod>2014-08-21T22:47:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/book/lean-ux/</loc>
+    <lastmod>2014-07-21T22:40:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/book/practical-api-design/</loc>
+    <lastmod>2014-06-13T06:46:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.artarch.net/about/</loc>
     <lastmod>2013-09-01T15:44:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</loc>
+    <lastmod>2012-09-29T00:35:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/golang/</loc>
+    <lastmod>2012-09-29T00:35:36+09:00</lastmod>
   </url>
   
 </urlset>

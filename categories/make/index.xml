@@ -36,5 +36,26 @@
 &lt;/div&gt;</description>
     </item>
     
+    <item>
+      <title>DigisparkとLM61で温度を測る</title>
+      <link>https://blog.artarch.net/posts/device/digispark_lm61_usb/</link>
+      <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/digispark_lm61_usb/</guid>
+      <description>&lt;p&gt;最近Digisparkで遊ぶのにはまってます。
+DigiUSBの使い方の導入として、温度をLM61で計測し、データを読んでみたのでメモ。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Piに挿せるモータードライバを試す</title>
+      <link>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</link>
+      <pubDate>Sun, 04 Dec 2016 18:17:22 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</guid>
+      <description>&lt;p&gt;raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
