@@ -9,10 +9,19 @@
     <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato)</webMaster>
     <copyright>ato — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 22 Dec 2019 22:39:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Dec 2019 00:22:42 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Puzzlers</title>
+      <link>https://blog.artarch.net/posts/golang/go-puzzlers/</link>
+      <pubDate>Wed, 25 Dec 2019 00:22:42 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/golang/go-puzzlers/</guid>
+      <description>&lt;p&gt;第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>hugoでOGP確認</title>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on art arch</title>
-    <link>https://blog.artarch.net/tags/golang/</link>
-    <description>Recent content in golang on art arch</description>
+    <title>presentation on art arch</title>
+    <link>https://blog.artarch.net/categories/presentation/</link>
+    <description>Recent content in presentation on art arch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>ato — All rights reserved.</copyright>
     <lastBuildDate>Wed, 25 Dec 2019 00:22:42 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.artarch.net/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.artarch.net/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <author>ato.araki@gmail.com (ato)</author>
       <guid>https://blog.artarch.net/posts/golang/go-puzzlers/</guid>
       <description>&lt;p&gt;第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
-      <link>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</link>
-      <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
-      <guid>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</guid>
-      <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
     </item>
     
   </channel>

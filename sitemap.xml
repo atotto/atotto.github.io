@@ -4,21 +4,41 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.artarch.net/posts/web/ogp/</loc>
-    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
+    <loc>https://blog.artarch.net/posts/golang/go-puzzlers/</loc>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/golang/</loc>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/presentation/</loc>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/web/ogp/</loc>
     <lastmod>2019-12-22T22:39:14+09:00</lastmod>
   </url>
   
@@ -44,11 +64,6 @@
   
   <url>
     <loc>https://blog.artarch.net/posts/rtk/</loc>
-    <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
   </url>
   
@@ -189,11 +204,6 @@
   
   <url>
     <loc>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</loc>
-    <lastmod>2012-09-29T00:35:36+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/golang/</loc>
     <lastmod>2012-09-29T00:35:36+09:00</lastmod>
   </url>
   
