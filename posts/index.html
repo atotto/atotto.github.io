@@ -216,6 +216,44 @@
 			<div class="flex flex-column flex-row-ns">
 				
 				<div class="w-100 w6-ns pl3-ns">
+					<h1 class="f3 fw1 mt0 lh-title"><a href="https://blog.artarch.net/posts/golang/go-test-pattern/" class="color-inherit dim link">Goでテストを書く(テストの実装パターン集)</a></h1>
+					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+						
+							<p><strong><a href="https://qiita.com/atotto/items/f6b8c773264a3183a53c">Go2 Advent Calendar 2017 20日目</a>の転載です。</strong></p>
+
+<hr />
+
+<p>Goでテストを書くお話です。</p>
+
+<p>基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。</p>
+
+<p>ポイントを先に列挙します:</p>
+
+<ul>
+<li>テストのエラーメッセージは丁寧に書こう</li>
+<li>テーブルテストを活用してパターンを整理しながら網羅しよう</li>
+<li><code>ｔ．Run</code>をつかって大きなテストを分割しよう</li>
+<li><code>t.Helper</code>をつかってテストエラーの箇所をわかりやすくしよう</li>
+<li>テスト用のデータは <code>testdata</code> ディレクトリに置こう</li>
+<li>Setup/Teardownをうまく書いてテストの見通しをよくしよう</li>
+<li>等</li>
+</ul>
+							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/posts/golang/go-test-pattern/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+
+    
+      <div class="relative w-100">
+	<article>
+		<div class="db pv4  ph0-l no-underline dark-gray">
+			<div class="flex flex-column flex-row-ns">
+				
+				<div class="w-100 w6-ns pl3-ns">
 					<h1 class="f3 fw1 mt0 lh-title"><a href="https://blog.artarch.net/posts/works/train_controller/" class="color-inherit dim link">Train Controller</a></h1>
 					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
 						
@@ -278,27 +316,6 @@ DigiUSBの使い方の導入として、温度をLM61で計測し、データを
 
 <p>Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi</p>
 							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</article>
-</div>
-
-    
-      <div class="relative w-100">
-	<article>
-		<div class="db pv4  ph0-l no-underline dark-gray">
-			<div class="flex flex-column flex-row-ns">
-				
-				<div class="w-100 w6-ns pl3-ns">
-					<h1 class="f3 fw1 mt0 lh-title"><a href="https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/" class="color-inherit dim link">LinuxからUSB HUBの電源のON/OFFを制御してみる</a></h1>
-					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-						
-							<p>USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
-いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。</p>
-							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
 						
 					</div>
 				</div>

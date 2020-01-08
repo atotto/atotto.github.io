@@ -76,6 +76,33 @@
     </item>
     
     <item>
+      <title>Goでテストを書く(テストの実装パターン集)</title>
+      <link>https://blog.artarch.net/posts/golang/go-test-pattern/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/golang/go-test-pattern/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://qiita.com/atotto/items/f6b8c773264a3183a53c&#34;&gt;Go2 Advent Calendar 2017 20日目&lt;/a&gt;の転載です。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Goでテストを書くお話です。&lt;/p&gt;
+
+&lt;p&gt;基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。&lt;/p&gt;
+
+&lt;p&gt;ポイントを先に列挙します:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;テストのエラーメッセージは丁寧に書こう&lt;/li&gt;
+&lt;li&gt;テーブルテストを活用してパターンを整理しながら網羅しよう&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ｔ．Run&lt;/code&gt;をつかって大きなテストを分割しよう&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t.Helper&lt;/code&gt;をつかってテストエラーの箇所をわかりやすくしよう&lt;/li&gt;
+&lt;li&gt;テスト用のデータは &lt;code&gt;testdata&lt;/code&gt; ディレクトリに置こう&lt;/li&gt;
+&lt;li&gt;Setup/Teardownをうまく書いてテストの見通しをよくしよう&lt;/li&gt;
+&lt;li&gt;等&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Train Controller</title>
       <link>https://blog.artarch.net/posts/works/train_controller/</link>
       <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>

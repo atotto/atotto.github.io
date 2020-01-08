@@ -103,6 +103,11 @@
   </url>
   
   <url>
+    <loc>https://blog.artarch.net/posts/golang/go-test-pattern/</loc>
+    <lastmod>2017-12-20T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.artarch.net/tags/toy/</loc>
     <lastmod>2017-05-08T21:04:23+09:00</lastmod>
   </url>
