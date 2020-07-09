@@ -4,12 +4,42 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/linux/gnome/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/gnome/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/linux/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/memo/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://blog.artarch.net/posts/</loc>
-    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.artarch.net/categories/presentation/</loc>
-    <lastmod>2019-12-25T00:22:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/</loc>
     <lastmod>2019-12-25T00:22:42+09:00</lastmod>
   </url>
   
