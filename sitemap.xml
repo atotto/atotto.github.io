@@ -4,12 +4,37 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/goland/</loc>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</loc>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/memo/</loc>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
   </url>
   
   <url>
@@ -24,21 +49,6 @@
   
   <url>
     <loc>https://blog.artarch.net/tags/linux/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/categories/memo/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/posts/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/</loc>
     <lastmod>2020-06-25T22:32:32+09:00</lastmod>
   </url>
   
