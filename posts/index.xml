@@ -9,10 +9,19 @@
     <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato)</webMaster>
     <copyright>ato — All rights reserved.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 23:23:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2020 22:55:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>証明書関連tips</title>
+      <link>https://blog.artarch.net/posts/web/certificate_tips/</link>
+      <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato)</author>
+      <guid>https://blog.artarch.net/posts/web/certificate_tips/</guid>
+      <description>&lt;p&gt;証明書を確認するときによく使うコマンドラインtips&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JetBrains OSS request でライセンスを応募してみた</title>

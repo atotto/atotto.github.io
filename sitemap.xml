@@ -4,12 +4,47 @@
   
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/linux/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/memo/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/tags/tips/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/categories/web/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.artarch.net/posts/web/certificate_tips/</loc>
+    <lastmod>2020-10-10T22:55:12+09:00</lastmod>
   </url>
   
   <url>
@@ -23,32 +58,12 @@
   </url>
   
   <url>
-    <loc>https://blog.artarch.net/categories/memo/</loc>
-    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/posts/</loc>
-    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/</loc>
-    <lastmod>2020-09-01T23:23:01+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.artarch.net/posts/linux/gnome/</loc>
     <lastmod>2020-06-25T22:32:32+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.artarch.net/tags/gnome/</loc>
-    <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/tags/linux/</loc>
     <lastmod>2020-06-25T22:32:32+09:00</lastmod>
   </url>
   
@@ -89,11 +104,6 @@
   
   <url>
     <loc>https://blog.artarch.net/posts/web/ogp/</loc>
-    <lastmod>2019-12-22T22:39:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.artarch.net/categories/web/</loc>
     <lastmod>2019-12-22T22:39:14+09:00</lastmod>
   </url>
   
