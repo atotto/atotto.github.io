@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>works on art arch</title>
+    <title>works on artarch</title>
     <link>https://blog.artarch.net/series/works/</link>
-    <description>Recent content in works on art arch</description>
+    <description>Recent content in works on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sun, 24 May 2020 23:42:34 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/series/works/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>Home Rover Robot (micro:bit&#43;robot)</title>
       <link>https://blog.artarch.net/posts/works/microbit-robot/</link>
       <pubDate>Sun, 24 May 2020 23:42:34 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/works/microbit-robot/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/Z31ZHTtBVgU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -32,7 +32,7 @@
       <title>Pomodoro Timer</title>
       <link>https://blog.artarch.net/posts/works/pomodoro_timer/</link>
       <pubDate>Sat, 06 Apr 2019 22:12:32 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/works/pomodoro_timer/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/p2KY_9WpKLg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -43,7 +43,7 @@
       <title>Train Controller</title>
       <link>https://blog.artarch.net/posts/works/train_controller/</link>
       <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/works/train_controller/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/brbYwpX_ItY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;

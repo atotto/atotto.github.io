@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>memo on art arch</title>
+    <title>memo on artarch</title>
     <link>https://blog.artarch.net/categories/memo/</link>
-    <description>Recent content in memo on art arch</description>
+    <description>Recent content in memo on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Oct 2020 22:55:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/memo/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>証明書関連tips</title>
       <link>https://blog.artarch.net/posts/web/certificate_tips/</link>
       <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/web/certificate_tips/</guid>
       <description>&lt;p&gt;証明書を確認するときによく使うコマンドラインtips&lt;/p&gt;</description>
     </item>
@@ -27,7 +27,7 @@
       <title>JetBrains OSS request でライセンスを応募してみた</title>
       <link>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</link>
       <pubDate>Tue, 01 Sep 2020 23:23:01 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</guid>
       <description>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
 emacsはデドックス中。
@@ -40,7 +40,7 @@ emacsはデドックス中。
       <title>debian stretch GDM (gnome) 設定メモ</title>
       <link>https://blog.artarch.net/posts/linux/gnome/</link>
       <pubDate>Thu, 25 Jun 2020 22:32:32 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/linux/gnome/</guid>
       <description>マウスカーソルのサイズを変更する $ gsettings set org.gnome.desktop.interface cursor-size 48  24,32,48,64で指定するらしい。 GUI(SettingsやTweak Tool)で変更できないような。
 フォントサイズを変更する $ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6  4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。</description>

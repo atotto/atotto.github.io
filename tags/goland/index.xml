@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>goland on art arch</title>
+    <title>goland on artarch</title>
     <link>https://blog.artarch.net/tags/goland/</link>
-    <description>Recent content in goland on art arch</description>
+    <description>Recent content in goland on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Tue, 01 Sep 2020 23:23:01 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/goland/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>JetBrains OSS request でライセンスを応募してみた</title>
       <link>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</link>
       <pubDate>Tue, 01 Sep 2020 23:23:01 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</guid>
       <description>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
 emacsはデドックス中。

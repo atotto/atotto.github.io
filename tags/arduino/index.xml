@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>arduino on art arch</title>
+    <title>arduino on artarch</title>
     <link>https://blog.artarch.net/tags/arduino/</link>
-    <description>Recent content in arduino on art arch</description>
+    <description>Recent content in arduino on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Mon, 19 Dec 2016 20:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>DigisparkとLM61で温度を測る</title>
       <link>https://blog.artarch.net/posts/device/digispark_lm61_usb/</link>
       <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/device/digispark_lm61_usb/</guid>
       <description>&lt;p&gt;最近Digisparkで遊ぶのにはまってます。
 DigiUSBの使い方の導入として、温度をLM61で計測し、データを読んでみたのでメモ。&lt;/p&gt;</description>
@@ -28,7 +28,7 @@ DigiUSBの使い方の導入として、温度をLM61で計測し、データを
       <title>Raspberry Piに挿せるモータードライバを試す</title>
       <link>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</link>
       <pubDate>Sun, 04 Dec 2016 18:17:22 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</guid>
       <description>&lt;p&gt;raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。&lt;/p&gt;
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web on art arch</title>
+    <title>web on artarch</title>
     <link>https://blog.artarch.net/categories/web/</link>
-    <description>Recent content in web on art arch</description>
+    <description>Recent content in web on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Oct 2020 22:55:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/web/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>証明書関連tips</title>
       <link>https://blog.artarch.net/posts/web/certificate_tips/</link>
       <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/web/certificate_tips/</guid>
       <description>&lt;p&gt;証明書を確認するときによく使うコマンドラインtips&lt;/p&gt;</description>
     </item>
@@ -27,7 +27,7 @@
       <title>hugoでOGP確認</title>
       <link>https://blog.artarch.net/posts/web/ogp/</link>
       <pubDate>Sun, 22 Dec 2019 22:39:14 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/web/ogp/</guid>
       <description>&lt;p&gt;OPG設定メモ&lt;/p&gt;</description>
     </item>
@@ -36,7 +36,7 @@
       <title>Hugo &#43; Github Pagesにしてみる</title>
       <link>https://blog.artarch.net/posts/web/hugo_github_pages/</link>
       <pubDate>Sun, 10 Nov 2019 19:55:42 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/web/hugo_github_pages/</guid>
       <description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;</description>
     </item>

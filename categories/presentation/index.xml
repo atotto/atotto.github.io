@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>presentation on art arch</title>
+    <title>presentation on artarch</title>
     <link>https://blog.artarch.net/categories/presentation/</link>
-    <description>Recent content in presentation on art arch</description>
+    <description>Recent content in presentation on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Wed, 25 Dec 2019 00:22:42 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>Go Puzzlers</title>
       <link>https://blog.artarch.net/posts/golang/go-puzzlers/</link>
       <pubDate>Wed, 25 Dec 2019 00:22:42 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/golang/go-puzzlers/</guid>
       <description>&lt;p&gt;第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。&lt;/p&gt;</description>
     </item>

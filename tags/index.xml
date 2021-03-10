@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on art arch</title>
+    <title>Tags on artarch</title>
     <link>https://blog.artarch.net/tags/</link>
-    <description>Recent content in Tags on art arch</description>
+    <description>Recent content in Tags on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sat, 10 Oct 2020 22:55:12 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>linux</title>
       <link>https://blog.artarch.net/tags/linux/</link>
       <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/linux/</guid>
       <description></description>
     </item>
@@ -27,7 +27,7 @@
       <title>tips</title>
       <link>https://blog.artarch.net/tags/tips/</link>
       <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/tips/</guid>
       <description></description>
     </item>
@@ -36,7 +36,7 @@
       <title>goland</title>
       <link>https://blog.artarch.net/tags/goland/</link>
       <pubDate>Tue, 01 Sep 2020 23:23:01 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/goland/</guid>
       <description></description>
     </item>
@@ -45,7 +45,7 @@
       <title>gnome</title>
       <link>https://blog.artarch.net/tags/gnome/</link>
       <pubDate>Thu, 25 Jun 2020 22:32:32 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/gnome/</guid>
       <description></description>
     </item>
@@ -54,7 +54,7 @@
       <title>golang</title>
       <link>https://blog.artarch.net/tags/golang/</link>
       <pubDate>Wed, 25 Dec 2019 00:22:42 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/golang/</guid>
       <description></description>
     </item>
@@ -63,7 +63,7 @@
       <title>GPS</title>
       <link>https://blog.artarch.net/tags/gps/</link>
       <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/gps/</guid>
       <description></description>
     </item>
@@ -72,7 +72,7 @@
       <title>RTK</title>
       <link>https://blog.artarch.net/tags/rtk/</link>
       <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/rtk/</guid>
       <description></description>
     </item>
@@ -81,7 +81,7 @@
       <title>Camera</title>
       <link>https://blog.artarch.net/tags/camera/</link>
       <pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/camera/</guid>
       <description></description>
     </item>
@@ -90,7 +90,7 @@
       <title>toy</title>
       <link>https://blog.artarch.net/tags/toy/</link>
       <pubDate>Mon, 08 May 2017 21:04:23 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/toy/</guid>
       <description></description>
     </item>
@@ -99,7 +99,7 @@
       <title>arduino</title>
       <link>https://blog.artarch.net/tags/arduino/</link>
       <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/arduino/</guid>
       <description></description>
     </item>
@@ -108,7 +108,7 @@
       <title>raspberry-pi</title>
       <link>https://blog.artarch.net/tags/raspberry-pi/</link>
       <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/raspberry-pi/</guid>
       <description></description>
     </item>
@@ -117,7 +117,7 @@
       <title>USB</title>
       <link>https://blog.artarch.net/tags/usb/</link>
       <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/usb/</guid>
       <description></description>
     </item>
@@ -126,7 +126,7 @@
       <title>keyboard</title>
       <link>https://blog.artarch.net/tags/keyboard/</link>
       <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/keyboard/</guid>
       <description></description>
     </item>
@@ -135,7 +135,7 @@
       <title>blink1</title>
       <link>https://blog.artarch.net/tags/blink1/</link>
       <pubDate>Thu, 21 Aug 2014 22:47:29 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/blink1/</guid>
       <description></description>
     </item>

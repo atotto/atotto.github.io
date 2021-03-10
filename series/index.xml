@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on art arch</title>
+    <title>Series on artarch</title>
     <link>https://blog.artarch.net/series/</link>
-    <description>Recent content in Series on art arch</description>
+    <description>Recent content in Series on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sun, 24 May 2020 23:42:34 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/series/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>works</title>
       <link>https://blog.artarch.net/series/works/</link>
       <pubDate>Sun, 24 May 2020 23:42:34 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/series/works/</guid>
       <description></description>
     </item>

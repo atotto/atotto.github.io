@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gnome on art arch</title>
+    <title>gnome on artarch</title>
     <link>https://blog.artarch.net/tags/gnome/</link>
-    <description>Recent content in gnome on art arch</description>
+    <description>Recent content in gnome on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Thu, 25 Jun 2020 22:32:32 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>debian stretch GDM (gnome) 設定メモ</title>
       <link>https://blog.artarch.net/posts/linux/gnome/</link>
       <pubDate>Thu, 25 Jun 2020 22:32:32 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/linux/gnome/</guid>
       <description>マウスカーソルのサイズを変更する $ gsettings set org.gnome.desktop.interface cursor-size 48  24,32,48,64で指定するらしい。 GUI(SettingsやTweak Tool)で変更できないような。
 フォントサイズを変更する $ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6  4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。</description>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RTK on art arch</title>
+    <title>RTK on artarch</title>
     <link>https://blog.artarch.net/tags/rtk/</link>
-    <description>Recent content in RTK on art arch</description>
+    <description>Recent content in RTK on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/rtk/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>RTKをやってみるために調べたことと分かったこと</title>
       <link>https://blog.artarch.net/posts/rtk/</link>
       <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/rtk/</guid>
       <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
 

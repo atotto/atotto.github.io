@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on art arch</title>
+    <title>golang on artarch</title>
     <link>https://blog.artarch.net/tags/golang/</link>
-    <description>Recent content in golang on art arch</description>
+    <description>Recent content in golang on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Wed, 25 Dec 2019 00:22:42 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/tags/golang/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>Go Puzzlers</title>
       <link>https://blog.artarch.net/posts/golang/go-puzzlers/</link>
       <pubDate>Wed, 25 Dec 2019 00:22:42 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/golang/go-puzzlers/</guid>
       <description>&lt;p&gt;第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。&lt;/p&gt;</description>
     </item>
@@ -27,7 +27,7 @@
       <title>Goでテストを書く(テストの実装パターン集)</title>
       <link>https://blog.artarch.net/posts/golang/go-test-pattern/</link>
       <pubDate>Wed, 20 Dec 2017 00:00:00 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/golang/go-test-pattern/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://qiita.com/atotto/items/f6b8c773264a3183a53c&#34;&gt;Go2 Advent Calendar 2017 20日目&lt;/a&gt;の転載です。&lt;/strong&gt;&lt;/p&gt;
 
@@ -54,7 +54,7 @@
       <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
       <link>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</link>
       <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</guid>
       <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
     </item>

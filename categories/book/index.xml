@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>book on art arch</title>
+    <title>book on artarch</title>
     <link>https://blog.artarch.net/categories/book/</link>
-    <description>Recent content in book on art arch</description>
+    <description>Recent content in book on artarch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <managingEditor>ato.araki@gmail.com (ato)</managingEditor>
-    <webMaster>ato.araki@gmail.com (ato)</webMaster>
-    <copyright>ato — All rights reserved.</copyright>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
     <lastBuildDate>Thu, 26 Mar 2015 22:48:03 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/book/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <title>How Google Works</title>
       <link>https://blog.artarch.net/posts/book/how_google_works/</link>
       <pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/how_google_works/</guid>
       <description>&lt;p&gt;読んで考えたことメモ&lt;/p&gt;</description>
     </item>
@@ -27,7 +27,7 @@
       <title>Lean UX</title>
       <link>https://blog.artarch.net/posts/book/lean-ux/</link>
       <pubDate>Mon, 21 Jul 2014 22:40:57 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/lean-ux/</guid>
       <description>&lt;p&gt;先日、読書会で読んできました。&lt;/p&gt;
 
@@ -39,7 +39,7 @@ Lean UXというタイトルからするとユーザーエクスペリエンス�
       <title>APIデザインの極意</title>
       <link>https://blog.artarch.net/posts/book/practical-api-design/</link>
       <pubDate>Fri, 13 Jun 2014 06:46:36 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/practical-api-design/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/484433591X/hatena310712-22/&#34;&gt;APIデザインの極意&lt;/a&gt;
 を、この本の訳者の &lt;a href=&#34;http://twitter.com/yoshiki_shibata/status/463985363195686912&#34;&gt;@yoshiki_shibata さんがレビューを募集&lt;/a&gt;していたので応募してみました。&lt;/p&gt;</description>
@@ -49,7 +49,7 @@ Lean UXというタイトルからするとユーザーエクスペリエンス�
       <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
       <link>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</link>
       <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato)</author>
+      <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</guid>
       <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
     </item>
