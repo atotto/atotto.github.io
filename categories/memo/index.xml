@@ -9,10 +9,19 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 10 Oct 2020 22:55:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/memo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ubuntu focal note</title>
+      <link>https://blog.artarch.net/posts/linux/ubuntu-focal/</link>
+      <pubDate>Sat, 29 May 2021 22:12:34 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/linux/ubuntu-focal/</guid>
+      <description>&lt;p&gt;設定メモ&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>証明書関連tips</title>

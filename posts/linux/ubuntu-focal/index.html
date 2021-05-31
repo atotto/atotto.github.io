@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151914489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151914489-1');
+</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ubuntu focal note</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.artarch.net/index.xml">
+		<link rel="canonical" href="https://blog.artarch.net/posts/linux/ubuntu-focal/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.59.1" />
+
+		
+		<meta property="og:title" content="ubuntu focal note" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://blog.artarch.net/img/default-header-img.jpg" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://blog.artarch.net/posts/linux/ubuntu-focal/" />
+		<meta property="og:site_name" content="ubuntu focal note" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@atotto" />
+
+
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://blog.artarch.net/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-posts page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('https://blog.artarch.net/img/default-header-img.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="https://blog.artarch.net/" title="Home">
+						<img src="https://blog.artarch.net/img/logo.jpg" class="w2 h2 br-100" alt="artarch" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/posts/">Posts</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/make/">Make</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/">Category</a>
+						<a class="link f5 ml2 dim near-white" href="https://github.com/atotto"><i class="fab fa-github-square"></i></a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="https://blog.artarch.net/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="https://blog.artarch.net/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">ubuntu focal note</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2021-05-29T22:12:34&#43;09:00">May 29, 2021</time>
+								<span class="display-print">by Ato Araki</span>
+								 in <a href="https://blog.artarch.net/categories/memo" class="no-underline category near-white dim">Memo</a>
+								<span class="display-print">at https://blog.artarch.net/posts/linux/ubuntu-focal/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<p>設定メモ</p>
+
+<h2 id="apps">apps</h2>
+
+<h3 id="mozc">mozc</h3>
+
+<pre><code>$ sudo apt install fcitx-mozc
+</code></pre>
+
+<blockquote>
+<p><img src="/posts/linux/fcitx.png" alt="img.png" />
+fcitxにする</p>
+</blockquote>
+
+<pre><code>$ sudo apt purge ibus
+</code></pre>
+
+<h3 id="chrome-remote-desktop">chrome-remote-desktop</h3>
+
+<p>headlessでセットアップするとPINの設定が簡単
+<a href="https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine">https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine</a></p>
+
+<p><code>/opt/google/chrome-remote-desktop/chrome-remote-desktop</code> の設定はここを参考に<code>DISPLAY=:0</code>で使えるようにする。
+<a href="https://qiita.com/ninose14/items/473369d76814174dd58f">https://qiita.com/ninose14/items/473369d76814174dd58f</a></p>
+
+<h3 id="chrome">chrome</h3>
+
+<p>debパッケージを落としてdpkg -iすればいい。debパッケージいれるとaptの設定してくれるみたい？</p>
+
+<pre><code>$ cat /etc/apt/sources.list.d/google-chrome.list                                                                                              [~]
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but any other modifications may be lost.
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+</code></pre>
+
+<h2 id="issues">issues</h2>
+
+<h3 id="複数のkeyboardで入力すると動かなくなる">複数のkeyboardで入力すると動かなくなる</h3>
+
+<p>同じキーボードを２つ左右に並べて使っている（いわゆるデュアルキーボード？）のでこれは致命的。</p>
+
+<ul>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1777708">https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1777708</a></li>
+<li><a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858">https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858</a></li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/fcitx/+bug/1920867">https://bugs.launchpad.net/ubuntu/+source/fcitx/+bug/1920867</a></li>
+</ul>
+
+<p>gnome-shellから永遠と以下のようなエラーが出て、キーボードを叩いている間GUIがプチフリーズする。</p>
+
+<pre><code class="language-text">Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+</code></pre>
+
+<p>gnome + x11 でどこかが悪い。</p>
+
+<h3 id="authentication-is-required-to-create-a-color-profile">authentication is required to create a color profile</h3>
+
+<p>ログインすると聞かれる。</p>
+
+<ul>
+<li><p><a href="https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile">https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile</a></p>
+
+<pre><code class="language-sh">$ cat &lt;&lt;EOF | sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-color-manager.pkla
+[Allow colord for all users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+EOF
+</code></pre></li>
+</ul>
+
+<p>で回避。</p>
+</article>
+
+		</main>
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			<p class="w-50 fr tr">
+			<a class="no-underline near-white" href="https://github.com/xaprb/story"><img class="dib" title="Made with Hugo and Story" alt="Story logo" src="https://blog.artarch.net/img/story-logo-white.svg" style="width: 1.5rem; height: 1.5rem" /></a>
+			</p>
+			<p class="w-50 near-white">
+				&copy; 2021 Ato Araki
+			</p>
+		</footer>
+		
+	
+	</body>
+</html>

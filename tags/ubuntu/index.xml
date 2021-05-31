@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on artarch</title>
+    <link>https://blog.artarch.net/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on artarch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
+    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu focal note</title>
+      <link>https://blog.artarch.net/posts/linux/ubuntu-focal/</link>
+      <pubDate>Sat, 29 May 2021 22:12:34 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/linux/ubuntu-focal/</guid>
+      <description>&lt;p&gt;設定メモ&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
