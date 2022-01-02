@@ -9,10 +9,19 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>YAMAHA YDP-88 修理</title>
+      <link>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</link>
+      <pubDate>Sun, 02 Jan 2022 23:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</guid>
+      <description>&lt;p&gt;スピーカーから音が出なくなった電子ピアノ(YAMAHA YDP-88)を修理。実家に帰ったついでに修理しました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ubuntu focal note</title>

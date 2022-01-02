@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>repairing on artarch</title>
+    <link>https://blog.artarch.net/categories/repairing/</link>
+    <description>Recent content in repairing on artarch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/categories/repairing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>YAMAHA YDP-88 修理</title>
+      <link>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</link>
+      <pubDate>Sun, 02 Jan 2022 23:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</guid>
+      <description>&lt;p&gt;スピーカーから音が出なくなった電子ピアノ(YAMAHA YDP-88)を修理。実家に帰ったついでに修理しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</guid>
+      <description>&lt;p&gt;年末の掃除もかねてメンテナンス。&lt;/p&gt;
+
+&lt;p&gt;キーの効きが悪いところがあったので調査。
+Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

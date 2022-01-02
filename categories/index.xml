@@ -9,10 +9,19 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.artarch.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>repairing</title>
+      <link>https://blog.artarch.net/categories/repairing/</link>
+      <pubDate>Sun, 02 Jan 2022 23:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/categories/repairing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>memo</title>
@@ -65,15 +74,6 @@
       <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/categories/gadget/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>repair</title>
-      <link>https://blog.artarch.net/categories/repair/</link>
-      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato araki)</author>
-      <guid>https://blog.artarch.net/categories/repair/</guid>
       <description></description>
     </item>
     
