@@ -9,7 +9,11 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 23:23:01 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/tags/goland/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2020 23:23:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/goland/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>JetBrains OSS request でライセンスを応募してみた</title>
       <link>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</link>
@@ -19,7 +23,7 @@
       <description>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
 emacsはデドックス中。
 1-2 weekほど審査にかかるとのこと。
- 2020-09-05 追記
+2020-09-05 追記
 無事ライセンス頂きました。 Goland だけかなと思っていたらAll Products Packでした。</description>
     </item>
     

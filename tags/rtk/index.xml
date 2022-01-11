@@ -9,7 +9,11 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/tags/rtk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Nov 2019 21:55:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/rtk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>RTKをやってみるために調べたことと分かったこと</title>
       <link>https://blog.artarch.net/posts/rtk/</link>
@@ -17,6 +21,7 @@
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/rtk/</guid>
       <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://qzss.go.jp/events/robotcar_191118.html&#34;&gt;https://qzss.go.jp/events/robotcar_191118.html&lt;/a&gt;&lt;/li&gt;

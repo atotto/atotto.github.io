@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.91.2" />
+		<meta name="generator" content="Hugo 0.59.1" />
 
 		
 		<meta property="og:title" content="Goでテストを書く(テストの実装パターン集)" />
@@ -93,10 +93,15 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p><strong><a href="https://qiita.com/atotto/items/f6b8c773264a3183a53c">Go2 Advent Calendar 2017 20日目</a>の転載です。</strong></p>
-<hr>
+
+<hr />
+
 <p>Goでテストを書くお話です。</p>
+
 <p>基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。</p>
+
 <p>ポイントを先に列挙します:</p>
+
 <ul>
 <li>テストのエラーメッセージは丁寧に書こう</li>
 <li>テーブルテストを活用してパターンを整理しながら網羅しよう</li>
@@ -106,287 +111,362 @@
 <li>Setup/Teardownをうまく書いてテストの見通しをよくしよう</li>
 <li>等</li>
 </ul>
-<p>では、見ていきましょう。</p>
-<h1 id="実装">実装</h1>
-<p>tenntennさんの <a href="https://qiita.com/tenntenn/items/590caa61b9701d2ada23">もっと楽して式の評価器を作る</a> を参考に、シンプルな計算機能を持つ関数(<code>Compute</code>)を書いて、それをテストしてみます（みんなはテストから書こう）。</p>
-<p>実装コード:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">calc</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;go/token&#34;</span>
-	<span style="color:#e6db74">&#34;go/types&#34;</span>
+<p>では、見ていきましょう。</p>
+
+<h1 id="実装">実装</h1>
+
+<p>tenntennさんの <a href="https://qiita.com/tenntenn/items/590caa61b9701d2ada23">もっと楽して式の評価器を作る</a> を参考に、シンプルな計算機能を持つ関数(<code>Compute</code>)を書いて、それをテストしてみます（みんなはテストから書こう）。</p>
+
+<p>実装コード:</p>
+
+<pre><code class="language-Go">package calc
+
+import (
+	&quot;go/token&quot;
+	&quot;go/types&quot;
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">expr</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
-	<span style="color:#a6e22e">tv</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">Eval</span>(<span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">NewFileSet</span>(), <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">NewPackage</span>(<span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#e6db74">&#34;main&#34;</span>), <span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">NoPos</span>, <span style="color:#a6e22e">expr</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">err</span>
+func Compute(expr string) (string, error) {
+	tv, err := types.Eval(token.NewFileSet(), types.NewPackage(&quot;main&quot;, &quot;main&quot;), token.NoPos, expr)
+	if err != nil {
+		return &quot;&quot;, err
 	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tv</span>.<span style="color:#a6e22e">Value</span>.<span style="color:#a6e22e">String</span>(), <span style="color:#66d9ef">nil</span>
+	return tv.Value.String(), nil
 }
-</code></pre></div><h1 id="テストを書いてみよう">テストを書いてみよう</h1>
+</code></pre>
+
+<h1 id="テストを書いてみよう">テストを書いてみよう</h1>
+
 <h2 id="シンプルなテスト">シンプルなテスト</h2>
+
 <p>まずはシンプルに。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#e6db74">&#34;1+1&#34;</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	s, err := Compute(&quot;1+1&quot;)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;2&#34;</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Compute(1+1) = %s, want 2&#34;</span>, <span style="color:#a6e22e">s</span>)
+	if s != &quot;2&quot; {
+		t.Errorf(&quot;Compute(1+1) = %s, want 2&quot;, s)
 	}
 }
-</code></pre></div><p><code>1+1=2</code>、簡単ですね。</p>
+</code></pre>
+
+<p><code>1+1=2</code>、簡単ですね。</p>
+
 <p>テスト結果をassertするようなテストユーティリティは、エラーメッセージを適切に書く習慣がつかないので、個人的にはあまりおすすめしません。このあたりは以下のFAQを読むと良いと思います。</p>
+
 <ul>
 <li><a href="http://golang.org/doc/faq#assertions">http://golang.org/doc/faq#assertions</a></li>
 <li><a href="http://golang.org/doc/faq#testing_framework">http://golang.org/doc/faq#testing_framework</a></li>
 </ul>
+
 <p>どうしても使いたい場合は</p>
+
 <ul>
 <li><a href="https://godoc.org/github.com/stretchr/testify/assert">https://godoc.org/github.com/stretchr/testify/assert</a></li>
 </ul>
+
 <p>が良いと思います。</p>
+
 <h2 id="テーブルを使ったテスト">テーブルを使ったテスト</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">computeTests</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">struct</span> {
-		<span style="color:#a6e22e">in</span>  <span style="color:#66d9ef">string</span>
-		<span style="color:#a6e22e">out</span> <span style="color:#66d9ef">string</span>
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	computeTests := []struct {
+		in  string
+		out string
 	}{
-		{<span style="color:#e6db74">&#34;1+1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>},
-		{<span style="color:#e6db74">&#34;1.0/2.0&#34;</span>, <span style="color:#e6db74">&#34;0.5&#34;</span>},
+		{&quot;1+1&quot;, &quot;2&quot;},
+		{&quot;1.0/2.0&quot;, &quot;0.5&quot;},
 	}
 
-	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">computeTests</span> {
-		<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">in</span>)
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+	for _, test := range computeTests {
+		s, err := Compute(test.in)
+		if err != nil {
+			t.Fatal(err)
 		}
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">out</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Compute(%s) = %s, want %s&#34;</span>, <span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">test</span>.<span style="color:#a6e22e">out</span>)
+		if s != test.out {
+			t.Errorf(&quot;Compute(%s) = %s, want %s&quot;, test.in, s, test.out)
 		}
 	}
 }
-</code></pre></div><p>パターンを網羅したい場合にとても便利です。ここもテストのエラーメッセージをわかりやすく記述しておきましょう。</p>
+</code></pre>
+
+<p>パターンを網羅したい場合にとても便利です。ここもテストのエラーメッセージをわかりやすく記述しておきましょう。</p>
+
 <p>参考:</p>
+
 <ul>
 <li><a href="https://github.com/golang/go/wiki/TableDrivenTests">https://github.com/golang/go/wiki/TableDrivenTests</a></li>
 <li><a href="https://golang.org/doc/code.html#Testing">https://golang.org/doc/code.html#Testing</a></li>
 </ul>
-<h2 id="quickchecktestingquickでブラックボックステストをする">QuickCheck(testing/quick)でブラックボックステストをする</h2>
+
+<h2 id="quickcheck-testing-quick-でブラックボックステストをする">QuickCheck(testing/quick)でブラックボックステストをする</h2>
+
 <p><a href="https://golang.org/pkg/testing/quick/">testing/quick</a>を使って、ブラックボックス的なテストを書きます。<code>quick.Check</code>に渡した関数の引数に乱数が入るので、それを使ってテストをします。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">add</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int16</span>) <span style="color:#66d9ef">bool</span> {
-		<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%d+%d&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>))
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	add := func(a, b int16) bool {
+		s, err := Compute(fmt.Sprintf(&quot;%d+%d&quot;, a, b))
+		if err != nil {
+			t.Fatal(err)
 		}
-		<span style="color:#a6e22e">expected</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Itoa</span>(int(<span style="color:#a6e22e">a</span>) <span style="color:#f92672">+</span> int(<span style="color:#a6e22e">b</span>))
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">expected</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Logf</span>(<span style="color:#e6db74">&#34;Compute(%d+%d) = %s, want %s&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">expected</span>)
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+		expected := strconv.Itoa(int(a) + int(b))
+		if s != expected {
+			t.Logf(&quot;Compute(%d+%d) = %s, want %s&quot;, a, b, s, expected)
+			return false
 		}
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+		return true
 	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">quick</span>.<span style="color:#a6e22e">Check</span>(<span style="color:#a6e22e">add</span>, <span style="color:#66d9ef">nil</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+	if err := quick.Check(add, nil); err != nil {
+		t.Fatal(err)
 	}
 }
-</code></pre></div><p>使い所が難しいですが、乱数を与えてテストすることでバグを見つけられることがあります。</p>
+</code></pre>
+
+<p>使い所が難しいですが、乱数を与えてテストすることでバグを見つけられることがあります。</p>
+
 <p>参考:</p>
+
 <ul>
 <li><a href="https://golang.org/pkg/testing/quick/">https://golang.org/pkg/testing/quick/</a></li>
 <li><a href="http://ymotongpoo.hatenablog.com/entry/2012/11/30/155846">http://ymotongpoo.hatenablog.com/entry/2012/11/30/155846</a></li>
 </ul>
-<h2 id="trunを使ってテストを分割するサブテスト">t.Runを使ってテストを分割する（サブテスト）</h2>
+
+<h2 id="t-runを使ってテストを分割する-サブテスト">t.Runを使ってテストを分割する（サブテスト）</h2>
+
 <p><a href="https://golang.org/pkg/testing/#T.Run">t.Run</a>をテストを分けるために使うと効果的です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;add sub&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;1+1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;-2+1&#34;</span>, <span style="color:#e6db74">&#34;-1&#34;</span>)
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	t.Run(&quot;add sub&quot;, func(t *testing.T) {
+		testCompute(t, &quot;1+1&quot;, &quot;2&quot;)
+		testCompute(t, &quot;-2+1&quot;, &quot;-1&quot;)
 	})
-	<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;div&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;1.0/2.0&#34;</span>, <span style="color:#e6db74">&#34;0.5&#34;</span>)
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;2.0/1.0&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)
+	t.Run(&quot;div&quot;, func(t *testing.T) {
+		testCompute(t, &quot;1.0/2.0&quot;, &quot;0.5&quot;)
+		testCompute(t, &quot;2.0/1.0&quot;, &quot;2&quot;)
 	})
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">expected</span> <span style="color:#66d9ef">string</span>) {
-	<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">in</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+func testCompute(t *testing.T, in, expected string) {
+	s, err := Compute(in)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">expected</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Compute(%s) = %s, want %s&#34;</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">expected</span>)
+	if s != expected {
+		t.Errorf(&quot;Compute(%s) = %s, want %s&quot;, in, s, expected)
 	}
 }
-</code></pre></div><p>ここでは、足し算引き算と割り算、のテストをまとめてみました。また、テストを別の関数（<code>testCompute</code>）に記述し、テストの内容の見通しを良くしました。</p>
+</code></pre>
+
+<p>ここでは、足し算引き算と割り算、のテストをまとめてみました。また、テストを別の関数（<code>testCompute</code>）に記述し、テストの内容の見通しを良くしました。</p>
+
 <p>参考:</p>
+
 <ul>
 <li><a href="https://golang.org/pkg/testing/#hdr-Subtests_and_Sub_benchmarks">https://golang.org/pkg/testing/#hdr-Subtests_and_Sub_benchmarks</a></li>
 <li><a href="https://golang.org/pkg/testing/#T.Run">https://golang.org/pkg/testing/#T.Run</a></li>
 </ul>
-<h2 id="thelperを使う">t.Helperを使う</h2>
+
+<h2 id="t-helperを使う">t.Helperを使う</h2>
+
 <p><a href="https://golang.org/doc/go1.9#test-helper">Go1.9から<code>t.Hepler()</code>が追加</a>されましたので見てみましょう。</p>
+
 <p>先程の <code>testCompute</code>　をもう一度見てみます。この中でテストが失敗した場合、<code>go test</code> のエラーメッセージは <code>testCompute</code> 内で発生したことを行番号で教えてくれます。ですが、どのテストで失敗したのかはややわかりにくいです。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">expected</span> <span style="color:#66d9ef">string</span>) {
-	<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">in</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+
+<pre><code class="language-Go">func testCompute(t *testing.T, in, expected string) {
+	s, err := Compute(in)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">expected</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Compute(%s) = %s, want %s&#34;</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">expected</span>) <span style="color:#75715e">// &lt;- ここでテストが失敗した場合、はここの行番号が表示される
-</span><span style="color:#75715e"></span>	}
+	if s != expected {
+		t.Errorf(&quot;Compute(%s) = %s, want %s&quot;, in, s, expected) // &lt;- ここでテストが失敗した場合、はここの行番号が表示される
+	}
 }
-</code></pre></div><p>ここで、<code>testCompute</code>に<code>t.Helper()</code>の１行を追加します。すると、<code>testCompute</code>内で発生したエラーは呼び元の<code>TestCompute</code>のどの行で失敗したのかを表示するようになります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#e6db74">&#34;add sub&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;1+1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>)
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;-2+1&#34;</span>, <span style="color:#e6db74">&#34;-1&#34;</span>)
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;1+1&#34;</span>, <span style="color:#e6db74">&#34;二&#34;</span>) <span style="color:#75715e">// エラーメッセージでここの行番号が失敗したことが表示される！！
-</span><span style="color:#75715e"></span>	})
+</code></pre>
+
+<p>ここで、<code>testCompute</code>に<code>t.Helper()</code>の１行を追加します。すると、<code>testCompute</code>内で発生したエラーは呼び元の<code>TestCompute</code>のどの行で失敗したのかを表示するようになります。</p>
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	t.Run(&quot;add sub&quot;, func(t *testing.T) {
+		testCompute(t, &quot;1+1&quot;, &quot;2&quot;)
+		testCompute(t, &quot;-2+1&quot;, &quot;-1&quot;)
+		testCompute(t, &quot;1+1&quot;, &quot;二&quot;) // エラーメッセージでここの行番号が失敗したことが表示される！！
+	})
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">expected</span> <span style="color:#66d9ef">string</span>) {
-	<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Helper</span>() <span style="color:#75715e">// &lt;- これを追加する
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Compute</span>(<span style="color:#a6e22e">in</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+func testCompute(t *testing.T, in, expected string) {
+	t.Helper() // &lt;- これを追加する
+	s, err := Compute(in)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">expected</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;Compute(%s) = %s, want %s&#34;</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">expected</span>) <span style="color:#75715e">// &lt;- ここでテストが失敗した場合、呼び元で失敗したことがレポートできるようになる
-</span><span style="color:#75715e"></span>	}
+	if s != expected {
+		t.Errorf(&quot;Compute(%s) = %s, want %s&quot;, in, s, expected) // &lt;- ここでテストが失敗した場合、呼び元で失敗したことがレポートできるようになる
+	}
 }
-</code></pre></div><p><code>t.Helper()</code> はテストのサポート関数を記述した場合は必ず付けると良いと思います。</p>
+</code></pre>
+
+<p><code>t.Helper()</code> はテストのサポート関数を記述した場合は必ず付けると良いと思います。</p>
+
 <p>参考:</p>
+
 <ul>
 <li><a href="https://golang.org/pkg/testing/#T.Helper">https://golang.org/pkg/testing/#T.Helper</a></li>
 <li><a href="https://golang.org/doc/go1.9#test-helper">https://golang.org/doc/go1.9#test-helper</a></li>
 </ul>
-<h2 id="テストでsetupteardownを使う">テストでSetup/Teardownを使う</h2>
+
+<h2 id="テストでsetup-teardownを使う">テストでSetup/Teardownを使う</h2>
+
 <p>テストの内容をテキストファイルに置き、それを読んでテストする、という内容に無理矢理書き換えてみます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;testdata/compute.txt&#34;</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+
+<pre><code class="language-Go">func TestCompute(t *testing.T) {
+	f, err := os.Open(&quot;testdata/compute.txt&quot;)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
+	defer f.Close()
 
-	<span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">f</span>)
-	<span style="color:#66d9ef">for</span> {
-		<span style="color:#a6e22e">line</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">ReadLine</span>()
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">EOF</span> {
-			<span style="color:#66d9ef">break</span>
+	r := bufio.NewReader(f)
+	for {
+		line, _, err := r.ReadLine()
+		if err == io.EOF {
+			break
 		}
-		<span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(string(<span style="color:#a6e22e">line</span>), <span style="color:#e6db74">&#34;=&#34;</span>)
-		<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">test</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;invalid test data: %s&#34;</span>, string(<span style="color:#a6e22e">line</span>))
+		test := strings.Split(string(line), &quot;=&quot;)
+		if len(test) != 2 {
+			t.Fatal(&quot;invalid test data: %s&quot;, string(line))
 		}
 
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">1</span>])
+		testCompute(t, test[0], test[1])
 	}
 }
-</code></pre></div><p>このファイルの読み込み処理をSetup/Teardownにまとめてみると↓</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SetupComputeTest</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">fname</span> <span style="color:#66d9ef">string</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Reader</span>, <span style="color:#66d9ef">func</span>()) {
-	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">fname</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+</code></pre>
+
+<p>このファイルの読み込み処理をSetup/Teardownにまとめてみると↓</p>
+
+<pre><code class="language-Go">func SetupComputeTest(t *testing.T, fname string) (*bufio.Reader, func()) {
+	f, err := os.Open(fname)
+	if err != nil {
+		t.Fatal(err)
 	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">f</span>), <span style="color:#66d9ef">func</span>() {
-		<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
-	}
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">Teardown</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">SetupComputeTest</span>(<span style="color:#a6e22e">t</span>, <span style="color:#e6db74">&#34;testdata/compute.txt&#34;</span>)
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">Teardown</span>()
-
-	<span style="color:#66d9ef">for</span> {
-		<span style="color:#a6e22e">line</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">ReadLine</span>()
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">EOF</span> {
-			<span style="color:#66d9ef">break</span>
-		}
-		<span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(string(<span style="color:#a6e22e">line</span>), <span style="color:#e6db74">&#34;=&#34;</span>)
-		<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">test</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> {
-			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;invalid test data: %s&#34;</span>, string(<span style="color:#a6e22e">line</span>))
-		}
-
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">1</span>])
+	return bufio.NewReader(f), func() {
+		f.Close()
 	}
 }
-</code></pre></div><p>テスト対象が複雑なものではないので無理矢理感がありますが、事前準備とテスト後の処理をまとめておけるので便利です。<a href="https://golang.org/pkg/net/http/httptest/">httptest</a>やモックの取りまとめや、データベースなどの処理などを書いておくと良さそうです。</p>
+
+func TestCompute(t *testing.T) {
+	r, Teardown := SetupComputeTest(t, &quot;testdata/compute.txt&quot;)
+	defer Teardown()
+
+	for {
+		line, _, err := r.ReadLine()
+		if err == io.EOF {
+			break
+		}
+		test := strings.Split(string(line), &quot;=&quot;)
+		if len(test) != 2 {
+			t.Fatal(&quot;invalid test data: %s&quot;, string(line))
+		}
+
+		testCompute(t, test[0], test[1])
+	}
+}
+</code></pre>
+
+<p>テスト対象が複雑なものではないので無理矢理感がありますが、事前準備とテスト後の処理をまとめておけるので便利です。<a href="https://golang.org/pkg/net/http/httptest/">httptest</a>やモックの取りまとめや、データベースなどの処理などを書いておくと良さそうです。</p>
+
 <p>なお、テスト用のデータは<code>testdata</code>ディレクトリに置くと良いです。Goはこの<code>testdata</code>をパッケージとしては見なさないため、様々なテストデータを置くことができます。 <a href="https://golang.org/cmd/go/#hdr-Test_packages">https://golang.org/cmd/go/#hdr-Test_packages</a></p>
-<h2 id="テストでsetupteardownを使うstructにtestingを組み込む">テストでSetup/Teardownを使う(structにtestingを組み込む)</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">computeTest</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">TB</span>
-	<span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">File</span>
-	<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Reader</span>
+
+<h2 id="テストでsetup-teardownを使う-structにtestingを組み込む">テストでSetup/Teardownを使う(structにtestingを組み込む)</h2>
+
+<pre><code class="language-Go">type computeTest struct {
+	testing.TB
+	f *os.File
+	r *bufio.Reader
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SetupComputeTest</span>(<span style="color:#a6e22e">tb</span> <span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">TB</span>, <span style="color:#a6e22e">fname</span> <span style="color:#66d9ef">string</span>) <span style="color:#f92672">*</span><span style="color:#a6e22e">computeTest</span> {
-	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">fname</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">tb</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#a6e22e">err</span>)
+func SetupComputeTest(tb testing.TB, fname string) *computeTest {
+	f, err := os.Open(fname)
+	if err != nil {
+		tb.Fatal(err)
 	}
 
-	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">computeTest</span>{
-		<span style="color:#a6e22e">TB</span>: <span style="color:#a6e22e">tb</span>,
-		<span style="color:#a6e22e">f</span>:  <span style="color:#a6e22e">f</span>,
-		<span style="color:#a6e22e">r</span>:  <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">f</span>),
+	return &amp;computeTest{
+		TB: tb,
+		f:  f,
+		r:  bufio.NewReader(f),
 	}
 }
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">computeTest</span>) <span style="color:#a6e22e">Teardown</span>() {
-	<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
+func (t *computeTest) Teardown() {
+	t.f.Close()
 }
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">computeTest</span>) <span style="color:#a6e22e">testData</span>() (<span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">out</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">ok</span> <span style="color:#66d9ef">bool</span>) {
-	<span style="color:#a6e22e">line</span>, <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">ReadLine</span>()
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">EOF</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">false</span>
+func (t *computeTest) testData() (in, out string, ok bool) {
+	line, _, err := t.r.ReadLine()
+	if err == io.EOF {
+		return &quot;&quot;, &quot;&quot;, false
 	}
-	<span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(string(<span style="color:#a6e22e">line</span>), <span style="color:#e6db74">&#34;=&#34;</span>)
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">test</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> {
-		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatal</span>(<span style="color:#e6db74">&#34;invalid test data: %s&#34;</span>, string(<span style="color:#a6e22e">line</span>))
+	test := strings.Split(string(line), &quot;=&quot;)
+	if len(test) != 2 {
+		t.Fatal(&quot;invalid test data: %s&quot;, string(line))
 	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">test</span>[<span style="color:#ae81ff">1</span>], <span style="color:#66d9ef">true</span>
+	return test[0], test[1], true
 }
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestCompute</span>(<span style="color:#a6e22e">tt</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
-	<span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">SetupComputeTest</span>(<span style="color:#a6e22e">tt</span>, <span style="color:#e6db74">&#34;testdata/compute.txt&#34;</span>)
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Teardown</span>()
+func TestCompute(tt *testing.T) {
+	t := SetupComputeTest(tt, &quot;testdata/compute.txt&quot;)
+	defer t.Teardown()
 
-	<span style="color:#66d9ef">for</span> {
-		<span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">testData</span>()
-		<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
-			<span style="color:#66d9ef">break</span>
+	for {
+		in, out, ok := t.testData()
+		if !ok {
+			break
 		}
-		<span style="color:#a6e22e">testCompute</span>(<span style="color:#a6e22e">tt</span>, <span style="color:#a6e22e">in</span>, <span style="color:#a6e22e">out</span>)
+		testCompute(tt, in, out)
 	}
 }
-</code></pre></div><p>この例も無理矢理感ありますが、例として。
+</code></pre>
+
+<p>この例も無理矢理感ありますが、例として。
 ポイントは、構造体に testingのオブジェクトを持つようにしているところです。こうすることで、各メソッド内で発生したエラー処理を隠蔽できます。適切に隠蔽しておくことで、テストの内容の見通しが良くなります。（この例の場合はイマイチ）。
 このパターンも、データベースや関連するモックなどを始め、テスト中によく使うチェックのための処理をまとめて実装しておくと良いです。</p>
-<h2 id="パッケージ全体でsetupteardownを使う">パッケージ全体でSetup/Teardownを使う</h2>
+
+<h2 id="パッケージ全体でsetup-teardownを使う">パッケージ全体でSetup/Teardownを使う</h2>
+
 <p>おまけですが。</p>
+
 <p>この場合は <a href="https://golang.org/pkg/testing/#hdr-Main"><code>func TestMain(m *testing.M)</code></a> が役に立ちます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Go" data-lang="Go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestMain</span>(<span style="color:#a6e22e">m</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">M</span>) {
-    <span style="color:#a6e22e">setup</span>()
-    <span style="color:#a6e22e">ret</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">Run</span>()
-    <span style="color:#a6e22e">teardown</span>()
-    <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Exit</span>(<span style="color:#a6e22e">ret</span>)
+
+<pre><code class="language-Go">func TestMain(m *testing.M) {
+    setup()
+    ret := m.Run()
+    teardown()
+    os.Exit(ret)
 }
-</code></pre></div><p><code>m.Run</code>でパッケージ内のテストがすべて実行されるため、パッケージ全体のSetupとTeardownが書けます。</p>
+</code></pre>
+
+<p><code>m.Run</code>でパッケージ内のテストがすべて実行されるため、パッケージ全体のSetupとTeardownが書けます。</p>
+
 <p>参考:</p>
+
 <ul>
 <li><a href="https://golang.org/pkg/testing/#hdr-Main">https://golang.org/pkg/testing/#hdr-Main</a></li>
 <li><a href="http://atotto.hatenadiary.jp/entry/2014/12/19/214357">http://atotto.hatenadiary.jp/entry/2014/12/19/214357</a></li>
 </ul>
+
 <h1 id="最後に">最後に</h1>
+
 <p>Goを開発で使ってきた中で使ってきたテストのパターンを簡単にまとめました。どの例もやりすぎないことがポイントです。過度な抽象化やサポート関数は読み手に混乱を与えるかもしれないからです。</p>
+
 <p>と、偉そうに書いてますが、いい塩梅にバランスをとるのは正直難しいです。悩ましい…。</p>
+
 <p>gistに置いておきました <a href="https://gist.github.com/atotto/d753d91f5f3661b07a3391c0c9f6fb05">https://gist.github.com/atotto/d753d91f5f3661b07a3391c0c9f6fb05</a></p>
+
 <h1 id="参考">参考</h1>
+
 <ul>
 <li><a href="https://github.com/golang/go/wiki/LearnTesting">https://github.com/golang/go/wiki/LearnTesting</a></li>
 </ul>

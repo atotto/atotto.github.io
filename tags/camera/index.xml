@@ -9,7 +9,11 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jul 2019 21:37:21 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/tags/camera/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jul 2019 21:37:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.artarch.net/tags/camera/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
       <link>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</link>

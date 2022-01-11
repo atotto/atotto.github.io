@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.91.2" />
+		<meta name="generator" content="Hugo 0.59.1" />
 
 		
 		<meta property="og:title" content="フィルムカメラをデジタル化するには(課題がたくさん)" />
@@ -93,31 +93,45 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。</p>
+
 <p>最近ではこのような仕組みのアダプタが出ているようだが、ちょっと大きい&hellip;</p>
+
 <blockquote>
-<p><img src="/posts/camera_film_and_digital/imback.jpeg" alt="imback">
+<p><img src="/posts/camera_film_and_digital/imback.jpeg" alt="imback" />
 <a href="https://www.imback.eu/">https://www.imback.eu/</a></p>
 </blockquote>
+
 <p>カメラのフィルムを配置する部分にCMOSカメラを置いたらどうなるのか。
 Amazonなんかでは山のようにUSBカメラが売られている。</p>
+
 <p>どうせならモロ黒カメラがいい
 <a href="https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/">https://www.arducam.com/products/camera-breakout-board/10mp-mt9j001mt9j003/</a></p>
+
 <h2 id="センササイズの問題">センササイズの問題</h2>
+
 <p>市販されているカメラのセンササイズは大きくても1/3インチ程度で、フルサイズの35mmx24mmに比べると劣る。
 このまま当てはめるとレンズの中心部分しか活用できず、また画角が狭くなるために望遠寄りとなる。
 広角のレンズアダプターなどをつければまだマシかもしれないが、カメラサイズが大きくなりがち。
 仮に35mmのセンサがあったとしても、レンズからの光が斜めに当たる部分が多くあるため、周辺光量に課題がありそう。
 センササイズが小さいものばかりなのは、大きくすると単に生産できる量が減り、単価が高くなる傾向があるため、できるだけ小さくすることで大量生産できる方向に働いている様子。</p>
+
 <h2 id="カメラの内部のレイアウト">カメラの内部のレイアウト</h2>
+
 <p>リッチにやれるなら、raspberry pi zeroあたりが収まると良さそう。
 バッテリーをどう組み込むのかは課題</p>
+
 <h2 id="シャッターとの同期はどうするか">シャッターとの同期はどうするか</h2>
+
 <p>カメラ側のシャッタースピード長めに取るとして、どう同期するか。
 バルブ撮影できるカメラだと長くできるが、写真撮ってる感が失われそう。
 カメラ側の露出を固定しつつ、動画撮影して明るい画像だけを取り出す、みたいなことになりそう。</p>
+
 <h2 id="ローリングシャッターがグローバルシャッターか">ローリングシャッターがグローバルシャッターか</h2>
+
 <p>カメラのシャッターを利用するのであれば、グローバルシャッターの方が良さそう。ローリングシャッターだと露光時間内に収まらなかった場合に中途半端な画像になる。</p>
+
 <h2 id="撮像面の比較">撮像面の比較</h2>
+
 <table>
 <thead>
 <tr>
@@ -125,25 +139,30 @@ Amazonなんかでは山のようにUSBカメラが売られている。</p>
 <th>サイズ</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>35mm</td>
 <td>36x24mm</td>
 </tr>
+
 <tr>
 <td>APS-C</td>
 <td>23.6x15.8mm</td>
 </tr>
+
 <tr>
 <td>1型</td>
 <td>13.2x8.8mm</td>
 </tr>
+
 <tr>
 <td>1/3型</td>
 <td>4.8x3.6mm</td>
 </tr>
 </tbody>
 </table>
+
 <blockquote>
 <p><a href="https://antaresdigicame.org/photo_gallery_sp/photo_gallery/camera/camera87.html">画像(イメージ)センサー・(CCD・CMOS)の大きさ比較</a></p>
 </blockquote>
