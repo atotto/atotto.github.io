@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="debian stretch GDM (gnome) 設定メモ" />
@@ -92,21 +92,14 @@
 		<main role="main">
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
-	
-
-<h2 id="マウスカーソルのサイズを変更する">マウスカーソルのサイズを変更する</h2>
-
+	<h2 id="マウスカーソルのサイズを変更する">マウスカーソルのサイズを変更する</h2>
 <pre><code>$ gsettings set org.gnome.desktop.interface cursor-size 48
 </code></pre>
-
 <p>24,32,48,64で指定するらしい。
 GUI(SettingsやTweak Tool)で変更できないような。</p>
-
 <h2 id="フォントサイズを変更する">フォントサイズを変更する</h2>
-
 <pre><code>$ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6
 </code></pre>
-
 <p>4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。</p>
 
 </article>

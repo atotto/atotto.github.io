@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="ubuntu focal note" />
@@ -93,82 +93,54 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>設定メモ</p>
-
 <h2 id="apps">apps</h2>
-
 <h3 id="mozc">mozc</h3>
-
 <pre><code>$ sudo apt install fcitx-mozc
 </code></pre>
-
 <blockquote>
-<p><img src="/posts/linux/fcitx.png" alt="img.png" />
+<p><img src="/posts/linux/fcitx.png" alt="img.png">
 fcitxにする</p>
 </blockquote>
-
 <pre><code>$ sudo apt purge ibus
 </code></pre>
-
 <h3 id="chrome-remote-desktop">chrome-remote-desktop</h3>
-
 <p>headlessでセットアップするとPINの設定が簡単
 <a href="https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine">https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine</a></p>
-
 <p><code>/opt/google/chrome-remote-desktop/chrome-remote-desktop</code> の設定はここを参考に<code>DISPLAY=:0</code>で使えるようにする。
 <a href="https://qiita.com/ninose14/items/473369d76814174dd58f">https://qiita.com/ninose14/items/473369d76814174dd58f</a></p>
-
 <h3 id="chrome">chrome</h3>
-
 <p>debパッケージを落としてdpkg -iすればいい。debパッケージいれるとaptの設定してくれるみたい？</p>
-
-<pre><code>$ cat /etc/apt/sources.list.d/google-chrome.list                                                                                              [~]
+<pre tabindex="0"><code>$ cat /etc/apt/sources.list.d/google-chrome.list                                                                                              [~]
 ### THIS FILE IS AUTOMATICALLY CONFIGURED ###
 # You may comment out this entry, but any other modifications may be lost.
 deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-</code></pre>
-
-<h2 id="issues">issues</h2>
-
+</code></pre><h2 id="issues">issues</h2>
 <h3 id="複数のkeyboardで入力すると動かなくなる">複数のkeyboardで入力すると動かなくなる</h3>
-
 <p>同じキーボードを２つ左右に並べて使っている（いわゆるデュアルキーボード？）のでこれは致命的。</p>
-
 <ul>
 <li><a href="https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1777708">https://bugs.launchpad.net/ubuntu/+source/gnome-shell/+bug/1777708</a></li>
 <li><a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858">https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858</a></li>
 <li><a href="https://bugs.launchpad.net/ubuntu/+source/fcitx/+bug/1920867">https://bugs.launchpad.net/ubuntu/+source/fcitx/+bug/1920867</a></li>
 </ul>
-
 <p>gnome-shellから永遠と以下のようなエラーが出て、キーボードを叩いている間GUIがプチフリーズする。</p>
-
-<pre><code class="language-text">Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
-</code></pre>
-
-<p>gnome + x11 でどこかが悪い。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+</code></pre></div><p>gnome + x11 でどこかが悪い。</p>
 <p>→ debian packageつくった <a href="https://packagecloud.io/atotto/mutter">https://packagecloud.io/atotto/mutter</a></p>
-
 <p><a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858#note_818548">https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/1858#note_818548</a> のワークアラウンドを適用。副作用はあると思うけど、動かなくなるよりまし・・</p>
-
 <h3 id="authentication-is-required-to-create-a-color-profile">authentication is required to create a color profile</h3>
-
 <p>ログインすると聞かれる。</p>
-
 <ul>
-<li><p><a href="https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile">https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile</a></p>
-
-<pre><code class="language-sh">$ cat &lt;&lt;EOF | sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-color-manager.pkla
-[Allow colord for all users]
-Identity=unix-user:*
-Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
-ResultAny=no
-ResultInactive=no
-ResultActive=yes
-EOF
-</code></pre></li>
+<li><a href="https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile">https://unix.stackexchange.com/questions/417906/authentication-is-required-to-create-a-color-profile</a></li>
 </ul>
-
-<p>で回避。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cat <span style="color:#e6db74">&lt;&lt;EOF | sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-color-manager.pkla
+</span><span style="color:#e6db74">[Allow colord for all users]
+</span><span style="color:#e6db74">Identity=unix-user:*
+</span><span style="color:#e6db74">Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+</span><span style="color:#e6db74">ResultAny=no
+</span><span style="color:#e6db74">ResultInactive=no
+</span><span style="color:#e6db74">ResultActive=yes
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><p>で回避。</p>
 </article>
 
 		</main>

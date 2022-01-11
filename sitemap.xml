@@ -1,280 +1,170 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.artarch.net/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/repairing/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/linux/</loc>
     <lastmod>2021-05-29T22:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/memo/</loc>
     <lastmod>2021-05-29T22:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/</loc>
     <lastmod>2021-05-29T22:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/ubuntu/</loc>
     <lastmod>2021-05-29T22:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/linux/ubuntu-focal/</loc>
     <lastmod>2021-05-29T22:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/tips/</loc>
     <lastmod>2020-10-10T22:55:12+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/web/</loc>
     <lastmod>2020-10-10T22:55:12+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/web/certificate_tips/</loc>
     <lastmod>2020-10-10T22:55:12+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/goland/</loc>
     <lastmod>2020-09-01T23:23:01+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</loc>
     <lastmod>2020-09-01T23:23:01+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/linux/gnome/</loc>
     <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/gnome/</loc>
     <lastmod>2020-06-25T22:32:32+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/works/microbit-robot/</loc>
     <lastmod>2020-05-24T23:42:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/make/</loc>
     <lastmod>2020-05-24T23:42:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/series/</loc>
     <lastmod>2020-05-24T23:42:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/series/works/</loc>
     <lastmod>2020-05-24T23:42:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/golang/go-puzzlers/</loc>
     <lastmod>2019-12-25T00:22:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/golang/</loc>
     <lastmod>2019-12-25T00:22:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/presentation/</loc>
     <lastmod>2019-12-25T00:22:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/web/ogp/</loc>
     <lastmod>2019-12-22T22:39:14+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/gps/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/note/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/rtk/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/rtk/</loc>
     <lastmod>2019-11-10T21:55:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/web/hugo_github_pages/</loc>
     <lastmod>2019-11-10T19:55:42+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/camera/</loc>
     <lastmod>2019-07-29T21:37:21+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</loc>
     <lastmod>2019-07-29T21:37:21+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/repairing/national-etz160-drill-driver/battery-replacement/</loc>
     <lastmod>2019-04-20T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/works/pomodoro_timer/</loc>
     <lastmod>2019-04-06T22:12:32+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/golang/go-test-pattern/</loc>
     <lastmod>2017-12-20T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/toy/</loc>
     <lastmod>2017-05-08T21:04:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/works/train_controller/</loc>
     <lastmod>2017-05-08T21:04:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/arduino/</loc>
     <lastmod>2016-12-19T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/digispark_lm61_usb/</loc>
     <lastmod>2016-12-19T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/raspberry-pi/</loc>
     <lastmod>2016-12-19T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</loc>
     <lastmod>2016-12-04T18:17:22+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/gadget/</loc>
     <lastmod>2015-10-09T12:13:13+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</loc>
     <lastmod>2015-10-09T12:13:13+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/usb/</loc>
     <lastmod>2015-10-09T12:13:13+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/keyboard/</loc>
     <lastmod>2015-06-04T18:15:11+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</loc>
     <lastmod>2015-06-04T18:15:11+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/tex-yoda/</loc>
     <lastmod>2015-06-04T18:15:11+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/categories/book/</loc>
     <lastmod>2015-03-26T22:48:03+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/book/how_google_works/</loc>
     <lastmod>2015-03-26T22:48:03+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</loc>
     <lastmod>2014-08-21T22:47:29+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/tags/blink1/</loc>
     <lastmod>2014-08-21T22:47:29+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/book/lean-ux/</loc>
     <lastmod>2014-07-21T22:40:57+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/book/practical-api-design/</loc>
     <lastmod>2014-06-13T06:46:36+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/about/</loc>
     <lastmod>2013-09-01T15:44:57+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</loc>
     <lastmod>2012-09-29T00:35:36+09:00</lastmod>
   </url>
-  
 </urlset>

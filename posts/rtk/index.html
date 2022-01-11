@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="RTKをやってみるために調べたことと分かったこと" />
@@ -93,55 +93,44 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと</p>
-
 <ul>
 <li><a href="https://robot-car.jimdo.com/">https://robot-car.jimdo.com/</a></li>
 <li><a href="https://qzss.go.jp/events/robotcar_191118.html">https://qzss.go.jp/events/robotcar_191118.html</a></li>
 </ul>
-
 <h2 id="最初に調べたこと">最初に調べたこと</h2>
-
 <ul>
 <li>RTKとは何で、何が必要か</li>
 <li>アンテナは何が必要か</li>
 </ul>
-
 <h2 id="わかったこと">わかったこと</h2>
-
 <ul>
 <li>RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする</li>
 <li>RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。</li>
 <li>1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）
-
 <ul>
 <li>価格が高め。</li>
 <li>F9Pなどがある。アンテナも1周波と比較すると高価。</li>
 <li>今後は2周波が来そう</li>
-</ul></li>
+</ul>
+</li>
 <li>rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる</li>
 <li>基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる</li>
 <li>M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。</li>
 <li>GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。</li>
 <li>docomoやsoftbankがRTKの基準局設置を進めている</li>
 </ul>
-
 <h2 id="結果として購入したもの">結果として購入したもの</h2>
-
 <ul>
 <li>M8T（一台）</li>
 <li>GNSSアンテナ（一台）</li>
 </ul>
-
 <h2 id="キーワード">キーワード</h2>
-
 <ul>
 <li>基準局</li>
 <li>移動局</li>
 <li>RTCM3</li>
 </ul>
-
 <h2 id="ノウハウ">ノウハウ</h2>
-
 <ul>
 <li>建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度）</li>
 <li>地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い

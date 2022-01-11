@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="blink(1) mk2を買った" />
@@ -93,52 +93,32 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p><a href="http://thingm.com/products/blink-1/">blink(1) mk2 USB RGB LED</a> を同僚と一緒に購入しました。</p>
-
-<p><img src="/posts/device/blink1-mk2.jpg" alt="blink1 mk2 LED" /></p>
-
+<p><img src="/posts/device/blink1-mk2.jpg" alt="blink1 mk2 LED"></p>
 <p>簡単に説明すると、カラーLEDを制御可能なUSBランプです。ウラとオモテで別々に操作できる2つのカラーLEDを装備しています。</p>
-
 <p>分解するとRGBのフルカラーLEDが見える:</p>
-
-<p><img src="/posts/device/blink1-mk2-led.jpg" alt="blink1 mk2 LED" /></p>
-
+<p><img src="/posts/device/blink1-mk2-led.jpg" alt="blink1 mk2 LED"></p>
 <p><a href="https://github.com/todbot/blink1">blink1のgithub</a>を見てみると対応している言語が多い！もちろんGo言語も。基本はlibusbで叩く感じです。</p>
-
 <h2 id="linuxでセットアップ">Linuxでセットアップ:</h2>
-
 <p>Ubuntuでのメモ。</p>
-
 <p>ひとまずリポジトリをclone:</p>
-
 <pre><code>$ git clone https://github.com/todbot/blink1.git
 </code></pre>
-
 <p><a href="https://github.com/todbot/blink1/tree/master/linux">https://github.com/todbot/blink1/tree/master/linux</a> に説明がありますが:</p>
-
 <pre><code>$ sudo cp blink1/linux/51-blink1.rules /etc/udev/rules.d/
 </code></pre>
-
 <p>をしておくとユーザ権限でblink1を操作できるようになります。</p>
-
 <p>コマンドのビルド:</p>
-
 <pre><code>$ cd blink1/commandline &amp;&amp; make
 </code></pre>
-
 <p>使い方は <a href="https://github.com/todbot/blink1/blob/master/docs/blink1-tool.md">blink1-tool.md</a> にありますが、ちゃんとした使い方は<a href="https://github.com/todbot/blink1/blob/master/commandline/blink1-tool.c">実装</a>を読むべきようです。</p>
-
-<pre><code>blink1-tool -m 1000 --rgb 255,0,0 
+<pre tabindex="0"><code>blink1-tool -m 1000 --rgb 255,0,0 
 # 1秒かけて赤く光る
 blink1-tool --off
 # 消灯 
 blink1-tool -t 1000 -m 200 --rgb 255,0,0 --blink 5
 # ぴーかx5
-</code></pre>
-
-<p>Windows版やMac版ではGUIですぐに動かせます。色を自由に設定できるのは楽しいですね。IFTTTへの連携も簡単にできそうです。</p>
-
-<h2 id="とりあえずやること-アイディア">とりあえずやること(アイディア):</h2>
-
+</code></pre><p>Windows版やMac版ではGUIですぐに動かせます。色を自由に設定できるのは楽しいですね。IFTTTへの連携も簡単にできそうです。</p>
+<h2 id="とりあえずやることアイディア">とりあえずやること(アイディア):</h2>
 <ul>
 <li>リモートのJenkinsのビルドが失敗したら手元のランプが光る。</li>
 <li>push前のコードのテストがバックグラウンドで失敗したら赤blink、成功したら緑3secとか。</li>
