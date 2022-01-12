@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="LinuxからUSB HUBの電源のON/OFFを制御してみる" />
@@ -36,6 +36,10 @@
 		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
@@ -94,66 +98,51 @@
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
 いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。</p>
-
 <blockquote>
-<div class="amazon-box">
+<p><div class="amazon-box">
     <div class="amazon-image">
-        <a href="http://www.amazon.co.jp/dp/B001Q6N4EQ/ref=nosim?tag=blog310712-22" target="_blank">
-            <img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B001Q6N4EQ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
+        <a href="https://www.amazon.co.jp/dp/B001Q6N4EQ/ref=nosim?tag=blog310712-22" target="_blank">
+            <img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B001Q6N4EQ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
         </a>
     </div>
     <div class="amazon-info">
         <div class="amazon-name">
-            <a href="http://www.amazon.co.jp/dp/B001Q6N4EQ/ref=nosim?tag=blog310712-22" target="_blank"></a>
+            <a href="https://www.amazon.co.jp/dp/B001Q6N4EQ/ref=nosim?tag=blog310712-22" target="_blank"></a>
         </div>
     </div>
     <div class="clear-left"></div>
 </div>
 <div class="amazon-box">
     <div class="amazon-image">
-        <a href="http://www.amazon.co.jp/dp/B001Q6N4F0/ref=nosim?tag=blog310712-22" target="_blank">
-            <img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B001Q6N4F0&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
+        <a href="https://www.amazon.co.jp/dp/B001Q6N4F0/ref=nosim?tag=blog310712-22" target="_blank">
+            <img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B001Q6N4F0&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
         </a>
     </div>
     <div class="amazon-info">
         <div class="amazon-name">
-            <a href="http://www.amazon.co.jp/dp/B001Q6N4F0/ref=nosim?tag=blog310712-22" target="_blank"></a>
+            <a href="https://www.amazon.co.jp/dp/B001Q6N4F0/ref=nosim?tag=blog310712-22" target="_blank"></a>
         </div>
     </div>
     <div class="clear-left"></div>
-</div>
+</div></p>
 </blockquote>
-
 <h3 id="lsusbコマンドで確認する">lsusbコマンドで確認する</h3>
-
 <p>Linuxならなんでもいいですが、とりあえずraspberry pi 2で。</p>
-
 <p><code>lsusb</code>で確認してみます:</p>
-
-<pre><code class="language-console">pi@raspberrypi ~ $ sudo lsusb 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">pi@raspberrypi ~ $ sudo lsusb 
 Bus 001 Device 002: ID 0424:9514 Standard Microsystems Corp. 
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 003: ID 0424:ec00 Standard Microsystems Corp. 
 Bus 001 Device 004: ID 0409:005a NEC Corp. HighSpeed Hub
-</code></pre>
-
-<p>このなかのNEC Corp.製のチップのデバイスがSUGOI HUBです。<code>BUS=1, Device=4</code>であることがわかります。</p>
-
+</code></pre></div><p>このなかのNEC Corp.製のチップのデバイスがSUGOI HUBです。<code>BUS=1, Device=4</code>であることがわかります。</p>
 <h3 id="hub-ctrlを使って制御する">hub-ctrlを使って制御する</h3>
-
 <p>portの電源制御が簡単にできるようになるので利用してみます:</p>
-
 <p><a href="http://www.gniibe.org/development/ac-power-control-by-USB-hub/index.html">http://www.gniibe.org/development/ac-power-control-by-USB-hub/index.html</a></p>
-
 <h4 id="hub-ctrlをコンパイル">hub-ctrlをコンパイル</h4>
-
-<pre><code class="language-console">$ wget http://www.gniibe.org/oitoite/ac-power-control-by-USB-hub/hub-ctrl.c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ wget http://www.gniibe.org/oitoite/ac-power-control-by-USB-hub/hub-ctrl.c
 $ gcc -O2 -o hub-ctrl hub-ctrl.c -lusb
-</code></pre>
-
-<p><code>-v</code>で各portの状態が確認できます:</p>
-
-<pre><code class="language-console">pi@raspberrypi ~ $ sudo ./hub-ctrl -v
+</code></pre></div><p><code>-v</code>で各portの状態が確認できます:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">pi@raspberrypi ~ $ sudo ./hub-ctrl -v
 Hub #0 at 001:004
  INFO: individual power switching.
  Hub Port Status:
@@ -162,35 +151,22 @@ Hub #0 at 001:004
    Port 3: 0000.0100 power
    Port 4: 0000.0100 power
 *snip*
-</code></pre>
-
-<p><code>Hub #0 at 001:004</code>が先にlsusbで確認した<code>BUS=1, Device=4</code>のSUGOI HUBです。</p>
-
+</code></pre></div><p><code>Hub #0 at 001:004</code>が先にlsusbで確認した<code>BUS=1, Device=4</code>のSUGOI HUBです。</p>
 <h3 id="操作してみる">操作してみる</h3>
-
 <p>portはSUGOI HUBの左から1,2,3,4の順で指定できます。</p>
-
-<pre><code class="language-console">$ sudo ./hub-ctrl -b 1 -d 4 -P 1 -p 0 # port 1のpower off
-$ sudo ./hub-ctrl -b 1 -d 4 -P 1 -p 1 # port 1のpower on
-$ sudo ./hub-ctrl -b 1 -d 4 -P 2 -p 0 # port 2のpower off
-$ sudo ./hub-ctrl -b 1 -d 4 -P 2 -p 1 # port 2のpower on
-</code></pre>
-
-<p>なお、port 3,4は操作できませんでした。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ sudo ./hub-ctrl -b <span style="color:#ae81ff">1</span> -d <span style="color:#ae81ff">4</span> -P <span style="color:#ae81ff">1</span> -p <span style="color:#ae81ff">0</span> <span style="color:#75715e"># port 1のpower off</span>
+$ sudo ./hub-ctrl -b <span style="color:#ae81ff">1</span> -d <span style="color:#ae81ff">4</span> -P <span style="color:#ae81ff">1</span> -p <span style="color:#ae81ff">1</span> <span style="color:#75715e"># port 1のpower on</span>
+$ sudo ./hub-ctrl -b <span style="color:#ae81ff">1</span> -d <span style="color:#ae81ff">4</span> -P <span style="color:#ae81ff">2</span> -p <span style="color:#ae81ff">0</span> <span style="color:#75715e"># port 2のpower off</span>
+$ sudo ./hub-ctrl -b <span style="color:#ae81ff">1</span> -d <span style="color:#ae81ff">4</span> -P <span style="color:#ae81ff">2</span> -p <span style="color:#ae81ff">1</span> <span style="color:#75715e"># port 2のpower on</span>
+</code></pre></div><p>なお、port 3,4は操作できませんでした。</p>
 <p>これでUSBファンなどが自在に操作できます！
 USB電源連動のタップを使えば、安全に電化製品を制御できそうですね。</p>
-
-<script src="https://gist.github.com/atotto/5c1d55a2cb99ced9f7c7.js"></script>
-
+<!-- raw HTML omitted -->
 <p><a href="https://gist.github.com/atotto/5c1d55a2cb99ced9f7c7">https://gist.github.com/atotto/5c1d55a2cb99ced9f7c7</a></p>
-
 <h3 id="raspberry-piでやっていて気になったこと">raspberry piでやっていて気になったこと</h3>
-
 <p><code>hub-ctrl -v</code>で確認すると<code>BUS=1, Device=2</code>にも何か見えています。
 これはraspberry piのものです。</p>
-
-<pre><code>Hub #1 at 001:002
+<pre tabindex="0"><code>Hub #1 at 001:002
  INFO: individual power switching.
  WARN: Port indicators are NOT supported.
  Hub Port Status:
@@ -204,20 +180,14 @@ Hub #2 at 001:001
  WARN: Port indicators are NOT supported.
  Hub Port Status:
    Port 1: 0000.0503 highspeed power enable connect
-</code></pre>
-
-<p>ためしに、raspberry piのportを操作してみました。
+</code></pre><p>ためしに、raspberry piのportを操作してみました。
 port 1の電源を落とすとLANが落ちました:</p>
-
 <pre><code>$ sudo ./hub-ctrl -b 1 -d 2 -P 1 -p 0
 </code></pre>
-
 <p>port 2、または、port 4を操作するとraspberry piのUSBの電源がすべて落ちました:</p>
-
 <pre><code>$ sudo ./hub-ctrl -b 1 -d 2 -P 2 -p 0
 $ sudo ./hub-ctrl -b 1 -d 2 -P 4 -p 0
 </code></pre>
-
 <p>残りのport 3,5はよくわかりません。
 ＃どこの資料をみればいいのでしょう。。</p>
 </article>

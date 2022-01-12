@@ -9,11 +9,7 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.artarch.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 29 May 2021 22:12:34 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux</title>
       <link>https://blog.artarch.net/tags/linux/</link>
@@ -65,6 +61,15 @@
       <pubDate>Wed, 25 Dec 2019 00:22:42 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keyboard</title>
+      <link>https://blog.artarch.net/tags/keyboard/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/tags/keyboard/</guid>
       <description></description>
     </item>
     
@@ -128,15 +133,6 @@
       <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/tags/usb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>keyboard</title>
-      <link>https://blog.artarch.net/tags/keyboard/</link>
-      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato araki)</author>
-      <guid>https://blog.artarch.net/tags/keyboard/</guid>
       <description></description>
     </item>
     

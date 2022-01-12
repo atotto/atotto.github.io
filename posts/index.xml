@@ -9,11 +9,7 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>YAMAHA YDP-88 修理</title>
       <link>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</link>
@@ -50,7 +46,7 @@
       <description>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
 emacsはデドックス中。
 1-2 weekほど審査にかかるとのこと。
-2020-09-05 追記
+ 2020-09-05 追記
 無事ライセンス頂きました。 Goland だけかなと思っていたらAll Products Packでした。</description>
     </item>
     
@@ -74,7 +70,6 @@ emacsはデドックス中。
   &lt;iframe src=&#34;https://www.youtube.com/embed/Z31ZHTtBVgU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-
 &lt;p&gt;Control with BLE.&lt;/p&gt;</description>
     </item>
     
@@ -85,6 +80,17 @@ emacsはデドックス中。
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/golang/go-puzzlers/</guid>
       <description>&lt;p&gt;第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</guid>
+      <description>&lt;p&gt;年末の掃除もかねてメンテナンス。&lt;/p&gt;
+&lt;p&gt;キーの効きが悪いところがあったので調査。
+Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +109,6 @@ emacsはデドックス中。
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/rtk/</guid>
       <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://qzss.go.jp/events/robotcar_191118.html&#34;&gt;https://qzss.go.jp/events/robotcar_191118.html&lt;/a&gt;&lt;/li&gt;
@@ -155,15 +160,10 @@ emacsはデドックス中。
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/golang/go-test-pattern/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://qiita.com/atotto/items/f6b8c773264a3183a53c&#34;&gt;Go2 Advent Calendar 2017 20日目&lt;/a&gt;の転載です。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;hr&gt;
 &lt;p&gt;Goでテストを書くお話です。&lt;/p&gt;
-
 &lt;p&gt;基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。&lt;/p&gt;
-
 &lt;p&gt;ポイントを先に列挙します:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;テストのエラーメッセージは丁寧に書こう&lt;/li&gt;
 &lt;li&gt;テーブルテストを活用してパターンを整理しながら網羅しよう&lt;/li&gt;
@@ -203,7 +203,6 @@ DigiUSBの使い方の導入として、温度をLM61で計測し、データを
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</guid>
       <description>&lt;p&gt;raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。&lt;/p&gt;
-
 &lt;p&gt;Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi&lt;/p&gt;</description>
     </item>
     
@@ -215,18 +214,6 @@ DigiUSBの使い方の導入として、温度をLM61で計測し、データを
       <guid>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</guid>
       <description>&lt;p&gt;USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
 いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tex Yoda(トラックポイントキーボード)</title>
-      <link>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</link>
-      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato araki)</author>
-      <guid>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</guid>
-      <description>&lt;p&gt;年末の掃除もかねてメンテナンス。&lt;/p&gt;
-
-&lt;p&gt;キーの効きが悪いところがあったので調査。
-Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -263,7 +250,6 @@ Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックして�
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/book/lean-ux/</guid>
       <description>&lt;p&gt;先日、読書会で読んできました。&lt;/p&gt;
-
 &lt;p&gt;この本をざっくりと説明すると、UIデザイナ＋エンジニア達がアジャイル開発をリーン・スタートアップの要領でプロダクト開発をすすめるために必要なこと・やることをおおまかにまとめた本、です。
 Lean UXというタイトルからするとユーザーエクスペリエンスをリーンを通じてどうデザインするか、ということを想像するかもしれませんが、UXのtipsなどはなく、純粋にリーンの話です。&lt;/p&gt;</description>
     </item>

@@ -1,39 +1,223 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>artarch </title>
-		<link>https://blog.artarch.net/</link>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<author>Ato Araki</author>
-		<rights>Copyright (c) 2022</rights>
-		<updated>2022-01-02 23:00:00 &#43;0900 &#43;0900</updated>
-		
-		<item>
-			<title>Posts</title>
-			<link>https://blog.artarch.net/posts/</link>
-			<pubDate>Sun, 02 Jan 2022 23:00:00 &#43;0900</pubDate>
-			<author>Ato Araki</author>
-			<guid>https://blog.artarch.net/posts/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.artarch.net/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
-			<description></description>
-		</item>
-		
-		<item>
-			<title>about</title>
-			<link>https://blog.artarch.net/about/</link>
-			<pubDate>Sun, 01 Sep 2013 15:44:57 &#43;0900</pubDate>
-			<author>Ato Araki</author>
-			<guid>https://blog.artarch.net/about/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.artarch.net/images/2013.png" medium="image" type="image/jpg" width="100" height="100" />
-			<description>&lt;p&gt;atotto&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.artarch.net/images/2013.png&#34; alt=&#34;atotto&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/atotto&#34;&gt;twitter/atotto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/atotto&#34;&gt;github.com/atotto&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-		</item>
-		
-	</channel>
-</rss>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<id>https://blog.artarch.net/</id>
+<title>artarch</title>
+<updated>2022-01-02T23:00:00+09:00</updated>
+<author><name>Ato Araki</name></author>
+<link rel='alternate' type='text/html' href='https://blog.artarch.net/' />
+<link rel='self' type='application/atom+xml' href='https://blog.artarch.net/index.xml' />
+<entry>
+	<id>https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/</id>
+	<title>YAMAHA YDP-88 修理</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/repairing/yamaha-ydp-88-digital-piano/2022-01/' />
+	<updated>2022-01-02T23:00:00+09:00</updated>
+	<summary>スピーカーから音が出なくなった電子ピアノ(YAMAHA YDP-88)を修理。実家に帰ったついでに修理しました。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/linux/ubuntu-focal/</id>
+	<title>ubuntu focal note</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/linux/ubuntu-focal/' />
+	<updated>2021-05-29T22:12:34+09:00</updated>
+	<summary>設定メモ
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/web/certificate_tips/</id>
+	<title>証明書関連tips</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/web/certificate_tips/' />
+	<updated>2020-10-10T22:55:12+09:00</updated>
+	<summary>証明書を確認するときによく使うコマンドラインtips
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/</id>
+	<title>JetBrains OSS request でライセンスを応募してみた</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/notes/jetbrains-oss-request/memo/' />
+	<updated>2020-09-01T23:23:01+09:00</updated>
+	<summary>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
+emacsはデドックス中。
+1-2 weekほど審査にかかるとのこと。
+ 2020-09-05 追記
+無事ライセンス頂きました。 Goland だけかなと思っていたらAll Products Packでした。...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/linux/gnome/</id>
+	<title>debian stretch GDM (gnome) 設定メモ</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/linux/gnome/' />
+	<updated>2020-06-25T22:32:32+09:00</updated>
+	<summary>マウスカーソルのサイズを変更する $ gsettings set org.gnome.desktop.interface cursor-size 48  24,32,48,64で指定するらしい。 GUI(SettingsやTweak Tool)で変更できないような。
+フォントサイズを変更する $ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6  4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/works/microbit-robot/</id>
+	<title>Home Rover Robot (micro:bit&#43;robot)</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/works/microbit-robot/' />
+	<updated>2020-05-24T23:42:34+09:00</updated>
+	<summary>  Control with BLE.
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/golang/go-puzzlers/</id>
+	<title>Go Puzzlers</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/golang/go-puzzlers/' />
+	<updated>2019-12-25T00:22:42+09:00</updated>
+	<summary>第5回 Java・Go研修 OB・OG懇親会（2018） at freee 株式会社 で発表した Go Puzzlers を公開します。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/</id>
+	<title>Tex Yoda(トラックポイントキーボード)</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/tex-yoda-maintenance-1/' />
+	<updated>2019-12-23T00:00:00+09:00</updated>
+	<summary>年末の掃除もかねてメンテナンス。
+キーの効きが悪いところがあったので調査。 Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/web/ogp/</id>
+	<title>hugoでOGP確認</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/web/ogp/' />
+	<updated>2019-12-22T22:39:14+09:00</updated>
+	<summary>OPG設定メモ
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/rtk/</id>
+	<title>RTKをやってみるために調べたことと分かったこと</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/rtk/' />
+	<updated>2019-11-10T21:55:23+09:00</updated>
+	<summary>GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと
+ https://robot-car.jimdo.com/ https://qzss.go.jp/events/robotcar_191118.html ...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/web/hugo_github_pages/</id>
+	<title>Hugo &#43; Github Pagesにしてみる</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/web/hugo_github_pages/' />
+	<updated>2019-11-10T19:55:42+09:00</updated>
+	<summary>Hatenaブログを長らくそのままにしていましたが、Hugo &#43; Github Pagesに移行してみようと試みる。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/</id>
+	<title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/camera_film_and_digital/camera_film_and_digital/' />
+	<updated>2019-07-29T21:37:21+09:00</updated>
+	<summary>フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/repairing/national-etz160-drill-driver/battery-replacement/</id>
+	<title>National ETZ160 ドリルドライバ バッテリー交換</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/repairing/national-etz160-drill-driver/battery-replacement/' />
+	<updated>2019-04-20T00:00:00+09:00</updated>
+	<summary>中学生の頃あたりに買ってもらったドリルドライバーを実家から発掘。モーターは無事なので修理して使えるようにします。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/works/pomodoro_timer/</id>
+	<title>Pomodoro Timer</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/works/pomodoro_timer/' />
+	<updated>2019-04-06T22:12:32+09:00</updated>
+	<summary> ...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/golang/go-test-pattern/</id>
+	<title>Goでテストを書く(テストの実装パターン集)</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/golang/go-test-pattern/' />
+	<updated>2017-12-20T00:00:00+09:00</updated>
+	<summary>Go2 Advent Calendar 2017 20日目の転載です。
+ Goでテストを書くお話です。
+基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。
+ポイントを先に列挙します:
+ テストのエラーメッセージは丁寧に書こう テーブルテストを活用してパターンを整理しながら網羅しよう ｔ．Runをつかって大きなテストを分割しよう t.Helperをつかってテストエラーの箇所をわかりやすくしよう テスト用のデータは testdata ディレクトリに置こう Setup/Teardownをうまく書いてテストの見通しをよくしよう 等 ...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/works/train_controller/</id>
+	<title>Train Controller</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/works/train_controller/' />
+	<updated>2017-05-08T21:04:23+09:00</updated>
+	<summary> ...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/digispark_lm61_usb/</id>
+	<title>DigisparkとLM61で温度を測る</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/digispark_lm61_usb/' />
+	<updated>2016-12-19T20:00:00+09:00</updated>
+	<summary>最近Digisparkで遊ぶのにはまってます。 DigiUSBの使い方の導入として、温度をLM61で計測し、データを読んでみたのでメモ。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/</id>
+	<title>Raspberry Piに挿せるモータードライバを試す</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/pololu_drv8835-motor-driver/' />
+	<updated>2016-12-04T18:17:22+09:00</updated>
+	<summary>raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。
+Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/</id>
+	<title>LinuxからUSB HUBの電源のON/OFFを制御してみる</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/linux-sugoi-usb-hub-power-ctrl/' />
+	<updated>2015-10-09T12:13:13+09:00</updated>
+	<summary>USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。 いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/tex-yoda/</id>
+	<title>Tex Yoda(トラックポイントキーボード)</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/tex-yoda/' />
+	<updated>2015-06-04T18:15:11+09:00</updated>
+	<summary>メカニカルキーボードにトラックポイントがついているキーボード(Tex Yoda)です。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/book/how_google_works/</id>
+	<title>How Google Works</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/book/how_google_works/' />
+	<updated>2015-03-26T22:48:03+09:00</updated>
+	<summary>読んで考えたことメモ
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/blink1-mk2-first-contact/</id>
+	<title>blink(1) mk2を買った</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/blink1-mk2-first-contact/' />
+	<updated>2014-08-21T22:47:29+09:00</updated>
+	<summary>blink(1) mk2 USB RGB LED を同僚と一緒に購入しました。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/book/lean-ux/</id>
+	<title>Lean UX</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/book/lean-ux/' />
+	<updated>2014-07-21T22:40:57+09:00</updated>
+	<summary>先日、読書会で読んできました。
+この本をざっくりと説明すると、UIデザイナ＋エンジニア達がアジャイル開発をリーン・スタートアップの要領でプロダクト開発をすすめるために必要なこと・やることをおおまかにまとめた本、です。 Lean UXというタイトルからするとユーザーエクスペリエンスをリーンを通じてどうデザインするか、ということを想像するかもしれませんが、UXのtipsなどはなく、純粋にリーンの話です。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/book/practical-api-design/</id>
+	<title>APIデザインの極意</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/book/practical-api-design/' />
+	<updated>2014-06-13T06:46:36+09:00</updated>
+	<summary>APIデザインの極意 を、この本の訳者の @yoshiki_shibata さんがレビューを募集していたので応募してみました。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/about/</id>
+	<title>about</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/about/' />
+	<updated>2013-09-01T15:44:57+09:00</updated>
+	<summary>atotto
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/</id>
+	<title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/book/the-go-programming-language-phrasebook/' />
+	<updated>2012-09-29T00:35:36+09:00</updated>
+	<summary>書店に少しずつ入っているようですが、一足早く、柴田さん(@yoshiki_shibata)より本書を戴きました！
+...</summary>
+</entry>
+</feed>

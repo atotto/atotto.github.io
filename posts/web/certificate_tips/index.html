@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="証明書関連tips" />
@@ -36,6 +36,10 @@
 		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
@@ -93,10 +97,8 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>証明書を確認するときによく使うコマンドラインtips</p>
-
 <h2 id="特定のサーバの証明書を確認する">特定のサーバの証明書を確認する</h2>
-
-<pre><code>$  openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot;
+<pre tabindex="0"><code>$  openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot;
 CONNECTED(00000003) 
 depth=2 C = US, O = DigiCert Inc, OU = www.digicert.com, CN = DigiCert Global Root CA
 verify return:1
@@ -113,19 +115,13 @@ ple.org
 -----BEGIN CERTIFICATE-----
 MIIG1TCCBb2gAwIBAgIQD74IsIVNBXOKsMzhya/uyTANBgkqhkiG9w0BAQsFADBP
 (snip)
-</code></pre>
-
-<p>note:</p>
-
+</code></pre><p>note:</p>
 <ul>
 <li>&ldquo;Q&rdquo; は openssl での接続を切断するために送っている</li>
 </ul>
-
 <h2 id="特定のサーバの証明書の中身を閲覧する">特定のサーバの証明書の中身を閲覧する</h2>
-
 <p>opensslコマンドにパイプする</p>
-
-<pre><code>$ openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot; 2&gt;/dev/null | openssl 
+<pre tabindex="0"><code>$ openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot; 2&gt;/dev/null | openssl 
 x509 -inform pem -noout -text
 Certificate:
     Data:
@@ -140,37 +136,25 @@ Certificate:
         Subject: C = US, ST = California, L = Los Angeles, O = Internet Corporation for Assigned Names a
 nd Numbers, CN = www.example.org
 (snip)
-</code></pre>
-
-<p>有効期限の確認などで便利</p>
-
-<pre><code>$ openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot; 2&gt;/dev/null | openssl x509 -inform pem -noout -text | grep GMT | grep Not
+</code></pre><p>有効期限の確認などで便利</p>
+<pre tabindex="0"><code>$ openssl s_client -showcerts -connect example.com:443 &lt;&lt;&lt; &quot;Q&quot; 2&gt;/dev/null | openssl x509 -inform pem -noout -text | grep GMT | grep Not
             Not Before: Nov 24 00:00:00 2020 GMT
             Not After : Dec 25 23:59:59 2021 GMT
-</code></pre>
-
-<h2 id="マシンにインストール済みの各証明書の期限を確認する">マシンにインストール済みの各証明書の期限を確認する</h2>
-
+</code></pre><h2 id="マシンにインストール済みの各証明書の期限を確認する">マシンにインストール済みの各証明書の期限を確認する</h2>
 <p>ca-certificatesでインストール済みの証明書を見てみる</p>
-
 <p>事前準備:</p>
-
-<pre><code>$ go get github.com/atotto/listcert
-</code></pre>
-
-<pre><code>$ listcert /etc/ssl/certs
+<pre tabindex="0"><code>$ go get github.com/atotto/listcert
+</code></pre><pre tabindex="0"><code>$ listcert /etc/ssl/certs
 /usr/share/ca-certificates/mozilla/Go_Daddy_Class_2_CA.crt, , 2034-06-29 17:06:20 +0000 UTC
 /usr/share/ca-certificates/mozilla/WellsSecure_Public_Root_Certificate_Authority.crt, WellsSecure Public Root Certificate Authority, 2022-12-14 00:07:54 +0000 UTC
 /usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt, , 2034-12-20 02:31:27 +0000 UTC
 (snip)
-</code></pre>
-
-<p>refs:
-- <a href="https://github.com/atotto/listcert">https://github.com/atotto/listcert</a></p>
-
+</code></pre><p>refs:</p>
+<ul>
+<li><a href="https://github.com/atotto/listcert">https://github.com/atotto/listcert</a></li>
+</ul>
 <h2 id="pkcs7の証明書を見てみる">pkcs7の証明書を見てみる</h2>
-
-<pre><code>$ openssl pkcs7 -print_certs -in example.p7b
+<pre tabindex="0"><code>$ openssl pkcs7 -print_certs -in example.p7b
 </code></pre>
 </article>
 

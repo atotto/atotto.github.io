@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
 		
-		<meta name="generator" content="Hugo 0.59.1" />
+		<meta name="generator" content="Hugo 0.91.2" />
 
 		
 		<meta property="og:title" content="Raspberry Piに挿せるモータードライバを試す" />
@@ -36,6 +36,10 @@
 		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
 		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
@@ -93,49 +97,35 @@
 		
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
 	<p>raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。</p>
-
 <p>Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi</p>
-
 <blockquote>
-<p><img src="/posts/device/pololu_drv8835-motor-driver.jpg" alt="DRV8835" />
+<p><img src="/posts/device/pololu_drv8835-motor-driver.jpg" alt="DRV8835">
 image: <a href="https://www.pololu.com/product/2753">https://www.pololu.com/product/2753</a></p>
 </blockquote>
-
 <p>ザクッと挿せてDCモータを2つ扱えるので楽です。</p>
-
 <h4 id="用意するもの">用意するもの</h4>
-
 <ul>
 <li>Raspberry Pi 2 or 3</li>
 <li><a href="https://www.pololu.com/product/2753">Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi</a>
-
 <ul>
 <li>わたしは<a href="http://store.shopping.yahoo.co.jp/suzakulab/pololu-2753.html">ここ</a>で買いました</li>
-</ul></li>
+</ul>
+</li>
 <li>適当なDCモータ（動作確認用）</li>
 </ul>
-
 <h4 id="ドライバのセットアップ">ドライバのセットアップ</h4>
-
 <p><a href="https://github.com/pololu/drv8835-motor-driver-rpi">https://github.com/pololu/drv8835-motor-driver-rpi</a> を見ながら:</p>
-
-<pre><code>sudo apt-get update
+<pre tabindex="0"><code>sudo apt-get update
 sudo apt-get install -y python-dev python-pip
 sudo pip install wiringpi
 git clone https://github.com/pololu/drv8835-motor-driver-rpi.git --depth 1
 pushd drv8835-motor-driver-rpi
 sudo python setup.py install
 popd
-</code></pre>
-
-<p>で完了。</p>
-
+</code></pre><p>で完了。</p>
 <h4 id="動作確認">動作確認</h4>
-
-<pre><code>sudo python example.py
-</code></pre>
-
-<p>でモータの動作確認をしておきましょう。</p>
+<pre tabindex="0"><code>sudo python example.py
+</code></pre><p>でモータの動作確認をしておきましょう。</p>
 </article>
 
 		</main>
