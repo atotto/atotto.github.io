@@ -113,10 +113,10 @@ Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックして�
     
     <item>
       <title>RTKをやってみるために調べたことと分かったこと</title>
-      <link>https://blog.artarch.net/posts/rtk/</link>
+      <link>https://blog.artarch.net/posts/notes/rtk/</link>
       <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
-      <guid>https://blog.artarch.net/posts/rtk/</guid>
+      <guid>https://blog.artarch.net/posts/notes/rtk/</guid>
       <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
@@ -131,6 +131,17 @@ Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックして�
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/web/hugo_github_pages/</guid>
       <description>&lt;p&gt;Hatenaブログを長らくそのままにしていましたが、Hugo + Github Pagesに移行してみようと試みる。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MadgwickFilter &#43; MPU9250 で遊ぶ</title>
+      <link>https://blog.artarch.net/posts/device/madgwickfilter_mpu9250/</link>
+      <pubDate>Sun, 06 Oct 2019 19:53:22 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/device/madgwickfilter_mpu9250/</guid>
+      <description>&lt;p&gt;MadgwickFilterを使ってみました。
+何者かはちゃんと説明できませんが、センサで起きるノイズなどでドリフトしてしまう姿勢を安定的に求めるために使います。
+MPU9250を利用して、加速度、ジャイロ、地磁気センサをこのフィルタを利用し、姿勢角を算出します。&lt;/p&gt;</description>
     </item>
     
     <item>

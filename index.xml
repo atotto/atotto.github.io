@@ -100,9 +100,9 @@ emacsはデドックス中。
 ...</summary>
 </entry>
 <entry>
-	<id>https://blog.artarch.net/posts/rtk/</id>
+	<id>https://blog.artarch.net/posts/notes/rtk/</id>
 	<title>RTKをやってみるために調べたことと分かったこと</title>
-	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/rtk/' />
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/notes/rtk/' />
 	<published>2019-11-10T21:55:23+09:00</published>
 	<updated>2019-11-10T21:55:23+09:00</updated>
 	<summary>GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと
@@ -115,6 +115,15 @@ emacsはデドックス中。
 	<published>2019-11-10T19:55:42+09:00</published>
 	<updated>2019-11-10T19:55:42+09:00</updated>
 	<summary>Hatenaブログを長らくそのままにしていましたが、Hugo &#43; Github Pagesに移行してみようと試みる。
+...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/posts/device/madgwickfilter_mpu9250/</id>
+	<title>MadgwickFilter &#43; MPU9250 で遊ぶ</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/device/madgwickfilter_mpu9250/' />
+	<published>2019-10-06T19:53:22+09:00</published>
+	<updated>2019-10-06T19:53:22+09:00</updated>
+	<summary>MadgwickFilterを使ってみました。 何者かはちゃんと説明できませんが、センサで起きるノイズなどでドリフトしてしまう姿勢を安定的に求めるために使います。 MPU9250を利用して、加速度、ジャイロ、地磁気センサをこのフィルタを利用し、姿勢角を算出します。
 ...</summary>
 </entry>
 <entry>
@@ -242,7 +251,7 @@ Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi
 	<title>about</title>
 	<link rel='alternate' type='text/html' href='https://blog.artarch.net/about/' />
 	<published>2013-09-01T15:44:57+09:00</published>
-	<updated>2013-09-01T15:44:57+09:00</updated>
+	<updated>2022-01-16T22:36:02+09:00</updated>
 	<summary>atotto
 ...</summary>
 </entry>
