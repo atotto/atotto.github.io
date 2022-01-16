@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>make</title>
+      <link>https://blog.artarch.net/categories/make/</link>
+      <pubDate>Sun, 04 Jul 2021 10:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/categories/make/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>memo</title>
       <link>https://blog.artarch.net/categories/memo/</link>
       <pubDate>Sat, 29 May 2021 22:12:34 +0900</pubDate>
@@ -34,15 +43,6 @@
       <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>make</title>
-      <link>https://blog.artarch.net/categories/make/</link>
-      <pubDate>Sun, 24 May 2020 23:42:34 +0900</pubDate>
-      <author>ato.araki@gmail.com (ato araki)</author>
-      <guid>https://blog.artarch.net/categories/make/</guid>
       <description></description>
     </item>
     
