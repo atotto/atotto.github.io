@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on artarch</title>
+    <link>https://blog.artarch.net/notes/</link>
+    <description>Recent content in Notes on artarch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
+    <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
+    <copyright>Ato Araki — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 02 Jan 2022 23:00:00 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YAMAHA YDP-88 修理</title>
+      <link>https://blog.artarch.net/notes/repairing/yamaha-ydp-88-digital-piano/</link>
+      <pubDate>Sun, 02 Jan 2022 23:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/repairing/yamaha-ydp-88-digital-piano/</guid>
+      <description>&lt;p&gt;スピーカーから音が出なくなった電子ピアノ(YAMAHA YDP-88)を修理。実家に帰ったついでに修理しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu focal note</title>
+      <link>https://blog.artarch.net/notes/linux/ubuntu-focal/</link>
+      <pubDate>Sat, 29 May 2021 22:12:34 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/linux/ubuntu-focal/</guid>
+      <description>&lt;p&gt;設定メモ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>証明書関連tips</title>
+      <link>https://blog.artarch.net/notes/linux/certificate-tips/</link>
+      <pubDate>Sat, 10 Oct 2020 22:55:12 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/linux/certificate-tips/</guid>
+      <description>&lt;p&gt;証明書を確認するときによく使うコマンドラインtips&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JetBrains OSS request でライセンスを応募してみた</title>
+      <link>https://blog.artarch.net/notes/jetbrains-oss-request/</link>
+      <pubDate>Tue, 01 Sep 2020 23:23:01 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/jetbrains-oss-request/</guid>
+      <description>会社で3年ほど Goland を利用させてもらっていて、すごく便利。個人活動でも Goland を使いたいので、とあるプロジェクトで応募してみました。
+emacsはデドックス中。
+1-2 weekほど審査にかかるとのこと。
+ 2020-09-05 追記
+無事ライセンス頂きました。 Goland だけかなと思っていたらAll Products Packでした。</description>
+    </item>
+    
+    <item>
+      <title>debian stretch GDM (gnome) 設定メモ</title>
+      <link>https://blog.artarch.net/notes/linux/gnome/</link>
+      <pubDate>Thu, 25 Jun 2020 22:32:32 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/linux/gnome/</guid>
+      <description>マウスカーソルのサイズを変更する $ gsettings set org.gnome.desktop.interface cursor-size 48  24,32,48,64で指定するらしい。 GUI(SettingsやTweak Tool)で変更できないような。
+フォントサイズを変更する $ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6  4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/notes/repairing/tex-yoda/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/repairing/tex-yoda/</guid>
+      <description>&lt;p&gt;年末の掃除もかねてメンテナンス。&lt;/p&gt;
+&lt;p&gt;キーの効きが悪いところがあったので調査。
+Tex Yodaのmassdropの掲示板を見てみると、ハンダクラックしている疑惑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>RTKをやってみるために調べたことと分かったこと</title>
+      <link>https://blog.artarch.net/notes/rtk/</link>
+      <pubDate>Sun, 10 Nov 2019 21:55:23 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/rtk/</guid>
+      <description>&lt;p&gt;GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://robot-car.jimdo.com/&#34;&gt;https://robot-car.jimdo.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qzss.go.jp/events/robotcar_191118.html&#34;&gt;https://qzss.go.jp/events/robotcar_191118.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>MadgwickFilter &#43; MPU9250 で遊ぶ</title>
+      <link>https://blog.artarch.net/notes/device/madgwickfilter-mpu9250/</link>
+      <pubDate>Sun, 06 Oct 2019 19:53:22 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/madgwickfilter-mpu9250/</guid>
+      <description>&lt;p&gt;MadgwickFilterを使ってみました。
+何者かはちゃんと説明できませんが、センサで起きるノイズなどでドリフトしてしまう姿勢を安定的に求めるために使います。
+MPU9250を利用して、加速度、ジャイロ、地磁気センサをこのフィルタを利用し、姿勢角を算出します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>フィルムカメラをデジタル化するには(課題がたくさん)</title>
+      <link>https://blog.artarch.net/notes/camera_film_and_digital/</link>
+      <pubDate>Mon, 29 Jul 2019 21:37:21 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/camera_film_and_digital/</guid>
+      <description>&lt;p&gt;フィルムカメラをデジタル化するという試みはこれまで多くのメーカーがトライし、消えていった。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>National ETZ160 ドリルドライバ バッテリー交換</title>
+      <link>https://blog.artarch.net/notes/repairing/national-etz160-drill-driver/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/repairing/national-etz160-drill-driver/</guid>
+      <description>&lt;p&gt;中学生の頃あたりに買ってもらったドリルドライバーを実家から発掘。モーターは無事なので修理して使えるようにします。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DigisparkとLM61で温度を測る</title>
+      <link>https://blog.artarch.net/notes/device/digispark-lm61-usb/</link>
+      <pubDate>Mon, 19 Dec 2016 20:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/digispark-lm61-usb/</guid>
+      <description>&lt;p&gt;最近Digisparkで遊ぶのにはまってます。
+DigiUSBの使い方の導入として、温度をLM61で計測し、データを読んでみたのでメモ。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Piに挿せるモータードライバを試す</title>
+      <link>https://blog.artarch.net/notes/device/pololu_drv8835-motor-driver/</link>
+      <pubDate>Sun, 04 Dec 2016 18:17:22 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/pololu_drv8835-motor-driver/</guid>
+      <description>&lt;p&gt;raspberry pi に直接挿せるデュアルモータードライバを試したのでメモ。&lt;/p&gt;
+&lt;p&gt;Pololu DRV8835 Dual Motor Driver Kit for Raspberry Pi&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LinuxからUSB HUBの電源のON/OFFを制御してみる</title>
+      <link>https://blog.artarch.net/notes/device/linux-sugoi-usb-hub-power-ctrl/</link>
+      <pubDate>Fri, 09 Oct 2015 12:13:13 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/linux-sugoi-usb-hub-power-ctrl/</guid>
+      <description>&lt;p&gt;USBの規格上、各ポートの電源の制御ができる（Per-port power switchingというらしい？）そうですが、その機能を実装しているデバイスがあまり無いようです。
+いろいろを探してみるとSUGOI HUBがその機能を実装しているということなので買って試してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tex Yoda(トラックポイントキーボード)</title>
+      <link>https://blog.artarch.net/notes/device/tex-yoda/</link>
+      <pubDate>Thu, 04 Jun 2015 18:15:11 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/tex-yoda/</guid>
+      <description>&lt;p&gt;メカニカルキーボードにトラックポイントがついているキーボード(Tex Yoda)です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How Google Works</title>
+      <link>https://blog.artarch.net/notes/book/how_google_works/</link>
+      <pubDate>Thu, 26 Mar 2015 22:48:03 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/book/how_google_works/</guid>
+      <description>&lt;p&gt;読んで考えたことメモ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>blink(1) mk2を買った</title>
+      <link>https://blog.artarch.net/notes/device/blink1-mk2/</link>
+      <pubDate>Thu, 21 Aug 2014 22:47:29 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/blink1-mk2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://thingm.com/products/blink-1/&#34;&gt;blink(1) mk2 USB RGB LED&lt;/a&gt; を同僚と一緒に購入しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lean UX</title>
+      <link>https://blog.artarch.net/notes/book/lean-ux/</link>
+      <pubDate>Mon, 21 Jul 2014 22:40:57 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/book/lean-ux/</guid>
+      <description>&lt;p&gt;先日、読書会で読んできました。&lt;/p&gt;
+&lt;p&gt;この本をざっくりと説明すると、UIデザイナ＋エンジニア達がアジャイル開発をリーン・スタートアップの要領でプロダクト開発をすすめるために必要なこと・やることをおおまかにまとめた本、です。
+Lean UXというタイトルからするとユーザーエクスペリエンスをリーンを通じてどうデザインするか、ということを想像するかもしれませんが、UXのtipsなどはなく、純粋にリーンの話です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>APIデザインの極意</title>
+      <link>https://blog.artarch.net/notes/book/practical-api-design/</link>
+      <pubDate>Fri, 13 Jun 2014 06:46:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/book/practical-api-design/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/484433591X/hatena310712-22/&#34;&gt;APIデザインの極意&lt;/a&gt;
+を、この本の訳者の &lt;a href=&#34;http://twitter.com/yoshiki_shibata/status/463985363195686912&#34;&gt;@yoshiki_shibata さんがレビューを募集&lt;/a&gt;していたので応募してみました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>&#34;プログラミング言語Goフレーズブック&#34;を戴きました</title>
+      <link>https://blog.artarch.net/notes/book/the-go-programming-language-phrasebook/</link>
+      <pubDate>Sat, 29 Sep 2012 00:35:36 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/book/the-go-programming-language-phrasebook/</guid>
+      <description>&lt;p&gt;書店に少しずつ入っているようですが、一足早く、柴田さん(&lt;a href=&#34;https://twitter.com/yoshiki_shibata&#34;&gt;@yoshiki_shibata&lt;/a&gt;)より本書を戴きました！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

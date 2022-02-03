@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151914489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151914489-1');
+</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Home Rover Robot (micro:bit&#43;robot)</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.artarch.net/index.xml">
+		<link rel="canonical" href="https://blog.artarch.net/works/microbit-robot/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
+		<meta name="description" content="BLEで操作できるロボット(micro:bit)">
+		
+		<meta name="generator" content="Hugo 0.91.2" />
+
+		
+		<meta property="og:title" content="Home Rover Robot (micro:bit&#43;robot)" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://blog.artarch.net/img/default-header-img.jpg" />
+		<meta property="og:description" content="BLEで操作できるロボット(micro:bit)" />
+		<meta property="og:url" content="https://blog.artarch.net/works/microbit-robot/" />
+		<meta property="og:site_name" content="Home Rover Robot (micro:bit&#43;robot)" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@atotto" />
+
+
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/toc.css" />
+		
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://blog.artarch.net/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-works page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('https://blog.artarch.net/img/default-header-img.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="https://blog.artarch.net/" title="Home">
+						<img src="https://blog.artarch.net/img/logo.jpg" class="w2 h2 br-100" alt="artarch" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/">Works</a>
+						<a class="link f5 ml2 dim near-white" href="/posts/">Posts</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/make/">Make</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/">Category</a>
+						<a class="link f5 ml2 dim near-white" href="/tags/">Tags</a>
+						<a class="link f5 ml2 dim near-white" href="/about/">About</a>
+						<a class="link f5 ml2 dim near-white" href="https://github.com/atotto"><i class="fab fa-github-square"></i></a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="https://blog.artarch.net/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="https://blog.artarch.net/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">Home Rover Robot (micro:bit+robot)</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2020-05-24T23:42:34&#43;09:00">May 24, 2020</time>
+								<span class="display-print">by Ato Araki</span>
+								 in <a href="https://blog.artarch.net/categories/make" class="no-underline category near-white dim">Make</a>
+								<span class="display-print">at https://blog.artarch.net/works/microbit-robot/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Z31ZHTtBVgU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Control with BLE.</p>
+<h2 id="材料">材料</h2>
+<ul>
+<li><div class="amazon-box">
+    <div class="amazon-image">
+        <a href="https://www.amazon.co.jp/dp/B07MCSGCLQ/ref=nosim?tag=blog310712-22" target="_blank">
+            <img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B07MCSGCLQ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
+        </a>
+    </div>
+    <div class="amazon-info">
+        <div class="amazon-name">
+            <a href="https://www.amazon.co.jp/dp/B07MCSGCLQ/ref=nosim?tag=blog310712-22" target="_blank">BBC micro:bit </a>
+        </div>
+    </div>
+    <div class="clear-left"></div>
+</div></li>
+<li><div class="amazon-box">
+    <div class="amazon-image">
+        <a href="https://www.amazon.co.jp/dp/B071HXQR9J/ref=nosim?tag=blog310712-22" target="_blank">
+            <img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B071HXQR9J&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
+        </a>
+    </div>
+    <div class="amazon-info">
+        <div class="amazon-name">
+            <a href="https://www.amazon.co.jp/dp/B071HXQR9J/ref=nosim?tag=blog310712-22" target="_blank">BBC micro:bit用モータードライバ v2</a>
+        </div>
+    </div>
+    <div class="clear-left"></div>
+</div></li>
+<li><div class="amazon-box">
+    <div class="amazon-image">
+        <a href="https://www.amazon.co.jp/dp/B073S47B11/ref=nosim?tag=blog310712-22" target="_blank">
+            <img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B073S47B11&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=blog310712-22" >
+        </a>
+    </div>
+    <div class="amazon-info">
+        <div class="amazon-name">
+            <a href="https://www.amazon.co.jp/dp/B073S47B11/ref=nosim?tag=blog310712-22" target="_blank">タミヤ 楽しい工作シリーズ No.227 カムプログラムロボット 工作セット 70227</a>
+        </div>
+    </div>
+    <div class="clear-left"></div>
+</div></li>
+</ul>
+<h2 id="プログラム">プログラム</h2>
+<p>github: <a href="https://github.com/atotto/mibot">https://github.com/atotto/mibot</a></p>
+<blockquote>
+<p><img src="https://github.com/atotto/mibot/raw/master/microbit/code.png" alt=""></p>
+</blockquote>
+</article>
+
+
+
+<aside class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<div id="see-also">
+		<h2>See Also</h2>
+		<ul>
+			
+			<li><a href="/works/pomodoro_timer/">Pomodoro Timer</a></li>
+			
+			<li><a href="/works/train_controller/">Train Controller</a></li>
+			
+			<li><a href="/posts/photovoltaics/">ベランダで太陽光発電を試す</a></li>
+			
+			<li><a href="/notes/rtk/">RTKをやってみるために調べたことと分かったこと</a></li>
+			
+			<li><a href="/notes/device/madgwickfilter-mpu9250/">MadgwickFilter &#43; MPU9250 で遊ぶ</a></li>
+			
+			<li><a href="/notes/device/digispark-lm61-usb/">DigisparkとLM61で温度を測る</a></li>
+			
+		</ul>
+	</div>
+</aside>
+
+
+
+		</main>
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			<p class="w-50 fr tr">
+				LastModified: 2020-05-24T14:42:34Z
+			</p>
+			<p class="w-50 near-white">
+				&copy; 2022 Ato Araki
+			</p>
+		</footer>
+		
+	
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151914489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151914489-1');
+</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>RTKをやってみるために調べたことと分かったこと</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.artarch.net/index.xml">
+		<link rel="canonical" href="https://blog.artarch.net/notes/rtk/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.91.2" />
+
+		
+		<meta property="og:title" content="RTKをやってみるために調べたことと分かったこと" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://blog.artarch.net/img/default-header-img.jpg" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://blog.artarch.net/notes/rtk/" />
+		<meta property="og:site_name" content="RTKをやってみるために調べたことと分かったこと" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@atotto" />
+
+
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/toc.css" />
+		
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://blog.artarch.net/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-notes page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('https://blog.artarch.net/img/default-header-img.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="https://blog.artarch.net/" title="Home">
+						<img src="https://blog.artarch.net/img/logo.jpg" class="w2 h2 br-100" alt="artarch" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/">Works</a>
+						<a class="link f5 ml2 dim near-white" href="/posts/">Posts</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/make/">Make</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/">Category</a>
+						<a class="link f5 ml2 dim near-white" href="/tags/">Tags</a>
+						<a class="link f5 ml2 dim near-white" href="/about/">About</a>
+						<a class="link f5 ml2 dim near-white" href="https://github.com/atotto"><i class="fab fa-github-square"></i></a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="https://blog.artarch.net/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="https://blog.artarch.net/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">RTKをやってみるために調べたことと分かったこと</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2019-11-10T21:55:23&#43;09:00">Nov 10, 2019</time>
+								<span class="display-print">by Ato Araki</span>
+								 in <a href="https://blog.artarch.net/categories/note" class="no-underline category near-white dim">Note</a>
+								<span class="display-print">at https://blog.artarch.net/notes/rtk/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<p>GPS,QZSSロボットカーコンテスト2019へ参加するために調べたこと</p>
+<ul>
+<li><a href="https://robot-car.jimdo.com/">https://robot-car.jimdo.com/</a></li>
+<li><a href="https://qzss.go.jp/events/robotcar_191118.html">https://qzss.go.jp/events/robotcar_191118.html</a></li>
+</ul>
+<h2 id="最初に調べたこと">最初に調べたこと</h2>
+<ul>
+<li>RTKとは何で、何が必要か</li>
+<li>アンテナは何が必要か</li>
+</ul>
+<h2 id="わかったこと">わかったこと</h2>
+<ul>
+<li>RTKをデバイス側でできるものは高価(3万くらいから）。Neo M8P, F9Pなど。ublox社のデバイスばかりヒットする</li>
+<li>RTKをデバイス側でできなくても、rtklibを利用すればPC側で算出できる。ただし、NMEAの出力では計算できないため、その他のデータを出力できるデバイスは必須。Neo M8Tなど。</li>
+<li>1周波よりも2周波のほうが有利（複数の周波数帯を利用できる方が有利）
+<ul>
+<li>価格が高め。</li>
+<li>F9Pなどがある。アンテナも1周波と比較すると高価。</li>
+<li>今後は2周波が来そう</li>
+</ul>
+</li>
+<li>rtklibのGUI付きのものはwindows版のみだが、コアとなるrtkrcvはlinuxでもビルドできる</li>
+<li>基準局は用意せずとも、有志の基準局が公開されているので、10km圏内であれば、比較的安定して利用できる</li>
+<li>M8Tで、かつ、日本で活用できる測位システムはGPS、Beidou、QZSS。</li>
+<li>GPSの人工衛星は数多くあがっているが、それ以上に、Beidouの人工衛星があがっている（中国すごい！）。日本国内であれば常に数十個の衛星が利用できる。</li>
+<li>docomoやsoftbankがRTKの基準局設置を進めている</li>
+</ul>
+<h2 id="結果として購入したもの">結果として購入したもの</h2>
+<ul>
+<li>M8T（一台）</li>
+<li>GNSSアンテナ（一台）</li>
+</ul>
+<h2 id="キーワード">キーワード</h2>
+<ul>
+<li>基準局</li>
+<li>移動局</li>
+<li>RTCM3</li>
+</ul>
+<h2 id="ノウハウ">ノウハウ</h2>
+<ul>
+<li>建物や木などの反射が気になる場合は仰角を調整しておく（例えば30度）</li>
+<li>地面からの反射を防ぐために、グランドプレーンは必須。最低でも直径10cmはあると良い
+<a href="http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf">http://www.denshi.e.kaiyodai.ac.jp/jp/assets/files/pdf/content1/yuasa_m.pdf</a></li>
+<li>GPSの周波がLTEと干渉する可能性があるので、気をつける
+<a href="https://www.gsi.go.jp/common/000195100.pdf">https://www.gsi.go.jp/common/000195100.pdf</a></li>
+<li>BeidouのC02衛星は避けたほうがいいらしい</li>
+</ul>
+</article>
+
+
+
+<aside class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<div id="see-also">
+		<h2>See Also</h2>
+		<ul>
+			
+			<li><a href="/notes/camera_film_and_digital/">フィルムカメラをデジタル化するには(課題がたくさん)</a></li>
+			
+			<li><a href="/works/pomodoro_timer/">Pomodoro Timer</a></li>
+			
+			<li><a href="/works/microbit-robot/">Home Rover Robot (micro:bit&#43;robot)</a></li>
+			
+			<li><a href="/works/train_controller/">Train Controller</a></li>
+			
+		</ul>
+	</div>
+</aside>
+
+
+
+		</main>
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			<p class="w-50 fr tr">
+				LastModified: 2019-11-10T12:55:23Z
+			</p>
+			<p class="w-50 near-white">
+				&copy; 2022 Ato Araki
+			</p>
+		</footer>
+		
+	
+	</body>
+</html>
