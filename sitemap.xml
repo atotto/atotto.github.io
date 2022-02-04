@@ -3,22 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2022-01-16T20:00:00+09:00</lastmod>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2022-01-16T20:00:00+09:00</lastmod>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/tags/electronics/</loc>
-    <lastmod>2022-01-02T23:00:00+09:00</lastmod>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/led/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/light/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/categories/make/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/microphone/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/posts/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/categories/%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/posts/light-flicker-measurement/</loc>
+    <lastmod>2022-02-03T22:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/notes/</loc>
     <lastmod>2022-01-16T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/tags/piano/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/tags/</loc>
-    <lastmod>2022-01-16T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/notes/repairing/yamaha-ydp-88-digital-piano/</loc>
     <lastmod>2022-01-02T23:00:00+09:00</lastmod>
@@ -34,15 +55,6 @@
   </url><url>
     <loc>https://blog.artarch.net/tags/diy/</loc>
     <lastmod>2022-01-14T10:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/categories/make/</loc>
-    <lastmod>2022-01-14T10:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/posts/</loc>
-    <lastmod>2022-01-14T10:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/categories/%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</loc>
-    <lastmod>2022-01-16T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/posts/photovoltaics/</loc>
     <lastmod>2022-01-14T10:00:00+09:00</lastmod>
@@ -291,9 +303,6 @@
     <lastmod>2014-08-21T22:47:29+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/tags/blink1/</loc>
-    <lastmod>2014-08-21T22:47:29+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/tags/led/</loc>
     <lastmod>2014-08-21T22:47:29+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/notes/book/lean-ux/</loc>

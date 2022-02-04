@@ -1,10 +1,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <id>https://blog.artarch.net/</id>
 <title>artarch</title>
-<updated>2022-01-02T23:00:00+09:00</updated>
+<updated>2022-02-03T22:00:00+09:00</updated>
 <author><name>Ato Araki</name></author>
 <link rel='alternate' type='text/html' href='https://blog.artarch.net/' />
 <link rel='self' type='application/atom+xml' href='https://blog.artarch.net/index.xml' />
+<entry>
+	<id>https://blog.artarch.net/posts/light-flicker-measurement/</id>
+	<title>ライトのちらつき（フリッカー）を調べてみる</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/posts/light-flicker-measurement/' />
+	<published>2022-02-03T22:00:00+09:00</published>
+	<updated>2022-02-03T22:00:00+09:00</updated>
+	<summary>光源のちらつき（フリッカー）を簡易的に観測できるようにしてみました。
+ちらつき (フリッカー:Flicker) は、電気用品安全法(PSE)の基準で基準があります。 とはいえ、気が付かない程度にちらついているLEDが一定数あり、気になるため、これを調べてみることにします。
+...</summary>
+</entry>
 <entry>
 	<id>https://blog.artarch.net/notes/repairing/yamaha-ydp-88-digital-piano/</id>
 	<title>YAMAHA YDP-88 修理</title>

@@ -9,7 +9,18 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 04 Jul 2021 10:00:00 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Feb 2022 22:00:00 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ライトのちらつき（フリッカー）を調べてみる</title>
+      <link>https://blog.artarch.net/posts/light-flicker-measurement/</link>
+      <pubDate>Thu, 03 Feb 2022 22:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/posts/light-flicker-measurement/</guid>
+      <description>&lt;p&gt;光源のちらつき（フリッカー）を簡易的に観測できるようにしてみました。&lt;/p&gt;
+&lt;p&gt;ちらつき (フリッカー:&lt;a href=&#34;https://en.wikipedia.org/wiki/Flicker_(light)&#34;&gt;Flicker&lt;/a&gt;) は、電気用品安全法(PSE)の基準で基準があります。
+とはいえ、気が付かない程度にちらついているLEDが一定数あり、気になるため、これを調べてみることにします。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>ベランダで太陽光発電を試す</title>
       <link>https://blog.artarch.net/posts/photovoltaics/</link>
