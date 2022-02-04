@@ -17,8 +17,8 @@
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/posts/light-flicker-measurement/</guid>
       <description>&lt;p&gt;光源のちらつき（フリッカー）を簡易的に観測できるようにしてみました。&lt;/p&gt;
-&lt;p&gt;ちらつき (フリッカー:&lt;a href=&#34;https://en.wikipedia.org/wiki/Flicker_(light)&#34;&gt;Flicker&lt;/a&gt;) は、電気用品安全法(PSE)の基準で基準があります。
-とはいえ、気が付かない程度にちらついているLEDが一定数あり、気になるため、これを調べてみることにします。&lt;/p&gt;</description>
+&lt;p&gt;ちらつき (フリッカー:&lt;a href=&#34;https://en.wikipedia.org/wiki/Flicker_(light)&#34;&gt;Flicker&lt;/a&gt;) は、電気用品安全法(PSE)で基準があります。
+とはいえ、気が付かない程度にちらついているLED電灯が一定数あり、気になるため、これを調べてみることにします。&lt;/p&gt;</description>
     </item>
     
     <item>
