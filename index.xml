@@ -42,6 +42,15 @@
 ...</summary>
 </entry>
 <entry>
+	<id>https://blog.artarch.net/notes/linux/pc-rtc-alarm/</id>
+	<title>PCを自動起動するの巻</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/notes/linux/pc-rtc-alarm/' />
+	<published>2020-10-06T10:00:00+09:00</published>
+	<updated>2020-10-06T10:00:00+09:00</updated>
+	<summary>停電が計画されていたりすると、停電復帰後に指定した時刻で起動しておきたい、なんてことがあります。
+...</summary>
+</entry>
+<entry>
 	<id>https://blog.artarch.net/notes/jetbrains-oss-request/</id>
 	<title>JetBrains OSS request でライセンスを応募してみた</title>
 	<link rel='alternate' type='text/html' href='https://blog.artarch.net/notes/jetbrains-oss-request/' />
@@ -171,6 +180,15 @@ emacsはデドックス中。
 	<published>2017-05-08T21:04:23+09:00</published>
 	<updated>2017-05-08T21:04:23+09:00</updated>
 	<summary> ...</summary>
+</entry>
+<entry>
+	<id>https://blog.artarch.net/notes/device/grafana-influxdb-arduino/</id>
+	<title>センサデータを influxdb に集めて grafana でみる</title>
+	<link rel='alternate' type='text/html' href='https://blog.artarch.net/notes/device/grafana-influxdb-arduino/' />
+	<published>2017-04-08T10:00:00+09:00</published>
+	<updated>2022-01-16T20:00:00+09:00</updated>
+	<summary>Arduino でセンサ値を InfluxDB へ入れつつ、 Grafana で参照する内容を少しまとめ
+...</summary>
 </entry>
 <entry>
 	<id>https://blog.artarch.net/notes/device/digispark-lm61-usb/</id>

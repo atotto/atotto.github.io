@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>PCを自動起動するの巻</title>
+      <link>https://blog.artarch.net/notes/linux/pc-rtc-alarm/</link>
+      <pubDate>Tue, 06 Oct 2020 10:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/linux/pc-rtc-alarm/</guid>
+      <description>&lt;p&gt;停電が計画されていたりすると、停電復帰後に指定した時刻で起動しておきたい、なんてことがあります。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>JetBrains OSS request でライセンスを応募してみた</title>
       <link>https://blog.artarch.net/notes/jetbrains-oss-request/</link>
       <pubDate>Tue, 01 Sep 2020 23:23:01 +0900</pubDate>
@@ -111,6 +120,15 @@ MPU9250を利用して、加速度、ジャイロ、地磁気センサをこの�
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/notes/repairing/national-etz160-drill-driver/</guid>
       <description>&lt;p&gt;中学生の頃あたりに買ってもらったドリルドライバーを実家から発掘。モーターは無事なので修理して使えるようにします。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>センサデータを influxdb に集めて grafana でみる</title>
+      <link>https://blog.artarch.net/notes/device/grafana-influxdb-arduino/</link>
+      <pubDate>Sat, 08 Apr 2017 10:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/device/grafana-influxdb-arduino/</guid>
+      <description>&lt;p&gt;Arduino でセンサ値を InfluxDB へ入れつつ、 Grafana で参照する内容を少しまとめ&lt;/p&gt;</description>
     </item>
     
     <item>

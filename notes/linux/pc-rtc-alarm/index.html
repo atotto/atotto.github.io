@@ -12,9 +12,9 @@
 </script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Train Controller</title>
+		<title>PCを自動起動するの巻</title>
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.artarch.net/index.xml">
-		<link rel="canonical" href="https://blog.artarch.net/works/train_controller/">
+		<link rel="canonical" href="https://blog.artarch.net/notes/linux/pc-rtc-alarm/">
 		
 		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
 		
@@ -22,12 +22,12 @@
 		<meta name="generator" content="Hugo 0.91.2" />
 
 		
-		<meta property="og:title" content="Train Controller" />
+		<meta property="og:title" content="PCを自動起動するの巻" />
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="https://blog.artarch.net/img/default-header-img.jpg" />
 		<meta property="og:description" content="" />
-		<meta property="og:url" content="https://blog.artarch.net/works/train_controller/" />
-		<meta property="og:site_name" content="Train Controller" />
+		<meta property="og:url" content="https://blog.artarch.net/notes/linux/pc-rtc-alarm/" />
+		<meta property="og:site_name" content="PCを自動起動するの巻" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@atotto" />
 
@@ -52,7 +52,7 @@
 		<script src="https://blog.artarch.net/js/story.js"></script>
 
 	</head>
-	<body class="ma0 bg-white section-works page-kind-page is-page-true ">
+	<body class="ma0 bg-white section-notes page-kind-page is-page-true ">
 		
 		<header class="cover bg-top" style="background-image: url('https://blog.artarch.net/img/default-header-img.jpg'); background-position: center;">
 			<div class="bg-black-30 bb bt">
@@ -75,16 +75,16 @@
 				</nav>
 
 				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
-					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">Train Controller</h1>
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">PCを自動起動するの巻</h1>
 					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
 						
 						
 							
 								Published
-								<time datetime="2017-05-08T21:04:23&#43;09:00">May 8, 2017</time>
+								<time datetime="2020-10-06T10:00:00&#43;09:00">Oct 6, 2020</time>
 								<span class="display-print">by Ato Araki</span>
-								 in <a href="https://blog.artarch.net/categories/make" class="no-underline category near-white dim">Make</a>
-								<span class="display-print">at https://blog.artarch.net/works/train_controller/</span>
+								 in <a href="https://blog.artarch.net/categories/computer" class="no-underline category near-white dim">Computer</a>, <a href="https://blog.artarch.net/categories/%E5%82%99%E5%BF%98%E9%8C%B2" class="no-underline category near-white dim">備忘録</a>
+								<span class="display-print">at https://blog.artarch.net/notes/linux/pc-rtc-alarm/</span>
 							
 						
 					</h2>
@@ -102,14 +102,66 @@
 		
 
 <article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
-	<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/brbYwpX_ItY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+	<p>停電が計画されていたりすると、停電復帰後に指定した時刻で起動しておきたい、なんてことがあります。</p>
+<h2 id="事前準備">事前準備</h2>
+<h3 id="biosを設定する">BIOSを設定する</h3>
+<p>BIOSでwakeupの設定をOSからできるようにしておく</p>
+<p><img src="55B77216-4C89-429A-BFF1-7570717BA14A.jpeg" alt=""></p>
+<p>確認</p>
+<pre tabindex="0"><code>$ sudo grep -i rtc /var/log/kern.log
+Sep 17 09:16:22 ds9 kernel: [    0.533310] rtc_cmos 00:07: RTC can wake from S4
+Sep 17 09:16:22 ds9 kernel: [    0.533686] rtc_cmos 00:07: rtc core: registered rtc_cmos as rtc0
+Sep 17 09:16:22 ds9 kernel: [    0.533765] rtc_cmos 00:07: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+Sep 17 09:16:22 ds9 kernel: [    0.536699] rtc_cmos 00:07: setting system clock to 2020-09-17 00:16:19 UTC (1600301779)
+</code></pre><p>S4になってればいいらしい</p>
+<h2 id="起動時刻を設定する">起動時刻を設定する</h2>
+<p>初期状態</p>
+<pre tabindex="0"><code>$ cat /proc/driver/rtc
+rtc_time	: 01:54:00
+rtc_date	: 2020-09-18
+alrm_time	: 01:52:00
+alrm_date	: 2020-09-19
+alarm_IRQ	: no
+alrm_pending	: no
+update IRQ enabled	: no
+periodic IRQ enabled	: no
+periodic IRQ frequency	: 1024
+max user IRQ frequency	: 64
+24hr		: yes
+periodic_IRQ	: no
+update_IRQ	: no
+HPET_emulated	: yes
+BCD		: yes
+DST_enable	: no
+periodic_freq	: 1024
+batt_status	: okay
+</code></pre><p>起動時刻を設定</p>
+<pre tabindex="0"><code>$ sudo su -c 'date &quot;+%s&quot; -d &quot;2020/09/18 10:56:00 JST&quot; &gt; /sys/class/rtc/rtc0/wakealarm'
+</code></pre><p>設定後、RTCのalrmが設定されてればOK</p>
+<pre tabindex="0"><code>$ cat /proc/driver/rtc
+rtc_time	: 01:54:20
+rtc_date	: 2020-09-18
+alrm_time	: 01:56:00
+alrm_date	: 2020-09-18
+alarm_IRQ	: yes
+alrm_pending	: no
+update IRQ enabled	: no
+periodic IRQ enabled	: no
+periodic IRQ frequency	: 1024
+max user IRQ frequency	: 64
+24hr		: yes
+periodic_IRQ	: no
+update_IRQ	: no
+HPET_emulated	: yes
+BCD		: yes
+DST_enable	: no
+periodic_freq	: 1024
+batt_status	: okay
 
-<ul>
-<li><a href="https://www.facebook.com/ato.araki/posts/10213411490867148">https://www.facebook.com/ato.araki/posts/10213411490867148</a></li>
-<li><a href="https://youtu.be/brbYwpX_ItY">https://youtu.be/brbYwpX_ItY</a></li>
-</ul>
+</code></pre><h2 id="おまけ">おまけ</h2>
+<h3 id="自動シャットダウン">自動シャットダウン</h3>
+<pre tabindex="0"><code>$ sudo shutdown -h 21:00
+</code></pre>
 </article>
 
 
@@ -119,15 +171,11 @@
 		<h2>See Also</h2>
 		<ul>
 			
-			<li><a href="/works/pomodoro_timer/">Pomodoro Timer</a></li>
+			<li><a href="/notes/linux/certificate-tips/">証明書関連tips</a></li>
 			
-			<li><a href="/works/microbit-robot/">Home Rover Robot (micro:bit&#43;robot)</a></li>
+			<li><a href="/notes/linux/gnome/">debian stretch GDM (gnome) 設定メモ</a></li>
 			
-			<li><a href="/notes/device/madgwickfilter-mpu9250/">MadgwickFilter &#43; MPU9250 で遊ぶ</a></li>
-			
-			<li><a href="/notes/device/digispark-lm61-usb/">DigisparkとLM61で温度を測る</a></li>
-			
-			<li><a href="/notes/device/pololu_drv8835-motor-driver/">Raspberry Piに挿せるモータードライバを試す</a></li>
+			<li><a href="/notes/linux/ubuntu-focal/">ubuntu focal note</a></li>
 			
 			<li><a href="/notes/device/grafana-influxdb-arduino/">センサデータを influxdb に集めて grafana でみる</a></li>
 			
@@ -158,7 +206,7 @@
 		
 		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
 			<p class="w-50 fr tr">
-				LastModified: 2017-05-08T12:04:23Z
+				LastModified: 2020-10-06T01:00:00Z
 			</p>
 			<p class="w-50 near-white">
 				&copy; 2022 Ato Araki

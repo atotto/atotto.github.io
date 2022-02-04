@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151914489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151914489-1');
+</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>センサデータを influxdb に集めて grafana でみる</title>
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.artarch.net/index.xml">
+		<link rel="canonical" href="https://blog.artarch.net/notes/device/grafana-influxdb-arduino/">
+		
+		<link rel="shortcut icon" type="image/png" href="https://blog.artarch.net/apple-touch-icon-precomposed.png">
+		
+		
+		<meta name="generator" content="Hugo 0.91.2" />
+
+		
+		<meta property="og:title" content="センサデータを influxdb に集めて grafana でみる" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://blog.artarch.net/img/default-header-img.jpg" />
+		<meta property="og:description" content="" />
+		<meta property="og:url" content="https://blog.artarch.net/notes/device/grafana-influxdb-arduino/" />
+		<meta property="og:site_name" content="センサデータを influxdb に集めて grafana でみる" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@atotto" />
+
+
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/tachyons.min.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/story.css" />
+		<link rel="stylesheet" href="https://blog.artarch.net/css/descartes.css" />
+		
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/amazon.css" />
+		
+		<link rel="stylesheet" href="https://blog.artarch.net/css/toc.css" />
+		
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script src="https://blog.artarch.net/js/story.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-notes page-kind-page is-page-true ">
+		
+		<header class="cover bg-top" style="background-image: url('https://blog.artarch.net/img/default-header-img.jpg'); background-position: center;">
+			<div class="bg-black-30 bb bt">
+
+				<nav class="hide-print sans-serif  border-box pa3 ph5-l">
+					<a href="https://blog.artarch.net/" title="Home">
+						<img src="https://blog.artarch.net/img/logo.jpg" class="w2 h2 br-100" alt="artarch" />
+					</a>
+					<div class="fr h2 pv2 tr">
+						<a class="link f5 ml2 dim near-white" href="/">Works</a>
+						<a class="link f5 ml2 dim near-white" href="/posts/">Posts</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/make/">Make</a>
+						<a class="link f5 ml2 dim near-white" href="/categories/">Category</a>
+						<a class="link f5 ml2 dim near-white" href="/tags/">Tags</a>
+						<a class="link f5 ml2 dim near-white" href="/about/">About</a>
+						<a class="link f5 ml2 dim near-white" href="https://github.com/atotto"><i class="fab fa-github-square"></i></a>
+						<a class="link f5 ml2 dim near-white fas fa-rss-square" href="https://blog.artarch.net/index.xml" title="RSS Feed"></a>
+						<a class="link f5 ml2 dim near-white fas fa-search" href="https://blog.artarch.net/search/" role="search" title="Search"></a>
+					</div>
+				</nav>
+
+				<div id="hdr" class="tc-l pv4-ns pv5-l pv2 ph3 ph4-ns">
+					<h1 class="near-white mt1-ns f2 fw3 mb0 mt0 lh-title">センサデータを influxdb に集めて grafana でみる</h1>
+					<h2 class="near-white mt3-l mb4-l fw1 f6 f3-l measure-wide-l center lh-copy mt2 mb3">
+						
+						
+							
+								Published
+								<time datetime="2017-04-08T10:00:00&#43;09:00">Apr 8, 2017</time>
+								<span class="display-print">by Ato Araki</span>
+								 in <a href="https://blog.artarch.net/categories/%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F" class="no-underline category near-white dim">やってみた</a>, <a href="https://blog.artarch.net/categories/%E5%82%99%E5%BF%98%E9%8C%B2" class="no-underline category near-white dim">備忘録</a>
+								<span class="display-print">at https://blog.artarch.net/notes/device/grafana-influxdb-arduino/</span>
+							
+						
+					</h2>
+				</div>
+
+				
+				
+				
+				
+
+			</div>
+		</header>
+		
+		<main role="main">
+		
+
+<article class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<p>Arduino でセンサ値を InfluxDB へ入れつつ、 Grafana で参照する内容を少しまとめ</p>
+<h2 id="grafana">grafana</h2>
+<p><a href="https://grafana.com/">https://grafana.com/</a></p>
+<h2 id="sample">sample</h2>
+<p>アナログ値をwifi経由でデータを入れてみる</p>
+<p>※ サンプルです。証明書などの準備が必要なのでこのままコンパイルできません。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-example.c" data-lang="example.c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Wire.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;SparkFunBME280.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;SparkFunCCS811.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define CCS811_ADDR 0x5B </span><span style="color:#75715e">//Default I2C Address
+</span><span style="color:#75715e">//#define CCS811_ADDR 0x5A //Alternate I2C Address
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define PIN_NOT_WAKE 5
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ssid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;wifi&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pass&#34;</span>;
+
+
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;address your influxdb server&gt;&#34;</span>;
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> httpsPort <span style="color:#f92672">=</span> <span style="color:#ae81ff">443</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> db_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> db_user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;esp8266&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> db_password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+
+<span style="color:#75715e">//Global sensor objects
+</span><span style="color:#75715e"></span>CCS811 <span style="color:#a6e22e">myCCS811</span>(CCS811_ADDR);
+BME280 myBME280;
+
+WiFiClientSecure client;
+
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> ca_cert[] PROGMEM;
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> ca_cert_len;
+
+
+<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+{
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  Serial.println();
+  Serial.println();
+  Serial.println();
+  Serial.println(<span style="color:#e6db74">&#34;Apply BME280 data to CCS811 for compensation.&#34;</span>);
+
+  Wire.begin();
+
+  <span style="color:#75715e">//This begins the CCS811 sensor and prints error status of .beginWithStatus()
+</span><span style="color:#75715e"></span>  CCS811Core<span style="color:#f92672">::</span>CCS811_Status_e returnCode <span style="color:#f92672">=</span> myCCS811.beginWithStatus();
+  Serial.print(<span style="color:#e6db74">&#34;CCS811 begin exited with: &#34;</span>);
+  Serial.println(myCCS811.statusString(returnCode));
+  
+  returnCode <span style="color:#f92672">=</span> myCCS811.setDriveMode(<span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 10s
+</span><span style="color:#75715e"></span>  Serial.print(<span style="color:#e6db74">&#34;CCS811 setDriveMode exited with: &#34;</span>);
+  Serial.println(myCCS811.statusString(returnCode));
+
+  <span style="color:#75715e">//Initialize BME280
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//For I2C, enable the following and disable the SPI section
+</span><span style="color:#75715e"></span>  myBME280.settings.commInterface <span style="color:#f92672">=</span> I2C_MODE;
+  myBME280.settings.I2CAddress <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x76</span>;
+  myBME280.settings.runMode <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">//Normal mode
+</span><span style="color:#75715e"></span>  myBME280.settings.tStandby <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  myBME280.settings.filter <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+  myBME280.settings.tempOverSample <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+  myBME280.settings.pressOverSample <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+  myBME280.settings.humidOverSample <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+
+  <span style="color:#75715e">//Calling .begin() causes the settings to be loaded
+</span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">10</span>);  <span style="color:#75715e">//Make sure sensor had enough time to turn on. BME280 requires 2ms to start up.
+</span><span style="color:#75715e"></span>  myBME280.begin();
+
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  Serial.println(<span style="color:#e6db74">&#34;connecting...&#34;</span>);
+  WiFi.hostname(<span style="color:#e6db74">&#34;environment-monitor-workspace&#34;</span>);
+  WiFi.begin(ssid, password);
+
+  connectWifi();
+
+  syncTime();
+
+  <span style="color:#66d9ef">bool</span> res <span style="color:#f92672">=</span> client.setCACert_P(ca_cert, ca_cert_len);
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>res) {
+    Serial.println(<span style="color:#e6db74">&#34;Failed to load root CA certificate!&#34;</span>);
+    <span style="color:#66d9ef">while</span> (true) {
+      yield();
+    }
+  }
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>client.connect(host, httpsPort)) {
+    Serial.println(<span style="color:#e6db74">&#34;connection failed&#34;</span>);
+    <span style="color:#66d9ef">return</span>;
+  }
+
+  <span style="color:#75715e">//client.keepAlive();
+</span><span style="color:#75715e"></span>  client.keepAlive(TCP_DEFAULT_KEEPALIVE_IDLE_SEC, TCP_DEFAULT_KEEPALIVE_INTERVAL_SEC, TCP_DEFAULT_KEEPALIVE_COUNT);
+
+  <span style="color:#66d9ef">if</span> (client.verifyCertChain(host)) {
+    <span style="color:#75715e">//Serial.println(&#34;* SSL certificate verify ok&#34;);
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> {
+    Serial.println(<span style="color:#e6db74">&#34;* ERROR: SSL certificate verify failed&#34;</span>);
+    client.stop();
+    <span style="color:#66d9ef">return</span>;
+  }
+  client.stop();
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">connectWifi</span>() {
+  Serial.println(<span style="color:#e6db74">&#34;connecting...&#34;</span>);
+  <span style="color:#66d9ef">while</span> (WiFi.status() <span style="color:#f92672">!=</span> WL_CONNECTED) {
+    delay(<span style="color:#ae81ff">500</span>);
+    digitalWrite(LED_BUILTIN, LOW);
+    Serial.print(<span style="color:#e6db74">&#34;.&#34;</span>);
+    delay(<span style="color:#ae81ff">10</span>);
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  Serial.println();
+  Serial.print(<span style="color:#e6db74">&#34;Connected to &#34;</span>);
+  Serial.println(ssid);
+  Serial.print(<span style="color:#e6db74">&#34;IP address: &#34;</span>);
+  Serial.println(WiFi.localIP());
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+{
+  <span style="color:#75715e">//Check to see if data is available
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (myCCS811.dataAvailable())
+  {
+    Serial.println();
+    <span style="color:#75715e">//Calling this function updates the global tVOC and eCO2 variables
+</span><span style="color:#75715e"></span>    myCCS811.readAlgorithmResults();
+    <span style="color:#75715e">//printInfoSerial fetches the values of tVOC and eCO2
+</span><span style="color:#75715e"></span>    printInfoSerial();
+
+    <span style="color:#66d9ef">float</span> BMEtempC <span style="color:#f92672">=</span> myBME280.readTempC();
+    <span style="color:#66d9ef">float</span> BMEhumid <span style="color:#f92672">=</span> myBME280.readFloatHumidity();
+
+    <span style="color:#75715e">//This sends the temperature data to the CCS811
+</span><span style="color:#75715e"></span>    myCCS811.setEnvironmentalData(BMEhumid, BMEtempC);
+  }
+  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (myCCS811.checkForStatusError())
+  {
+    <span style="color:#75715e">//If the CCS811 found an internal error, print it.
+</span><span style="color:#75715e"></span>    printSensorError();
+  }
+
+  Serial.print(<span style="color:#e6db74">&#34;.&#34;</span>);
+  delay(<span style="color:#ae81ff">100</span>); <span style="color:#75715e">//Wait for next reading
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#75715e">//---------------------------------------------------------------
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printInfoSerial</span>()
+{
+  <span style="color:#75715e">//getCO2() gets the previously read data from the library
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">uint16_t</span> co2 <span style="color:#f92672">=</span> myCCS811.getCO2();
+  Serial.print(<span style="color:#e6db74">&#34; eCO2       : &#34;</span>);
+  Serial.print(co2);
+  Serial.println(<span style="color:#e6db74">&#34; ppm&#34;</span>);
+
+  <span style="color:#75715e">//getTVOC() gets the previously read data from the library
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">uint16_t</span> tvoc <span style="color:#f92672">=</span> myCCS811.getTVOC();
+  Serial.print(<span style="color:#e6db74">&#34; TVOC       : &#34;</span>);
+  Serial.print(tvoc);
+  Serial.println(<span style="color:#e6db74">&#34; ppb&#34;</span>);
+
+  <span style="color:#66d9ef">float</span> temperature <span style="color:#f92672">=</span> myBME280.readTempC();
+  Serial.print(<span style="color:#e6db74">&#34; Temperature: &#34;</span>);
+  Serial.print(temperature, <span style="color:#ae81ff">2</span>);
+  Serial.println(<span style="color:#e6db74">&#34; C&#34;</span>);
+
+  <span style="color:#66d9ef">float</span> pressure <span style="color:#f92672">=</span> myBME280.readFloatPressure() <span style="color:#f92672">/</span> <span style="color:#ae81ff">100.0</span>;
+  Serial.print(<span style="color:#e6db74">&#34; Pressure   : &#34;</span>);
+  Serial.print(pressure, <span style="color:#ae81ff">4</span>);
+  Serial.println(<span style="color:#e6db74">&#34; hPa&#34;</span>);
+
+  Serial.print(<span style="color:#e6db74">&#34; Altitude   : &#34;</span>);
+  Serial.print(myBME280.readFloatAltitudeMeters(), <span style="color:#ae81ff">2</span>);
+  Serial.println(<span style="color:#e6db74">&#34; m&#34;</span>);
+
+  <span style="color:#66d9ef">float</span> humidity <span style="color:#f92672">=</span> myBME280.readFloatHumidity();
+  Serial.print(<span style="color:#e6db74">&#34; Humidity   : &#34;</span>);
+  Serial.print(humidity, <span style="color:#ae81ff">2</span>);
+  Serial.println(<span style="color:#e6db74">&#34; %&#34;</span>);
+
+  Serial.println();
+
+  sendDataToInfluxdb(temperature, pressure, humidity, co2, tvoc);
+}
+
+<span style="color:#75715e">//printSensorError gets, clears, then prints the errors
+</span><span style="color:#75715e">//saved within the error register.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printSensorError</span>()
+{
+  <span style="color:#66d9ef">uint8_t</span> error <span style="color:#f92672">=</span> myCCS811.getErrorRegister();
+
+  <span style="color:#66d9ef">if</span> ( error <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xFF</span> ) <span style="color:#75715e">//comm error
+</span><span style="color:#75715e"></span>  {
+    Serial.println(<span style="color:#e6db74">&#34;Failed to get ERROR_ID register.&#34;</span>);
+  }
+  <span style="color:#66d9ef">else</span>
+  {
+    Serial.print(<span style="color:#e6db74">&#34;Errcharor: &#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">5</span>) Serial.print(<span style="color:#e6db74">&#34;HeaterSupply&#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span>) Serial.print(<span style="color:#e6db74">&#34;HeaterFault&#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">3</span>) Serial.print(<span style="color:#e6db74">&#34;MaxResistance&#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>) Serial.print(<span style="color:#e6db74">&#34;MeasModeInvalid&#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>) Serial.print(<span style="color:#e6db74">&#34;ReadRegInvalid&#34;</span>);
+    <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">0</span>) Serial.print(<span style="color:#e6db74">&#34;MsgInvalid&#34;</span>);
+    Serial.println();
+  }
+}
+
+
+<span style="color:#75715e">// keepalive https://forum.arduino.cc/index.php?topic=372714.0
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendDataToInfluxdb</span>(<span style="color:#66d9ef">float</span> temperature, <span style="color:#66d9ef">float</span> pressure, <span style="color:#66d9ef">float</span> humidity, <span style="color:#66d9ef">uint16_t</span> co2, <span style="color:#66d9ef">uint16_t</span> tvoc) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>client.connected()) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>client.connect(host, httpsPort)) {
+      Serial.println(<span style="color:#e6db74">&#34;connection failed&#34;</span>);
+      connectWifi();
+      <span style="color:#66d9ef">return</span>;
+    }
+  }
+
+  counter<span style="color:#f92672">++</span>;
+
+  String payload <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;environment_monitor,location=workspace temperature=&#34;</span> <span style="color:#f92672">+</span> String(temperature) <span style="color:#f92672">+</span>
+                   <span style="color:#e6db74">&#34;,pressure=&#34;</span> <span style="color:#f92672">+</span> String(pressure) <span style="color:#f92672">+</span>
+                   <span style="color:#e6db74">&#34;,humidity=&#34;</span> <span style="color:#f92672">+</span> String(humidity) <span style="color:#f92672">+</span>
+                   <span style="color:#e6db74">&#34;,eCO2=&#34;</span> <span style="color:#f92672">+</span> String(co2) <span style="color:#f92672">+</span>
+                   <span style="color:#e6db74">&#34;,TVOC=&#34;</span> <span style="color:#f92672">+</span> String(tvoc) <span style="color:#f92672">+</span>
+                   <span style="color:#e6db74">&#34;,counter=&#34;</span> <span style="color:#f92672">+</span> String(counter);
+
+  Serial.println(payload.c_str());
+
+  String url <span style="color:#f92672">=</span> String(<span style="color:#e6db74">&#34;/write?db=&#34;</span>) <span style="color:#f92672">+</span> db_name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;u=&#34;</span> <span style="color:#f92672">+</span> db_user <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;p=&#34;</span> <span style="color:#f92672">+</span> db_password;
+  client.print(String(<span style="color:#e6db74">&#34;POST &#34;</span>) <span style="color:#f92672">+</span> url <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; HTTP/1.1</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;Host: &#34;</span> <span style="color:#f92672">+</span> host <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;User-Agent: esp8266 envmon</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;Accept: */*</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>);
+  client.print(<span style="color:#e6db74">&#34;Content-Length: &#34;</span>);
+  client.println(payload.length());
+  client.println(<span style="color:#e6db74">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span>);
+  client.println(<span style="color:#e6db74">&#34;Connection: keep-alive&#34;</span>);
+  <span style="color:#75715e">//client.println(&#34;Connection: close&#34;);
+</span><span style="color:#75715e"></span>  client.println();
+  client.println(payload);
+  client.println();
+  client.println();
+
+  <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> timeout <span style="color:#f92672">=</span> millis();
+  <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>client.available()) {
+    <span style="color:#66d9ef">if</span> (millis() <span style="color:#f92672">-</span> timeout <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10000</span>) {
+      Serial.println(<span style="color:#e6db74">&#34;&gt;&gt;&gt; Client Timeout !&#34;</span>);
+      client.stop();
+      delay(<span style="color:#ae81ff">1000</span>);
+      <span style="color:#66d9ef">return</span>;
+    }
+  }
+
+  <span style="color:#66d9ef">while</span> (client.connected()) {
+    <span style="color:#75715e">//while (client.connected()) {
+</span><span style="color:#75715e"></span>    String line <span style="color:#f92672">=</span> client.readStringUntil(<span style="color:#e6db74">&#39;\n&#39;</span>);
+    <span style="color:#75715e">//Serial.print(&#34;&lt; &#34;);
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//Serial.println(line);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (line <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>) {
+      <span style="color:#66d9ef">break</span>;
+    }
+  }
+  <span style="color:#75715e">//  while (client.available()) {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//    String line = client.readStringUntil(&#39;\n&#39;);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//    Serial.print(&#34;&lt; &#34;);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//    Serial.println(line);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//  }
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//client.stop();
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//Serial.println(&#34;* done&#34;);
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#75715e">#define JST     3600*9
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">syncTime</span>() {
+  configTime(JST, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;time.google.com&#34;</span>, <span style="color:#e6db74">&#34;ntp.nict.jp&#34;</span>);
+
+  time_t now <span style="color:#f92672">=</span> time(nullptr);
+  <span style="color:#66d9ef">while</span> (now <span style="color:#f92672">&lt;</span> JST <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) {
+    delay(<span style="color:#ae81ff">500</span>);
+    Serial.print(<span style="color:#e6db74">&#34;.&#34;</span>);
+    now <span style="color:#f92672">=</span> time(nullptr);
+  }
+  <span style="color:#66d9ef">struct</span> tm timeinfo;
+  gmtime_r(<span style="color:#f92672">&amp;</span>now, <span style="color:#f92672">&amp;</span>timeinfo);
+  Serial.print(<span style="color:#e6db74">&#34;Current time: &#34;</span>);
+  Serial.print(asctime(<span style="color:#f92672">&amp;</span>timeinfo));
+}
+</code></pre></div><h1 id="データ収集で得られたものの一例">データ収集で得られたものの一例</h1>
+<h2 id="m5stack-で表示">M5Stack で表示</h2>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">grafanaのグラフ（室内の温湿度情報）をM5stackに表示できた。ちょっとテンション上がる <a href="https://t.co/3Lu3TwtuDd">pic.twitter.com/3Lu3TwtuDd</a></p>&mdash; Ato Araki (@atotto) <a href="https://twitter.com/atotto/status/1396413897758830598?ref_src=twsrc%5Etfw">May 23, 2021</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="トンガの火山噴火の衝撃波らしきものの観測">トンガの火山噴火の衝撃波らしきものの観測</h2>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">我が家の気圧計もバッチリ捉えてた<a href="https://t.co/N9ZJWbsuAZ">https://t.co/N9ZJWbsuAZ</a> <a href="https://t.co/Uep5j7Dloe">pic.twitter.com/Uep5j7Dloe</a></p>&mdash; Ato Araki (@atotto) <a href="https://twitter.com/atotto/status/1482523385632800768?ref_src=twsrc%5Etfw">January 16, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</article>
+
+
+
+<aside class="center bg-white br-3 pv1 ph4 lh-copy f5 nested-links mw7">
+	<div id="see-also">
+		<h2>See Also</h2>
+		<ul>
+			
+			<li><a href="/works/train_controller/">Train Controller</a></li>
+			
+			<li><a href="/notes/linux/pc-rtc-alarm/">PCを自動起動するの巻</a></li>
+			
+			<li><a href="/notes/device/madgwickfilter-mpu9250/">MadgwickFilter &#43; MPU9250 で遊ぶ</a></li>
+			
+			<li><a href="/works/pomodoro_timer/">Pomodoro Timer</a></li>
+			
+			<li><a href="/notes/device/digispark-lm61-usb/">DigisparkとLM61で温度を測る</a></li>
+			
+			<li><a href="/notes/device/pololu_drv8835-motor-driver/">Raspberry Piに挿せるモータードライバを試す</a></li>
+			
+		</ul>
+	</div>
+</aside>
+
+
+
+		</main>
+		
+				<div class="hide-print sans-serif f6 f5-l mt5 ph3 pb6 center nested-copy-line-height lh-copy nested-links mw-100 measure-wide">
+		<div class="about-the-author">
+		
+			
+			
+				
+					
+				
+			
+		
+		</div>
+		
+	</div>
+
+		
+		
+		
+		<footer class="hide-print sans-serif f6 fw1 bg-black near-white bottom-0 w-100 pa3" role="contentinfo">
+			<p class="w-50 fr tr">
+				LastModified: 2022-01-16T11:00:00Z
+			</p>
+			<p class="w-50 near-white">
+				&copy; 2022 Ato Araki
+			</p>
+		</footer>
+		
+	
+	</body>
+</html>
