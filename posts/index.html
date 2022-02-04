@@ -95,6 +95,45 @@
 		<div class="db pv4 ph3 ph0-l no-underline dark-gray">
 			<div class="flex flex-column flex-row-ns">
 				
+				<div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('https://blog.artarch.net/articles/golang/gopherhat.jpg'); background-position: center;">
+					<a href="https://blog.artarch.net/articles/golang/go-test-pattern/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
+						<i class="mt3 mt5-l child far fa-calendar-alt"></i> Dec 20, 2017
+					</a>
+				</div>
+				
+				<div class="w-100 w6-ns pl3-ns">
+					<h1 class="f3 fw1 mt0 lh-title"><a href="https://blog.artarch.net/articles/golang/go-test-pattern/" class="color-inherit dim link">Goでテストを書く(テストの実装パターン集)</a></h1>
+					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+						
+							<p><strong><a href="https://qiita.com/atotto/items/f6b8c773264a3183a53c">Go2 Advent Calendar 2017 20日目</a> の転載です。</strong></p>
+<hr>
+<p>Goでテストを書くお話です。</p>
+<p>基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。</p>
+<p>ポイントを先に列挙します:</p>
+<ul>
+<li>テストのエラーメッセージは丁寧に書こう</li>
+<li>テーブルテストを活用してパターンを整理しながら網羅しよう</li>
+<li><code>ｔ．Run</code>をつかって大きなテストを分割しよう</li>
+<li><code>t.Helper</code>をつかってテストエラーの箇所をわかりやすくしよう</li>
+<li>テスト用のデータは <code>testdata</code> ディレクトリに置こう</li>
+<li>Setup/Teardownをうまく書いてテストの見通しをよくしよう</li>
+<li>等</li>
+</ul>
+							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/articles/golang/go-test-pattern/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+
+        
+        <div class="relative w-100">
+	<article>
+		<div class="db pv4 ph3 ph0-l no-underline dark-gray">
+			<div class="flex flex-column flex-row-ns">
+				
 				<div class="mb4 mb0-ns w-100 h4 h4-m w4-m h5-ns w5-ns br3 cover hide-child" style="background-image: url('https://blog.artarch.net/posts/light-flicker-measurement/IMG_1939.jpeg'); background-position: center;">
 					<a href="https://blog.artarch.net/posts/light-flicker-measurement/" class="sans-serif db child w-100 h-100 f7 lh-copy white no-underline br3 ph3 pt4 pt5-l ttu tc bg-black-60">
 						<i class="mt3 mt5-l child far fa-calendar-alt"></i> Feb 3, 2022
@@ -285,27 +324,6 @@ emacsはデドックス中。
  2020-09-05 追記
 無事ライセンス頂きました。 Goland だけかなと思っていたらAll Products Packでした。
 							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/notes/jetbrains-oss-request/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</article>
-</div>
-
-        
-        <div class="relative w-100">
-	<article>
-		<div class="db pv4  ph0-l no-underline dark-gray">
-			<div class="flex flex-column flex-row-ns">
-				
-				<div class="w-100 w6-ns pl3-ns">
-					<h1 class="f3 fw1 mt0 lh-title"><a href="https://blog.artarch.net/notes/linux/gnome/" class="color-inherit dim link">debian stretch GDM (gnome) 設定メモ</a></h1>
-					<div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-						
-							マウスカーソルのサイズを変更する $ gsettings set org.gnome.desktop.interface cursor-size 48  24,32,48,64で指定するらしい。 GUI(SettingsやTweak Tool)で変更できないような。
-フォントサイズを変更する $ gsettings set org.gnome.desktop.interface text-scaling-factor 1.6  4Kディスプレイだと文字が小さくなるので、外部ディスプレイ利用時によく使う。
-							<p class="pa0 sans-serif f7"><a class="ba br3 pa2 link" href="https://blog.artarch.net/notes/linux/gnome/">Continue Reading <i class="fas fa-chevron-circle-right"></i></a></p>
 						
 					</div>
 				</div>

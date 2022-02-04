@@ -176,7 +176,7 @@ emacsはデドックス中。
 	<title>Goでテストを書く(テストの実装パターン集)</title>
 	<link rel='alternate' type='text/html' href='https://blog.artarch.net/articles/golang/go-test-pattern/' />
 	<published>2017-12-20T00:00:00+09:00</published>
-	<updated>2017-12-20T00:00:00+09:00</updated>
+	<updated>2022-02-04T19:30:00+09:00</updated>
 	<summary>Go2 Advent Calendar 2017 20日目 の転載です。
  Goでテストを書くお話です。
 基本的なところから、応用的なテストの書き方（パターン？）をまとめておくことにしました。
