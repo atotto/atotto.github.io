@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>macos 開発まわりの設定メモ</title>
+      <link>https://blog.artarch.net/notes/darwin/setup-m1-mac/</link>
+      <pubDate>Sun, 02 Jan 2022 22:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/darwin/setup-m1-mac/</guid>
+      <description>&lt;p&gt;M1 MacBook Proを新規でセットアップした時の雑記（随時更新）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>ubuntu focal note</title>
       <link>https://blog.artarch.net/notes/linux/ubuntu-focal/</link>
       <pubDate>Sat, 29 May 2021 22:12:34 +0900</pubDate>
