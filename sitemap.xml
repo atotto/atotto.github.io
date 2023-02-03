@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.artarch.net/</loc>
-    <lastmod>2022-11-11T22:30:00+09:00</lastmod>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/categories/</loc>
-    <lastmod>2022-11-11T22:30:00+09:00</lastmod>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/categories/note/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/notes/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/categories/%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/tags/%E3%82%A2%E3%83%9E%E3%83%81%E3%83%A5%E3%82%A2%E7%84%A1%E7%B7%9A/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/categories/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.artarch.net/notes/amateur-3rd-radio-operator/</loc>
+    <lastmod>2023-02-03T23:23:23+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/tags/computer/</loc>
     <lastmod>2022-11-11T22:30:00+09:00</lastmod>
@@ -23,16 +44,7 @@
     <loc>https://blog.artarch.net/tags/linux/</loc>
     <lastmod>2022-11-11T22:30:00+09:00</lastmod>
   </url><url>
-    <loc>https://blog.artarch.net/notes/</loc>
-    <lastmod>2022-11-11T22:30:00+09:00</lastmod>
-  </url><url>
     <loc>https://blog.artarch.net/tags/photo/</loc>
-    <lastmod>2022-11-11T22:30:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/tags/</loc>
-    <lastmod>2022-11-11T22:30:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/categories/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
     <lastmod>2022-11-11T22:30:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/notes/device/thinkpad-x220/</loc>
@@ -46,12 +58,6 @@
   </url><url>
     <loc>https://blog.artarch.net/notes/linux/ubuntu-jammy/</loc>
     <lastmod>2022-10-01T22:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/categories/note/</loc>
-    <lastmod>2022-08-18T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.artarch.net/categories/%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/</loc>
-    <lastmod>2022-08-18T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.artarch.net/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-08-18T20:00:00+09:00</lastmod>
