@@ -119,8 +119,8 @@
 <p>ubuntu:</p>
 <pre tabindex="0"><code>$ sudo apt install exif
 </code></pre><h2 id="gps-の情報を削除する">GPS の情報を削除する</h2>
-<pre tabindex="0"><code>$ exif --remove --ifd GPS --output IMG_001.jpg IMG_001.jpg
-</code></pre><p>応用: ディレクトリツリーにある jpg|jpeg のファイルから GPS の情報を削除する</p>
+<pre tabindex="0"><code>$ exif --remove --ifd GPS --output IMG_001.webp IMG_001.webp
+</code></pre><p>応用: ディレクトリツリーにある webp|webp のファイルから GPS の情報を削除する</p>
 <pre tabindex="0"><code>$ find . -type f -iregex '.*\.jpe?g' | xargs -n 1 --replace=File bash -c &quot;echo File; exif --ifd GPS -x File | (! grep -v exif) || exif --remove --ifd GPS --output File File&quot; 
 </code></pre>
 </article>
@@ -132,9 +132,9 @@
 		<h2>See Also</h2>
 		<ul>
 			
-			<li><a href="/notes/device/thinkpad-x220/">Thinkpad X220</a></li>
-			
 			<li><a href="/notes/linux/ubuntu-jammy/">ubuntu jammy note</a></li>
+			
+			<li><a href="/notes/device/thinkpad-x220/">Thinkpad X220</a></li>
 			
 			<li><a href="/notes/linux/ubuntu-focal/">ubuntu focal note</a></li>
 			
