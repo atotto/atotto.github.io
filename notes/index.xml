@@ -9,7 +9,16 @@
     <managingEditor>ato.araki@gmail.com (ato araki)</managingEditor>
     <webMaster>ato.araki@gmail.com (ato araki)</webMaster>
     <copyright>Ato Araki — All rights reserved.</copyright>
-    <lastBuildDate>Fri, 03 Feb 2023 20:23:23 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jun 2024 18:00:00 +0900</lastBuildDate><atom:link href="https://blog.artarch.net/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu noble note</title>
+      <link>https://blog.artarch.net/notes/linux/ubuntu-noble/</link>
+      <pubDate>Sat, 08 Jun 2024 18:00:00 +0900</pubDate>
+      <author>ato.araki@gmail.com (ato araki)</author>
+      <guid>https://blog.artarch.net/notes/linux/ubuntu-noble/</guid>
+      <description>&lt;p&gt;Ubuntu 24.04 (Noble Numbat) を導入します！&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>第三級アマチュア無線技士(3アマ)を受験しました</title>
       <link>https://blog.artarch.net/notes/amateur-3rd-radio-operator/</link>
@@ -43,7 +52,7 @@
       <pubDate>Sat, 01 Oct 2022 22:00:00 +0900</pubDate>
       <author>ato.araki@gmail.com (ato araki)</author>
       <guid>https://blog.artarch.net/notes/linux/ubuntu-jammy/</guid>
-      <description>&lt;p&gt;最初しかやらない、忘れやすい設定の備忘録&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ubuntu 22.04 (Jammy Jellyfish) を導入します！&lt;/p&gt;</description>
     </item>
     
     <item>
