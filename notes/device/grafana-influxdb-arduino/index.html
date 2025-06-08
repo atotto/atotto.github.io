@@ -325,7 +325,7 @@ WiFiClientSecure client;
   }
   <span style="color:#66d9ef">else</span>
   {
-    Serial.print(<span style="color:#e6db74">&#34;Errcharor: &#34;</span>);
+    Serial.print(<span style="color:#e6db74">&#34;Error: &#34;</span>);
     <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">5</span>) Serial.print(<span style="color:#e6db74">&#34;HeaterSupply&#34;</span>);
     <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">4</span>) Serial.print(<span style="color:#e6db74">&#34;HeaterFault&#34;</span>);
     <span style="color:#66d9ef">if</span> (error <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">3</span>) Serial.print(<span style="color:#e6db74">&#34;MaxResistance&#34;</span>);
