@@ -33,7 +33,7 @@
 &lt;ul&gt;
 &lt;li&gt;テストのエラーメッセージは丁寧に書こう&lt;/li&gt;
 &lt;li&gt;テーブルテストを活用してパターンを整理しながら網羅しよう&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ｔ．Run&lt;/code&gt;をつかって大きなテストを分割しよう&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t.Run&lt;/code&gt;をつかって大きなテストを分割しよう&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;t.Helper&lt;/code&gt;をつかってテストエラーの箇所をわかりやすくしよう&lt;/li&gt;
 &lt;li&gt;テスト用のデータは &lt;code&gt;testdata&lt;/code&gt; ディレクトリに置こう&lt;/li&gt;
 &lt;li&gt;Setup/Teardownをうまく書いてテストの見通しをよくしよう&lt;/li&gt;
