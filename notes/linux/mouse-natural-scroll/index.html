@@ -122,12 +122,12 @@
 <p>なぜそんなことをしたいかと言うと、 Thinkpad の TrackPoint や、外付けの TrackPoint キーボード、 Tex Yoda のトラックポイントによるスクロール方向はそのまま使用したい、が、
 外付けマウスのスクロールは macOS と合わせてナチュラルスクロールにしたいから、となります。</p>
 <h2 id="1-マウスの-usb-id-を確認">1. マウスの USB ID を確認</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ lsusb | grep Mouse
-Bus <span style="color:#ae81ff">003</span> Device 062: ID 046d:c510 Logitech, Inc. Cordless Mouse
-</code></pre></div><p>例では <code>046d:c510</code> が ID になります。</p>
+<pre tabindex="0"><code>$ lsusb | grep Mouse
+Bus 003 Device 062: ID 046d:c510 Logitech, Inc. Cordless Mouse
+</code></pre><p>例では <code>046d:c510</code> が ID になります。</p>
 <h2 id="2-設定ファイルを作成">2. 設定ファイルを作成</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/X11/xorg.conf.d/99-mouse-scroll.conf
-</code></pre></div><pre tabindex="0"><code class="language-conf" data-lang="conf">Section &quot;InputClass&quot;
+<pre tabindex="0"><code>$ sudo nano /etc/X11/xorg.conf.d/99-mouse-scroll.conf
+</code></pre><pre tabindex="0"><code class="language-conf" data-lang="conf">Section &quot;InputClass&quot;
     Identifier  &quot;Logicool V500 Cordless Mouse natural-scroll&quot;
     MatchUSBID  &quot;046d:c510&quot;
     MatchIsPointer &quot;on&quot;
@@ -138,16 +138,16 @@ EndSection
 <h2 id="3-反映方法">3. 反映方法</h2>
 <p>X サーバーを再起動するため、GUI のログアウト・ログイン、もしくは再起動を行います。</p>
 <h2 id="4-動作確認">4. 動作確認</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xinput list-props <span style="color:#e6db74">&#34;Logitech USB Receiver&#34;</span> | grep -i Natural
-        libinput Natural Scrolling Enabled <span style="color:#f92672">(</span>316<span style="color:#f92672">)</span>:       <span style="color:#ae81ff">1</span>
-        libinput Natural Scrolling Enabled Default <span style="color:#f92672">(</span>317<span style="color:#f92672">)</span>:       <span style="color:#ae81ff">0</span>
+<pre tabindex="0"><code>$ xinput list-props &quot;Logitech USB Receiver&quot; | grep -i Natural
+        libinput Natural Scrolling Enabled (316):       1
+        libinput Natural Scrolling Enabled Default (317):       0
 
-</code></pre></div><p>値が <code>1</code> なら反転設定が適用されています。</p>
+</code></pre><p>値が <code>1</code> なら反転設定が適用されています。</p>
 <h2 id="memo-一時的に適用したい">memo: 一時的に適用したい</h2>
 <p>idを検索</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ xinput list | grep Logitech
-⎜   ↳ Logitech USB Receiver                     id<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>   <span style="color:#f92672">[</span>slave  pointer  <span style="color:#f92672">(</span>2<span style="color:#f92672">)]</span>
-</code></pre></div><p>id=10 に対して設定 (ここでの <code>10</code> は例です。前の手順で確認した実際のデバイス ID に置き換えてください)</p>
+<pre tabindex="0"><code>$ xinput list | grep Logitech
+⎜   ↳ Logitech USB Receiver                     id=10   [slave  pointer  (2)]
+</code></pre><p>id=10 に対して設定 (ここでの <code>10</code> は例です。前の手順で確認した実際のデバイス ID に置き換えてください)</p>
 <pre tabindex="0"><code>$ xinput set-prop 10 &quot;libinput Natural Scrolling Enabled&quot; 1
 </code></pre>
 </article>
